@@ -70,7 +70,7 @@ draw_my_wall(int pos_x, int pos_y, u16 color)
 	blank_pixel = (COLOR_GRAY << 16) + COLOR_GRAY;
 	for (i = 0; i < BIG_BOX_HEIGHT; i++) {
 
-		basePoint = (u32 *) BG_GFX+
+		basePoint = (u32 *) BG_GFX_SUB+
 				((((pos_y * BIG_BOX_HEIGHT) + i) * SCREEN_WIDTH) +
 						pos_x * BIG_BOX_WIDTH) / 2;
 
@@ -95,7 +95,7 @@ select_my_wall(int pos_x, int pos_y, u16 color)
 
 	for (i = 0; i < BIG_BOX_HEIGHT; i++) {
 
-		basePoint = (u32 *) BG_GFX+
+		basePoint = (u32 *) BG_GFX_SUB+
 				((((pos_y * BIG_BOX_HEIGHT) + i) * SCREEN_WIDTH) +
 						pos_x * BIG_BOX_WIDTH) / 2;
 
