@@ -1,1 +1,0 @@
-abcde.o: abcde.s
