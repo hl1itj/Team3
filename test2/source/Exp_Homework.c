@@ -140,8 +140,8 @@ read_puzzle(void)
 	if (!(virtual_puzzle & 0x3F))
 		return 0;
 	touchRead(&touch);
-	touch.py = touch.py / BIG_BOX_HEIGHT;
-	touch.px = touch.px / BIG_BOX_WIDTH;
+	touch.py = (touch.py / BIG_BOX_HEIGHT);
+	touch.px = (touch.px / BIG_BOX_WIDTH) - 2;
 	if ((touch.py < 0) || (touch.py > 5) || (touch.px < 0) || (touch.px > 5))
 		return 0;
 	if (!(virtual_puzzle & (0x20 >> touch.py)))
@@ -184,13 +184,14 @@ Exp_8_Homework_B(void)
 {
 	int i, j;
 	u8 old_key = 0, key;
+	const int SP = 2;
 	const int N_PUZZLE = 6;
 	const int N_BLOCK = 5;
 
 	srand((int)time(NULL));
 
 
-	for (i = 0; i < N_PUZZLE; i++)
+	for (i = SP; i < SP + N_PUZZLE; i++)
 		for (j = 0; j < N_PUZZLE; j++)
 			draw_my_wall(i, j, set_color(rand() % N_BLOCK));
 
@@ -202,8 +203,8 @@ Exp_8_Homework_B(void)
 			//select_my_wall(old_key, old_key, COLOR_GRAY);
 			//select_my_wall(key, key, COLOR_SELECT);
 			key--;
-			select_my_wall(old_key % N_PUZZLE, old_key / N_PUZZLE, COLOR_GRAY);
-			select_my_wall(key % N_PUZZLE, key / N_PUZZLE, COLOR_SELECT);
+			select_my_wall(old_key % N_PUZZLE + SP, old_key / N_PUZZLE, COLOR_GRAY);
+			select_my_wall(key % N_PUZZLE + SP, key / N_PUZZLE, COLOR_SELECT);
 			old_key = key;
 		}
 
