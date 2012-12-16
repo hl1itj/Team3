@@ -26,8 +26,8 @@ int
 main(void)
 {
 	InitDebug();
-	init_virtual_io(ENABLE_SW | ENABLE_MATRIX);	// Enable Virtual LED's on Top Screen
-	//init_printf();							// Initialize Bottom Screen for printf()
+	//init_virtual_io(ENABLE_SW | ENABLE_MATRIX);	// Enable Virtual LED's on Top Screen
+	init_printf();							// Initialize Bottom Screen for printf()
 
 	xTaskCreate(Key_Task,
 					     (const signed char * const)"Key_Task",
@@ -82,7 +82,7 @@ portTASK_FUNCTION(Exp_8_Task, pvParameters)
     bgInit(3,BgType_Bmp16, BgSize_B16_256x256, 0, 0);
 
     while (1) {
-		Exp_8_Homework_A();
+		//Exp_8_Homework_A();
 		Exp_8_Homework_B();
 	}
 }

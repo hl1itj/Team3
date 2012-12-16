@@ -43,6 +43,7 @@
 // �ʿ��� global ����
 xSemaphoreHandle xSemaphore[BIG_BOX_X_MAX - 1];
 u8 limit_x;
+static volatile u8 virtual_puzzle;
 
 void
 draw_my_box(int pos_x, int pos_y, u16 color)
@@ -109,6 +110,46 @@ select_my_wall(int pos_x, int pos_y, u16 color)
 		}
 	}
 }
+
+u16 set_color(int n) {
+	switch (n) {
+	case 0:
+		return COLOR_YELLOW;
+	case 1:
+		return COLOR_RED;
+	case 2:
+		return COLOR_GREEN;
+	case 3:
+		return COLOR_BLUE;
+	case 4:
+		return COLOR_PURPLE;
+	}
+}
+
+void write_puzzle(u8 value)
+{
+	virtual_puzzle = value & 0x3F;
+}
+
+static
+u8
+read_puzzle(void)
+{
+	touchPosition touch;
+
+	if (!(virtual_puzzle & 0x3F))
+		return 0;
+	touchRead(&touch);
+	touch.py = touch.py / BIG_BOX_HEIGHT;
+	touch.px = touch.px / BIG_BOX_WIDTH;
+	if ((touch.py < 0) || (touch.py > 5) || (touch.px < 0) || (touch.px > 5))
+		return 0;
+	if (!(virtual_puzzle & (0x20 >> touch.py)))
+		return 0;
+	return (0x20 >> touch.px);
+}
+
+
 extern xTaskHandle BallTask;
 
 void
@@ -138,22 +179,6 @@ Exp_8_Homework_A(void)
 		vTaskDelay(10);		// Wait while START KEY is being pressed
 }
 
-
-u16 set_color(int n) {
-	switch (n) {
-	case 0:
-		return COLOR_YELLOW;
-	case 1:
-		return COLOR_RED;
-	case 2:
-		return COLOR_GREEN;
-	case 3:
-		return COLOR_BLUE;
-	case 4:
-		return COLOR_PURPLE;
-	}
-}
-
 void
 Exp_8_Homework_B(void)
 {
@@ -164,17 +189,21 @@ Exp_8_Homework_B(void)
 
 	srand((int)time(NULL));
 
+	/*
 	for (i = 0; i < N_PUZZLE; i++)
 		for (j = 0; j < N_PUZZLE; j++)
 			draw_my_wall(i, j, set_color(rand() % N_BLOCK));
-
+	 */
 	while (1) {
 		key = getkey();
+		printf("%d ", key);
+		/*
 		if (key < N_PUZZLE) {
 			select_my_wall(old_key, old_key, COLOR_GRAY);
 			select_my_wall(key, key, COLOR_SELECT);
 			old_key = key;
 		}
+		 */
 	}
 }
 
@@ -268,6 +297,30 @@ portTASK_FUNCTION(Key_Task, pvParameters)
 		// Fill Here
 
 		if (!key_pressed) {
+
+			write_puzzle(0x20 >> scan);
+			key = scan * 6;
+
+			pre_line = read_puzzle();
+			switch (read_puzzle()) {
+			case 32 : key += 1; break;
+			case 16 : key += 2; break;
+			case 8 : key += 3; break;
+			case 4 : key += 4; break;
+			case 2 : key += 5; break;
+			case 1 : key += 6;
+			default : key = 255; break;
+			}
+
+			scan++;
+			if (scan == 6)
+				scan = 0;
+
+			if (key <= 36) {
+				key_pressed = TRUE;
+				xQueueSend(KeyQueue, &key, 0);
+			}
+			/*
 			writeb_virtual_io(KEY_MATRIX, 0x80 >> scan);
 			key = scan * 4;
 
@@ -288,12 +341,21 @@ portTASK_FUNCTION(Key_Task, pvParameters)
 				key_pressed = TRUE;
 				xQueueSend(KeyQueue, &key, 0);
 			}
+			 */
 		}
 
+		/*
 		if (key_pressed
 				&& ((readb_virtual_io(KEY_MATRIX) == 0)
 						|| (readb_virtual_io(KEY_MATRIX) != pre_line)))
 			key_pressed = FALSE;
+		 */
+
+		if (key_pressed
+				&& ((read_puzzle() == 0)
+						|| (read_puzzle() != pre_line)))
+			key_pressed = FALSE;
+
 		vTaskDelay(MSEC2TICK(25));
 	}
 }
