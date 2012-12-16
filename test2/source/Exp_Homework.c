@@ -144,8 +144,7 @@ read_puzzle(void)
 	touch.px = (touch.px / BIG_BOX_WIDTH) - 2;
 	if ((touch.py < 0) || (touch.py > 5) || (touch.px < 0) || (touch.px > 5))
 		return 0;
-	if (!(virtual_puzzle & (0x20 >> touch.py)))
-		return 0;
+	if (!(virtual_puzzle & (0x20 >> touch.py))) return 0;
 	return (0x20 >> touch.px);
 }
 
@@ -190,11 +189,10 @@ Exp_8_Homework_B(void)
 
 	srand((int)time(NULL));
 
-/*
 	for (i = SP; i < SP + N_PUZZLE; i++)
 		for (j = 0; j < N_PUZZLE; j++)
 			draw_my_wall(i, j, set_color(rand() % N_BLOCK));
-*/
+
 	while (1) {
 		key = getkey();
 
@@ -202,12 +200,12 @@ Exp_8_Homework_B(void)
 			printf("%d ", key);
 			//select_my_wall(old_key, old_key, COLOR_GRAY);
 			//select_my_wall(key, key, COLOR_SELECT);
-			/*
+
 			key--;
 			select_my_wall(old_key % N_PUZZLE + SP, old_key / N_PUZZLE, COLOR_GRAY);
 			select_my_wall(key % N_PUZZLE + SP, key / N_PUZZLE, COLOR_SELECT);
 			old_key = key;
-			*/
+
 		}
 
 	}
@@ -314,7 +312,7 @@ portTASK_FUNCTION(Key_Task, pvParameters)
 			case 8 : key += 3; break;
 			case 4 : key += 4; break;
 			case 2 : key += 5; break;
-			case 1 : key += 6;
+			case 1 : key += 6; break;
 			default : key = 255; break;
 			}
 
