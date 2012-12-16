@@ -189,21 +189,24 @@ Exp_8_Homework_B(void)
 
 	srand((int)time(NULL));
 
-	/*
+
 	for (i = 0; i < N_PUZZLE; i++)
 		for (j = 0; j < N_PUZZLE; j++)
 			draw_my_wall(i, j, set_color(rand() % N_BLOCK));
-	 */
+
 	while (1) {
 		key = getkey();
-		printf("%d ", key);
-		/*
-		if (key < N_PUZZLE) {
-			select_my_wall(old_key, old_key, COLOR_GRAY);
-			select_my_wall(key, key, COLOR_SELECT);
+		//printf("%d ", key);
+
+		if (key <= 36) {
+			//select_my_wall(old_key, old_key, COLOR_GRAY);
+			//select_my_wall(key, key, COLOR_SELECT);
+			key--;
+			select_my_wall(old_key % N_PUZZLE, old_key / N_PUZZLE, COLOR_GRAY);
+			select_my_wall(key % N_PUZZLE, key / N_PUZZLE, COLOR_SELECT);
 			old_key = key;
 		}
-		 */
+
 	}
 }
 
