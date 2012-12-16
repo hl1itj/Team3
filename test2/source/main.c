@@ -26,8 +26,8 @@ int
 main(void)
 {
 	InitDebug();
-	init_virtual_io(ENABLE_SW | ENABLE_MATRIX);	// Enable Virtual LED's on Top Screen
-	//init_printf();							// Initialize Bottom Screen for printf()
+	//init_virtual_io(ENABLE_SW | ENABLE_MATRIX);	// Enable Virtual LED's on Top Screen
+	init_printf();							// Initialize Bottom Screen for printf()
 
 	xTaskCreate(Key_Task,
 					     (const signed char * const)"Key_Task",
