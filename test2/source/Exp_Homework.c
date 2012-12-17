@@ -166,15 +166,18 @@ u8 is_switching_position(u8 old_key, u8 key)
 		if (((old_x-1) == x) && (old_y == y))
 			return TRUE;
 	}
-	else if (old_x < 5) {
+
+	if (old_x < 5) {
 		if (((old_x+1) == x) && (old_y == y))
 			return TRUE;
 	}
-	else if (old_y > 0) {
+
+	if (old_y > 0) {
 		if (((old_y-1) == y) && (old_x == x))
 			return TRUE;
 	}
-	else if (old_y < 5) {
+
+	if (old_y < 5) {
 		if (((old_y+1) == y) && (old_x == x))
 			return TRUE;
 	}
@@ -274,7 +277,6 @@ Exp_8_Homework_B(void)
 					select_my_wall(PUZZLE_X(old_key), PUZZLE_Y(old_key), COLOR_GRAY);
 				}
 				else if (is_switching_position(old_key, key)) {
-					select_my_wall(0, 0, COLOR_SELECT);
 					selected = FALSE;
 					select_my_wall(PUZZLE_X(old_key), PUZZLE_Y(old_key), COLOR_GRAY);
 					switching_color(old_key, key);
