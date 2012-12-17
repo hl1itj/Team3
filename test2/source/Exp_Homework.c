@@ -43,16 +43,16 @@
 #define SP				2
 #define N_PUZZLE		6
 #define N_BLOCK		5
-#define PUZZLE_X(key)	((key) % N_PUZZLE)
-#define PUZZLE_Y(key)	((key) / N_PUZZLE)
-#define SCREEN_X(key)	(((key) % N_PUZZLE) + SP)
-#define SCREEN_Y(key)	((key) / N_PUZZLE)
+#define PUZZLE_X(x)	((x) % N_PUZZLE)
+#define PUZZLE_Y(x)	((x) / N_PUZZLE)
+#define SCREEN_X(x)	(((x) % N_PUZZLE) + SP)
+#define SCREEN_Y(x)	((x) / N_PUZZLE)
 
 // �ʿ��� global ����
 xSemaphoreHandle xSemaphore[BIG_BOX_X_MAX - 1];
 u8 limit_x;
-static volatile u8 virtual_puzzle;
-static volatile u8 puzzle[N_PUZZLE][N_PUZZLE];
+volatile u8 virtual_puzzle;
+u8 puzzle[N_PUZZLE][N_PUZZLE];
 
 void
 draw_my_box(int pos_x, int pos_y, u16 color)
@@ -94,8 +94,8 @@ draw_my_wall(int pos_x, int pos_y, u16 color)
 		}
 	}
 }
-void
-select_my_wall(int pos_x, int pos_y, u16 color)
+
+void select_my_wall(int pos_x, int pos_y, u16 color)
 {
 	// draw big white box
 	int i, j;
@@ -120,7 +120,7 @@ select_my_wall(int pos_x, int pos_y, u16 color)
 	}
 }
 
-u16 set_color(int n) {
+u16 set_color(u8 n) {
 	switch (n) {
 	case 0:
 		return COLOR_YELLOW;
@@ -140,9 +140,7 @@ void write_puzzle(u8 value)
 	virtual_puzzle = value & 0x3F;
 }
 
-static
-u8
-read_puzzle(void)
+u8 read_puzzle(void)
 {
 	touchPosition touch;
 
@@ -240,13 +238,14 @@ Exp_8_Homework_B(void)
 	u8 old_key = -1;
 	u8 key;
 	u8 selected = FALSE;
+	u8 color;
 
 	// random으로 puzzle 초기화
 	srand((int)time(NULL));
-	for (i = SP; i < SP + N_PUZZLE; i++)
+	for (i = 0; i < N_PUZZLE; i++)
 		for (j = 0; j < N_PUZZLE; j++) {
-			u8 color = rand() % N_BLOCK;
-			draw_my_wall(i, j, set_color(color));
+			color = rand() % N_BLOCK;
+			draw_my_wall(i + SP, j, set_color(color));
 			puzzle[i][j] = color;
 		}
 
