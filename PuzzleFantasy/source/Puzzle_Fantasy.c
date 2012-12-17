@@ -16,7 +16,7 @@
 #define COLOR_YELLOW     RGB(31, 31, 0) /* Bright White */
 #define COLOR_BLACK     RGB( 0,  0,  0)	/* Black : Zero	*/
 #define COLOR_GRAY     RGB(16, 16, 16)
-#define COLOR_GREEN     RGB( 0, 31,  0) /* Bright White */
+#define COLOR_GREEN     RGB( 0, 31,  0) /* Bright Green */
 #define COLOR_BLUE      RGB( 0,  0, 31) /* Bright White */
 #define COLOR_PURPLE     RGB(16, 0, 16) /* Bright White */
 #define COLOR_SELECT     RGB(31, 0, 31) /* Bright White */
@@ -120,7 +120,7 @@ read_puzzle(void)
 		return 0;
 	touchRead(&touch);
 	touch.py = (touch.py / BLOCK_HEIGHT);
-	touch.px = (touch.px / BLOCK_WIDTH) - 2;
+	touch.px = (touch.px / BLOCK_WIDTH) - SP;
 	if ((touch.py < 0) || (touch.py > 5) || (touch.px < 0) || (touch.px > 5))
 		return 0;
 	if (!(virtual_puzzle & (0x20 >> touch.py))) return 0;
@@ -177,7 +177,13 @@ switching_color(u8 old_key, u8 key)
 }
 
 void
-Puzzle(void)
+cancel_out_block()
+{
+
+}
+
+void
+Game(void)
 {
 	int i, j;
 	u8 old_key = -1;
@@ -193,6 +199,8 @@ Puzzle(void)
 			draw_block(i + SP, j, set_color(color));
 			puzzle[i][j] = color;
 		}
+	// BLOCK 상쇄 되는지 확인
+
 
 	/* key입력에 따른 처리 pusedo code */
 	///////////////////////////////////////////////
@@ -202,6 +210,7 @@ Puzzle(void)
 	// selected == true인 경우
 	// 		key == old_key라면, 선택 해제
 	//		선택한 puzzle의 상하좌우 라면, 위치 바꿈
+	//		가능하다면 puzzle 상쇄
 	///////////////////////////////////////////////
 	while (1) {
 		key = getkey();
@@ -226,6 +235,9 @@ Puzzle(void)
 					selected = FALSE;
 					select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
 					switching_color(old_key, key);
+					// BLOCK 상쇄 되는지 확인
+					cancel_out_block();
+					// 적용가능한 행동이 있다면 행동함
 				}
 			}
 		}

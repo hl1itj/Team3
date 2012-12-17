@@ -63,12 +63,12 @@ InitDebug(void)
 #endif
 }
 
-void Puzzle(void);
+void Game(void);
 
 static
 portTASK_FUNCTION(Main_Task, pvParameters)
 {
 	while (1) {
-		Puzzle();
+		Game();
 	}
 }
