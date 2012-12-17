@@ -40,10 +40,17 @@
 #define BIG_RATE	(BIG_BOX_WIDTH / BOX_WIDTH)
 #define SEM(x)	(((x) / BIG_RATE) - 1)
 
+#define SP				2
+#define N_PUZZLE		6
+#define N_BLOCK		5
+#define PUZZLE_X(key)	(((key) % N_PUZZLE) + SP)
+#define PUZZLE_Y(key)	((key) / N_PUZZLE)
+
 // �ʿ��� global ����
 xSemaphoreHandle xSemaphore[BIG_BOX_X_MAX - 1];
 u8 limit_x;
 static volatile u8 virtual_puzzle;
+u8 puzzle[N_PUZZLE][N_PUZZLE];
 
 void
 draw_my_box(int pos_x, int pos_y, u16 color)
@@ -148,6 +155,49 @@ read_puzzle(void)
 	return (0x20 >> touch.px);
 }
 
+u8 is_switching_position(u8 old_key, u8 key)
+{
+	u8 old_x, old_y;
+	u8 x, y;
+	old_x = PUZZLE_X(old_key); old_y = PUZZLE_Y(old_key);
+	x = PUZZLE_X(key); y = PUZZLE_Y(key);
+
+	if (old_x > 0) {
+		if (((old_x-1) == x) && (old_y == y))
+			return TRUE;
+	}
+	else if (old_x < 5) {
+		if (((old_x+1) == x) && (old_y == y))
+			return TRUE;
+	}
+	else if (old_y > 0) {
+		if (((old_y-1) == y) && (old_x == x))
+			return TRUE;
+	}
+	else if (old_y < 5) {
+		if (((old_y+1) == y) && (old_x == x))
+			return TRUE;
+	}
+
+	return FALSE;
+}
+
+void switching_color(u8 old_key, u8 key)
+{
+	u8 old_x, old_y;
+	u8 x, y;
+	u8 temp;
+
+	old_x = PUZZLE_X(old_key); old_y = PUZZLE_Y(old_key);
+	x = PUZZLE_X(key); y = PUZZLE_Y(key);
+
+	temp = puzzle[old_x][old_y];
+	puzzle[old_x][old_y] = puzzle[x][y];
+	puzzle[x][y] = temp;
+
+	draw_my_wall(old_x, old_y, set_color(puzzle[old_x][old_y]));
+	draw_my_wall(x, y, set_color(puzzle[x][y]));
+}
 
 extern xTaskHandle BallTask;
 
@@ -182,32 +232,55 @@ void
 Exp_8_Homework_B(void)
 {
 	int i, j;
-	u8 old_key = 0, key;
-	const int SP = 2;
-	const int N_PUZZLE = 6;
-	const int N_BLOCK = 5;
+	u8 old_key = -1;
+	u8 key;
+	u8 selected = FALSE;
 
+	// random으로 puzzle 초기화
 	srand((int)time(NULL));
-
 	for (i = SP; i < SP + N_PUZZLE; i++)
-		for (j = 0; j < N_PUZZLE; j++)
-			draw_my_wall(i, j, set_color(rand() % N_BLOCK));
+		for (j = 0; j < N_PUZZLE; j++) {
+			u8 color = rand() % N_BLOCK;
+			draw_my_wall(i, j, set_color(color));
+			puzzle[i][j] = color;
+		}
 
+	/* key입력에 따른 처리 pusedo code */
+	///////////////////////////////////////////////
+	// getkey
+	// selected == false인 경우
+	// 		key 값에 따라 puzzle 선택
+	// selected == true인 경우
+	// 		key == old_key라면, 선택 해제
+	//		선택한 puzzle의 상하좌우 라면, 위치 바꿈
+	///////////////////////////////////////////////
 	while (1) {
 		key = getkey();
 
 		if (key <= 36) {
 			printf("%d ", key);
-			//select_my_wall(old_key, old_key, COLOR_GRAY);
-			//select_my_wall(key, key, COLOR_SELECT);
-
 			key--;
-			select_my_wall(old_key % N_PUZZLE + SP, old_key / N_PUZZLE, COLOR_GRAY);
-			select_my_wall(key % N_PUZZLE + SP, key / N_PUZZLE, COLOR_SELECT);
-			old_key = key;
 
+			if (!selected) {
+				selected = TRUE;
+				if (old_key != -1)
+					select_my_wall(PUZZLE_X(old_key), PUZZLE_Y(old_key), COLOR_GRAY);
+				select_my_wall(PUZZLE_X(key), PUZZLE_Y(key), COLOR_SELECT);
+				old_key = key;
+			}
+			else {
+				if (key == old_key) {
+					selected = FALSE;
+					select_my_wall(PUZZLE_X(old_key), PUZZLE_Y(old_key), COLOR_GRAY);
+				}
+				else if (is_switching_position(old_key, key)) {
+					select_my_wall(0, 0, COLOR_SELECT);
+					selected = FALSE;
+					select_my_wall(PUZZLE_X(old_key), PUZZLE_Y(old_key), COLOR_GRAY);
+					switching_color(old_key, key);
+				}
+			}
 		}
-
 	}
 }
 
@@ -288,6 +361,8 @@ getkey(void)
 	return key;
 }
 
+// 4*4 key matrix 입력을 6*6 입력으로 바꿈
+// 기존의 key scan하는 방식과 동일
 portTASK_FUNCTION(Key_Task, pvParameters)
 {
 	// Variables
