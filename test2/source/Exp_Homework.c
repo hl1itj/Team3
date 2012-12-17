@@ -43,14 +43,16 @@
 #define SP				2
 #define N_PUZZLE		6
 #define N_BLOCK		5
-#define PUZZLE_X(key)	(((key) % N_PUZZLE) + SP)
+#define PUZZLE_X(key)	((key) % N_PUZZLE)
 #define PUZZLE_Y(key)	((key) / N_PUZZLE)
+#define SCREEN_X(key)	(((key) % N_PUZZLE) + SP)
+#define SCREEN_Y(key)	((key) / N_PUZZLE)
 
 // �ʿ��� global ����
 xSemaphoreHandle xSemaphore[BIG_BOX_X_MAX - 1];
 u8 limit_x;
 static volatile u8 virtual_puzzle;
-u8 puzzle[N_PUZZLE][N_PUZZLE];
+static volatile u8 puzzle[N_PUZZLE][N_PUZZLE];
 
 void
 draw_my_box(int pos_x, int pos_y, u16 color)
@@ -198,8 +200,8 @@ void switching_color(u8 old_key, u8 key)
 	puzzle[old_x][old_y] = puzzle[x][y];
 	puzzle[x][y] = temp;
 
-	draw_my_wall(old_x, old_y, set_color(puzzle[old_x][old_y]));
-	draw_my_wall(x, y, set_color(puzzle[x][y]));
+	draw_my_wall(SCREEN_X(old_key), SCREEN_Y(old_key), set_color(puzzle[old_x][old_y]));
+	draw_my_wall(SCREEN_X(key), SCREEN_Y(key), set_color(puzzle[x][y]));
 }
 
 extern xTaskHandle BallTask;
@@ -267,18 +269,18 @@ Exp_8_Homework_B(void)
 			if (!selected) {
 				selected = TRUE;
 				if (old_key != -1)
-					select_my_wall(PUZZLE_X(old_key), PUZZLE_Y(old_key), COLOR_GRAY);
-				select_my_wall(PUZZLE_X(key), PUZZLE_Y(key), COLOR_SELECT);
+					select_my_wall(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
+				select_my_wall(SCREEN_X(key), SCREEN_Y(key), COLOR_SELECT);
 				old_key = key;
 			}
 			else {
 				if (key == old_key) {
 					selected = FALSE;
-					select_my_wall(PUZZLE_X(old_key), PUZZLE_Y(old_key), COLOR_GRAY);
+					select_my_wall(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
 				}
 				else if (is_switching_position(old_key, key)) {
 					selected = FALSE;
-					select_my_wall(PUZZLE_X(old_key), PUZZLE_Y(old_key), COLOR_GRAY);
+					select_my_wall(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
 					switching_color(old_key, key);
 				}
 			}
