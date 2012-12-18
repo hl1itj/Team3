@@ -285,6 +285,7 @@ void check_puzzle(void)
 
 			// 폭발 이미지
 
+
 			// 일정 시간 delay
 			for (i = 0; i < 1000000; i++);
 
