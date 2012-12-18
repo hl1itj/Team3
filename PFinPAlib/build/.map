@@ -1,0 +1,2431 @@
+Archive member included because of file (symbol)
+
+c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+                              main.o (PA_CheckLid)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+                              main.o (PA_Init)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_VBLCountersReset)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o) (PA_UpdatePad)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (RandomValue)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_InitSpriteExtPal)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_UpdateUserInfo)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_UseGraffiti)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_ResetSpriteSys)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_textpal)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (pa_bittextpoliceheight)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o) (PA_TiledFont)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_BmpFont0)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_BmpFont1)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_BmpFont2)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_BmpFont3)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_BmpFont4)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Map.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_TiledFont_Map)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Pal.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_TiledFont_Pal)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Tiles.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_TiledFont_Tiles)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Map.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o) (PA_BmpFont0_Map)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Sizes.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o) (PA_BmpFont0_Sizes)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Tiles.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_BmpFont0_Tiles_size)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Map.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o) (PA_BmpFont1_Map)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Sizes.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o) (PA_BmpFont1_Sizes)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Tiles.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_BmpFont1_Tiles_size)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Map.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o) (PA_BmpFont2_Map)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Sizes.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o) (PA_BmpFont2_Sizes)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Tiles.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_BmpFont2_Tiles_size)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Map.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o) (PA_BmpFont3_Map)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Sizes.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o) (PA_BmpFont3_Sizes)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Tiles.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_BmpFont3_Tiles_size)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Map.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o) (PA_BmpFont4_Map)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Sizes.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o) (PA_BmpFont4_Sizes)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Tiles.bin.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_BmpFont4_Tiles_size)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o) (PA_BgInfo)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o) (PA_Error)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (PA_InitFifo)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o) (PA_LoadText)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o) (PA_SetBgPalNCol)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o) (PA_SetVideoMode)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o) (bit8_tiles)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o) (c16_tiles)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o) (PA_StoreEasyBgInfos)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o) (PA_InfLargeScrollXN)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o) (PA_LoadRotBgMap)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o) (PA_DrawBg)
+c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o) (PA_Keyboard_Struct)
+c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o) (keyboard_Map)
+c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o) (keyboard_Palette)
+c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o) (keyboard_Tiles)
+c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o) (scanKeys)
+c:/devkitPro/libnds/lib\libnds9.a(system.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (powerOn)
+c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o) (touchRead)
+c:/devkitPro/libnds/lib\libnds9.a(video.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (vramSetMainBanks)
+c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o (initSystem)
+c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA.o) (fifoSendValue32)
+c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA.o) (irqSet)
+c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o (__libnds_exit)
+c:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o) (DC_FlushRange)
+c:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o (__libnds_mpu_setup)
+c:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA.o) (swiDelay)
+c:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+                              c:/devkitPro/libnds/lib\libnds9.a(interrupts.o) (IntrMain)
+c:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+                              c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o) (swiSoftReset)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_divsi3.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o) (__aeabi_idiv)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_dvmd_tls.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_divsi3.o) (__aeabi_idiv0)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_addsubdf3.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o) (__aeabi_dsub)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_muldivdf3.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o) (__aeabi_dmul)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_cmpdf2.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o) (__aeabi_dcmplt)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_fixdfsi.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o) (__aeabi_d2iz)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_muldi3.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o) (__aeabi_lmul)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o) (gmtime)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime_r.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime.o) (gmtime_r)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime.o) (_impure_ptr)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o (__libc_init_array)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o) (setlocale)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o) (malloc)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o) (_malloc_r)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mbtowc_r.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o) (__utf8_mbtowc)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o) (memcpy)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mktm_r.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime_r.o) (_mktm_r)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o) (__malloc_lock)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcasecmp.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o) (strcasecmp)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcat.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o) (strcat)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strchr.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o) (strchr)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcmp.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o) (strcmp)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcpy.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o) (strcpy)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlcpy.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o) (strlcpy)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlen.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o) (strlen)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncasecmp.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o) (strncasecmp)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncmp.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o) (strncmp)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncpy.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o) (strncpy)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strtol.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o) (_strtol_r)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-sysstat.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o) (stat)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-time.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o) (time)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzlock.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mktm_r.o) (__tz_lock)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzvars.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mktm_r.o) (_daylight)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-wctomb_r.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o) (__utf8_wctomb)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-ctype_.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o) (__set_ctype)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o) (_free_r)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-getenv_r.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o) (_getenv_r)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gettzinfo.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mktm_r.o) (__gettzinfo)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-environ.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-getenv_r.o) (environ)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-envlock.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-getenv_r.o) (__env_lock)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o) (_sbrk_r)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(stat.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-sysstat.o) (_stat_r)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(times.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-time.o) (_gettimeofday_r)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o (fake_heap_start)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(build_argv.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o (build_argv)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+                              c:/devkitPro/libnds/lib\libnds9.a(initSystem.o) (__syscalls)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(dirent.o)
+                              c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o) (opendir)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(iosupport.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(stat.o) (FindDevice)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_udivsi3.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strtol.o) (__aeabi_uidiv)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-errno.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(times.o) (__errno)
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strnlen.o)
+                              c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(dirent.o) (strnlen)
+
+Allocating common symbols
+Common symbol       size              file
+
+PA_ScreenSpace      0x2               c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+PA_Reco             0xc               c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+fifo_datamsg_data   0x40              c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+PA_Draw16           0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+PA_RTC              0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+free_mem            0x2000            c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+PadPointer          0x4               c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+__dsimode           0x1               c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+fifo_buffer         0x800             c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+PA_texttiles        0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+n_free_mem          0x4               c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+PA_SpritePrio       0x100             c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+PA_LetterPos        0x3004            c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+PA_olddowntime      0x4               c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+PA_Keyboard_Struct  0x12              c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+PA_parallaxY        0x20              c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+PA_VBLCounter       0x40              c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+used_mem            0x800             c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+fifo_value32_func   0x40              c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+fifo_address_func   0x40              c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+PA_parallaxX        0x20              c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+PA_DrawBg32         0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+pa_checklid         0x1               c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+PA_RecoInfo         0x18              c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+spriteanims         0x2400            c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+PA_SpriteAnimP      0x2000            c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+PA_IPC              0x198             c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+Pad                 0x27              c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+PA_TextBox          0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+PAbgtext            0x2               c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+tempsize            0x2               c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+pa_printx           0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+pa_bittextpoliceheight
+                    0xa               c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+Stylus              0x1c              c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+PA_first            0x200             c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+pa_bittextsizes     0xa               c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+fifo_value32_data   0x40              c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+charblocks          0x8c              c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+PA_next             0x100             c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+PA_bgmap            0x20              c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+PA_GifInfo          0x14              c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+fifo_value32_queue  0x40              c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+PA_StylusPos        0x9c40            c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+fifo_data_queue     0x40              c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+rotbg_size          0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+PA_VBLCounterOn     0x10              c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+pa_printy           0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+PA_DrawBg           0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+PA_oldx             0x4               c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+textcol             0x4               c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+PA_drawsize         0x2               c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+obj_per_gfx         0x800             c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+PA_CustomShape      0xd48             c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+PA_RecoShape        0x10              c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+pa_printscroll      0x4               c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+PA_oldy             0x4               c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+PA_MovedSprite      0x10              c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+PA_BgInfo           0x220             c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+tempvar             0x2               c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+punixTime           0x4               c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(times.o)
+fifo_address_data   0x40              c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+_PA_LidDown         0x1               c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+PA_temppal          0x200             c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+PA_UserInfo         0x52              c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+scrollpos           0xe0              c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+PA_obj              0x800             c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+DualSpriteX         0x100             c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+PA_textpal          0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+PA_nBit             0x2               c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+fifo_datamsg_func   0x40              c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+PA_Draw1632         0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+pa_obj_created      0x100             c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+fifo_address_queue  0x40              c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+PA_textmap          0x8               c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+PA_ExtPal           0x4               c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x08000000         0x02000000
+ewram            0x02000000         0x003ff000
+dtcm             0x0b000000         0x00004000
+vectors          0x01000000         0x00000100
+itcm             0x01000100         0x00007f00
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x01000000                __vectors_start = ORIGIN (vectors)
+                0x01000100                __itcm_start = ORIGIN (itcm)
+                0x023ff000                __ewram_end = (ORIGIN (ewram) + 0x3ff000)
+                0x023ff000                __eheap_end = (ORIGIN (ewram) + 0x3ff000)
+                0x0b000000                __dtcm_start = ORIGIN (dtcm)
+                0x0b004000                __dtcm_top = (ORIGIN (dtcm) + 0x4000)
+                0x0b003ff8                __irq_flags = (__dtcm_top - 0x8)
+                0x0b003ffc                __irq_vector = (__dtcm_top - 0x4)
+                0x0b003f00                __sp_svc = (__dtcm_top - 0x100)
+                0x0b003e00                __sp_irq = (__sp_svc - 0x100)
+                0x0b003d00                __sp_usr = (__sp_irq - 0x100)
+
+.init           0x02000000      0x23c
+                0x02000000                __text_start = .
+ *(.init)
+ .init          0x02000000      0x230 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o
+                0x02000000                _start
+ .init          0x02000230        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crti.o
+                0x02000230                _init
+ .init          0x02000234        0x8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtn.o
+                0x0200023c                . = ALIGN (0x4)
+
+.plt
+ *(.plt)
+
+.text           0x02000240     0xbd68
+ *(EXCLUDE_FILE(*.itcm*) .text)
+ .text          0x02000240        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o
+ .text          0x02000240        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crti.o
+ .text          0x02000240       0xd0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtbegin.o
+ .text          0x02000310        0x0 main.o
+ .text          0x02000310       0xbc c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+                0x02000310                PA_SetBrightness
+                0x02000350                PA_Nothing
+                0x02000354                PA_CheckLid
+ .text          0x020003cc      0x278 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+                0x020003cc                PA_Init2D
+                0x02000428                PA_Init
+ .text          0x02000644       0x78 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+                0x02000644                PA_VBLCountersReset
+                0x02000664                PA_vblFunc
+ .text          0x020006bc      0x2e0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+                0x020006bc                PA_UpdatePad
+                0x020008d4                PA_UpdateStylus
+ .text          0x0200099c      0x158 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+                0x0200099c                PA_AdjustAngle
+ .text          0x02000af4      0x244 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+                0x02000af4                PA_LoadSpriteExtPal
+                0x02000bac                PA_InitSpriteExtPal
+                0x02000c04                PA_LoadBgPalN
+                0x02000cd4                PA_InitBgExtPal
+ .text          0x02000d38       0xc4 c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+                0x02000d38                PA_UpdateUserInfo
+                0x02000dbc                PA_UpdateRTC
+ .text          0x02000dfc      0x4e4 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+                0x02000dfc                PA_StylusLine
+                0x02000f5c                PA_AnalyzeShape
+                0x0200125c                PA_CheckLetter
+ .text          0x020012e0      0x7dc c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+                0x020012e0                PA_InitSpriteExtPrio
+                0x02001314                PA_ResetSpriteSysScreen
+                0x02001468                PA_ResetSpriteSys
+                0x02001484                PA_CreateGfx
+                0x020015e0                PA_DeleteGfx
+                0x0200177c                PA_DeleteSprite
+                0x020018d0                PA_InitSpriteDraw
+                0x02001930                PA_UpdateOAM
+                0x02001a84                PA_UpdateSpriteVBL
+ *fill*         0x02001abc        0x4 ff
+ .text          0x02001ac0      0xa98 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+                0x02001ac0                PA_CreateTextPal
+                0x02001b6c                PA_LoadDefaultText
+                0x02001c34                PA_OutputSimpleText
+                0x02001d10                PA_OutputText
+                0x020024b0                PA_ClearTextBg
+ .text          0x02002558      0x428 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+                0x02002558                PA_DoAlign
+                0x020026ac                PA_DoLetterPos
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Map.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Pal.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Tiles.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Map.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Sizes.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Tiles.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Map.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Sizes.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Tiles.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Map.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Sizes.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Tiles.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Map.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Sizes.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Tiles.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Map.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Sizes.bin.o)
+ .text          0x02002980        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Tiles.bin.o)
+ .text          0x02002980      0x6f0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+                0x02002980                PA_ReLoadBgTiles
+                0x020029c8                PA_InitBg
+                0x02002ab0                PA_DeleteTiles
+                0x02002b44                PA_LoadBgTilesEx
+                0x02002d54                PA_DeleteMap
+                0x02002dd0                PA_LoadBgMap
+                0x02002f4c                PA_ResetBgSysScreen
+                0x02003060                PA_ResetBgSys
+ .text          0x02003070       0x84 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+                0x02003070                PA_Error
+                0x02003090                _PA_Assert
+ .text          0x020030f4       0x50 c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+                0x020030f4                PA_FifoMsgHandler
+                0x02003130                PA_InitFifo
+ .text          0x02003144      0x824 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+                0x02003144                PA_LoadBackground
+                0x02003640                PA_LoadText
+                0x02003774                PA_LoadKeyboard
+                0x020038c8                PA_AddBitmapFont
+                0x02003918                PA_Add16cFont
+ .text          0x02003968      0x1e8 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+                0x02003968                PA_CreatePalBright
+                0x02003a2c                PA_CreatePalTransition
+                0x02003a94                PA_SetBgPalNCol
+                0x02003ae4                PA_SetSpritePalCol
+                0x02003b2c                PA_3DSetSpritePalCol
+ .text          0x02003b50      0x1b4 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+                0x02003b50                PA_SetVideoMode
+                0x02003b74                PA_Locate
+ .text          0x02003d04     0x1230 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+                0x02003d04                NoLetter
+                0x02003d08                Letter
+                0x020040f8                RotLetter2
+                0x0200453c                RotLetter
+                0x02004984                TranspLetter
+                0x02004da8                pa_8bitTextDecompress
+                0x02004e20                PA_8bitText
+                0x02004ed0                PA_CenterSmartText
+ .text          0x02004f34      0x6d0 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+                0x02004f34                PA_16c8X8Color
+                0x0200508c                PA_Init16cBgEx
+                0x0200522c                pa_16cTextDecompress
+                0x020052b8                PA_16cText
+                0x0200543c                PA_16cErase
+                0x02005474                PA_16cClearZone
+ .text          0x02005604      0x338 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+                0x02005604                PA_EasyBgScrollX
+                0x02005690                PA_EasyBgScrollY
+                0x0200571c                PA_StoreEasyBgInfos
+                0x02005758                PA_EasyBgLoadEx
+ .text          0x0200593c      0xccc c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+                0x0200593c                PA_LargeScrollXN
+                0x02005af8                PA_LargeScrollYN
+                0x02005ca8                PA_InfLargeScrollXN
+                0x02005e8c                PA_InfLargeScrollYN
+                0x02006074                PA_UpdateTileEngineX
+                0x020061b0                PA_UpdateTileEngineY
+                0x020062e8                PA_InfTilesScrollX
+                0x02006378                PA_InfTilesScrollY
+                0x02006408                PA_InitLargeBg
+ .text          0x02006608      0x188 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+                0x02006608                PA_LoadRotBgMap
+ .text          0x02006790      0x2b4 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+                0x02006790                PA_LoadBmpToBuffer
+ .text          0x02006a44      0x604 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+                0x02006a44                PA_ReloadKeyboardCol
+                0x02006b24                PA_LoadDefaultKeyboard
+                0x02006c80                PA_ChangeKeyboardType
+                0x02006e00                PA_SetLetterPal
+                0x02006f20                PA_CheckKeyboard
+ .text          0x02007048        0x0 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+ .text          0x02007048        0x0 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+ .text          0x02007048        0x0 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+ .text          0x02007048       0xf4 c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+                0x02007048                scanKeys
+                0x020070b4                keysHeld
+                0x020070c0                keysDown
+                0x020070d0                keysDownRepeat
+                0x020070e0                keysSetRepeat
+                0x020070f8                keysUp
+                0x02007108                keysCurrent
+ .text          0x0200713c      0x128 c:/devkitPro/libnds/lib\libnds9.a(system.o)
+                0x0200713c                setSDcallback
+                0x02007148                systemMsgHandler
+                0x0200718c                systemSleep
+                0x020071a4                systemValueHandler
+                0x020071e0                powerOn
+                0x0200720c                powerOff
+                0x02007234                ledBlink
+                0x02007244                getBatteryLevel
+ .text          0x02007264       0x4c c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+                0x02007264                touchRead
+                0x0200728c                touchReadXY
+ .text          0x020072b0      0x1f8 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+                0x020072b0                vramSetPrimaryBanks
+                0x020072f4                vramSetMainBanks
+                0x02007338                vramSetBanks_EFG
+                0x02007370                vramRestorePrimaryBanks
+                0x0200737c                vramRestoreMainBanks
+                0x02007388                vramRestoreBanks_EFG
+                0x02007394                setBrightness
+                0x020073d4                vramDefault
+ .text          0x020074a8      0x140 c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+                0x020074a8                initSystem
+ .text          0x020075e8      0xc58 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x0200783c                fifoSendAddress
+                0x02007868                fifoSendValue32
+                0x020078a8                fifoSendDatamsg
+                0x02007918                fifoGetAddress
+                0x02007990                fifoSetAddressHandler
+                0x02007a04                fifoGetValue32
+                0x02007a78                fifoSetValue32Handler
+                0x02007aec                fifoGetDatamsg
+                0x02007f70                fifoSetDatamsgHandler
+                0x02008008                fifoCheckAddress
+                0x0200802c                fifoCheckDatamsg
+                0x02008050                fifoCheckValue32
+                0x02008074                fifoInit
+ .text          0x02008240      0x1ec c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+                0x02008240                irqDummy
+                0x02008244                irqSet
+                0x020082b0                irqInit
+                0x020082fc                irqInitHandler
+                0x0200832c                irqEnable
+                0x02008390                irqDisable
+                0x020083f4                irqClear
+ .text          0x0200842c       0x58 c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+                0x0200842c                systemErrorExit
+                0x02008430                __libnds_exit
+ .text          0x02008484       0x70 c:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+                0x02008484                DC_FlushAll
+                0x020084b0                DC_FlushRange
+                0x020084cc                DC_InvalidateAll
+                0x020084d8                DC_InvalidateRange
+ .text          0x020084f4      0x1b4 c:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+                0x020084f4                __libnds_mpu_setup
+                0x02008634                memCached
+                0x0200864c                memUncached
+ *fill*         0x020086a8        0x8 ff
+ .text          0x020086b0       0x70 c:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+                0x020086b0                swiDelay
+                0x020086b4                swiIntrWait
+                0x020086b8                swiWaitForVBlank
+                0x020086bc                swiSleep
+                0x020086c0                swiChangeSoundBias
+                0x020086c4                swiDivide
+                0x020086c8                swiRemainder
+                0x020086ce                swiDivMod
+                0x020086da                swiCopy
+                0x020086de                swiFastCopy
+                0x020086e2                swiSqrt
+                0x020086e6                swiCRC16
+                0x020086ea                swiIsDebugger
+                0x020086ee                swiUnpackBits
+                0x020086f2                swiDecompressLZSSWram
+                0x020086f6                swiDecompressLZSSVramNTR
+                0x020086fa                swiDecompressLZSSVramTWL
+                0x020086fe                swiDecompressHuffman
+                0x02008702                swiDecompressRLEWram
+                0x02008706                swiDecompressRLEVram
+                0x0200870a                swiWaitForIRQ
+                0x0200870e                swiDecodeDelta8
+                0x02008712                swiDecodeDelta16
+                0x02008716                swiSetHaltCR
+ .text          0x02008720        0x0 c:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .text          0x02008720       0x30 c:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+                0x02008720                swiSoftReset
+ .text          0x02008750      0x150 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_divsi3.o)
+                0x02008750                __divsi3
+                0x02008750                __aeabi_idiv
+                0x02008880                __aeabi_idivmod
+ .text          0x020088a0        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_dvmd_tls.o)
+                0x020088a0                __aeabi_idiv0
+                0x020088a0                __aeabi_ldiv0
+ .text          0x020088a4      0x41c c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_addsubdf3.o)
+                0x020088a4                __aeabi_drsub
+                0x020088ac                __aeabi_dsub
+                0x020088ac                __subdf3
+                0x020088b0                __aeabi_dadd
+                0x020088b0                __adddf3
+                0x02008bc0                __floatunsidf
+                0x02008bc0                __aeabi_ui2d
+                0x02008be4                __floatsidf
+                0x02008be4                __aeabi_i2d
+                0x02008c0c                __aeabi_f2d
+                0x02008c0c                __extendsfdf2
+                0x02008c4c                __floatundidf
+                0x02008c4c                __aeabi_ul2d
+                0x02008c60                __floatdidf
+                0x02008c60                __aeabi_l2d
+ .text          0x02008cc0      0x49c c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_muldivdf3.o)
+                0x02008cc0                __aeabi_dmul
+                0x02008cc0                __muldf3
+                0x02008f50                __divdf3
+                0x02008f50                __aeabi_ddiv
+ .text          0x0200915c      0x144 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_cmpdf2.o)
+                0x0200915c                __gtdf2
+                0x0200915c                __gedf2
+                0x02009164                __ltdf2
+                0x02009164                __ledf2
+                0x0200916c                __nedf2
+                0x0200916c                __eqdf2
+                0x0200916c                __cmpdf2
+                0x020091f4                __aeabi_cdrcmple
+                0x02009210                __aeabi_cdcmpeq
+                0x02009210                __aeabi_cdcmple
+                0x02009228                __aeabi_dcmpeq
+                0x02009240                __aeabi_dcmplt
+                0x02009258                __aeabi_dcmple
+                0x02009270                __aeabi_dcmpge
+                0x02009288                __aeabi_dcmpgt
+ .text          0x020092a0       0x5c c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_fixdfsi.o)
+                0x020092a0                __aeabi_d2iz
+                0x020092a0                __fixdfsi
+ .text          0x020092fc       0x4c c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_muldi3.o)
+                0x020092fc                __muldi3
+                0x020092fc                __aeabi_lmul
+ .text          0x02009348       0x18 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime.o)
+                0x02009348                gmtime
+ .text          0x02009360       0x10 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime_r.o)
+                0x02009360                gmtime_r
+ .text          0x02009370        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+ .text          0x02009370       0x54 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
+                0x02009370                __libc_init_array
+ .text          0x020093c4      0x950 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o)
+                0x02009ab8                _setlocale_r
+                0x02009cb4                __locale_charset
+                0x02009cbc                __locale_mb_cur_max
+                0x02009cc8                __locale_msgcharset
+                0x02009cd4                __locale_cjk_lang
+                0x02009ce0                _localeconv_r
+                0x02009cec                setlocale
+                0x02009d08                localeconv
+ .text          0x02009d14       0x30 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
+                0x02009d14                malloc
+                0x02009d2c                free
+ .text          0x02009d44      0x51c c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x02009d44                _malloc_r
+ .text          0x0200a260      0x584 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mbtowc_r.o)
+                0x0200a260                __utf8_mbtowc
+                0x0200a4c0                _mbtowc_r
+                0x0200a4fc                __ascii_mbtowc
+                0x0200a52c                __sjis_mbtowc
+                0x0200a5ec                __eucjp_mbtowc
+                0x0200a6b4                __jis_mbtowc
+ .text          0x0200a7e4       0x90 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
+                0x0200a7e4                memcpy
+ .text          0x0200a874      0x498 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mktm_r.o)
+                0x0200a874                __tzcalc_limits
+                0x0200aa10                _mktm_r
+ .text          0x0200ad0c        0x8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+                0x0200ad0c                __malloc_lock
+                0x0200ad10                __malloc_unlock
+ .text          0x0200ad14       0x50 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcasecmp.o)
+                0x0200ad14                strcasecmp
+ .text          0x0200ad64       0x50 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcat.o)
+                0x0200ad64                strcat
+ .text          0x0200adb4       0xd4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strchr.o)
+                0x0200adb4                strchr
+ .text          0x0200ae88       0x14 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcmp.o)
+                0x0200ae88                strcmp
+ .text          0x0200ae9c       0x10 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcpy.o)
+                0x0200ae9c                strcpy
+ .text          0x0200aeac       0x48 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlcpy.o)
+                0x0200aeac                strlcpy
+ .text          0x0200aef4       0x10 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlen.o)
+                0x0200aef4                strlen
+ .text          0x0200af04       0x60 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncasecmp.o)
+                0x0200af04                strncasecmp
+ .text          0x0200af64       0xbc c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncmp.o)
+                0x0200af64                strncmp
+ .text          0x0200b020       0x60 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncpy.o)
+                0x0200b020                strncpy
+ .text          0x0200b080      0x190 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strtol.o)
+                0x0200b080                _strtol_r
+                0x0200b1f0                strtol
+ .text          0x0200b210       0x1c c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-sysstat.o)
+                0x0200b210                stat
+ .text          0x0200b22c       0x30 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-time.o)
+                0x0200b22c                time
+ .text          0x0200b25c        0x8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzlock.o)
+                0x0200b25c                __tz_lock
+                0x0200b260                __tz_unlock
+ .text          0x0200b264        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzvars.o)
+ .text          0x0200b264      0x2a4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-wctomb_r.o)
+                0x0200b264                __utf8_wctomb
+                0x0200b318                _wctomb_r
+                0x0200b350                __ascii_wctomb
+                0x0200b370                __sjis_wctomb
+                0x0200b3ec                __eucjp_wctomb
+                0x0200b488                __jis_wctomb
+ .text          0x0200b508       0x10 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-ctype_.o)
+                0x0200b508                __set_ctype
+ .text          0x0200b518      0x238 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+                0x0200b518                _malloc_trim_r
+                0x0200b5bc                _free_r
+ .text          0x0200b750       0xa8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-getenv_r.o)
+                0x0200b750                _findenv_r
+                0x0200b7e8                _getenv_r
+ .text          0x0200b7f8        0x8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gettzinfo.o)
+                0x0200b7f8                __gettzinfo
+ .text          0x0200b800        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-environ.o)
+ .text          0x0200b800        0x8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-envlock.o)
+                0x0200b800                __env_lock
+                0x0200b804                __env_unlock
+ .text          0x0200b808       0x54 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+                0x0200b808                _sbrk_r
+ .text          0x0200b85c       0x40 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(stat.o)
+                0x0200b85c                _stat_r
+ .text          0x0200b89c       0x44 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(times.o)
+                0x0200b89c                _times
+                0x0200b8b0                _times_r
+                0x0200b8b8                _gettimeofday_r
+ .text          0x0200b8e0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+ .text          0x0200b8e0       0x4c c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(build_argv.o)
+                0x0200b8e0                build_argv
+ .text          0x0200b92c        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+ .text          0x0200b92c      0x340 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(dirent.o)
+                0x0200b9ac                opendir
+                0x0200ba58                closedir
+                0x0200bab8                readdir
+                0x0200bb5c                readdir_r
+                0x0200bbe8                rewinddir
+                0x0200bc00                seekdir
+                0x0200bc54                telldir
+ .text          0x0200bc6c      0x144 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(iosupport.o)
+                0x0200bc6c                setDefaultDevice
+                0x0200bc80                FindDevice
+                0x0200bcf0                RemoveDevice
+                0x0200bd14                AddDevice
+                0x0200bd90                GetDeviceOpTab
+ .text          0x0200bdb0      0x11c c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_udivsi3.o)
+                0x0200bdb0                __aeabi_uidiv
+                0x0200bdb0                __udivsi3
+                0x0200beac                __aeabi_uidivmod
+ .text          0x0200becc        0xc c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-errno.o)
+                0x0200becc                __errno
+ .text          0x0200bed8       0x34 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strnlen.o)
+                0x0200bed8                strnlen
+ .text          0x0200bf0c        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtend.o
+ .text          0x0200bf0c        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtn.o
+ *(.text.*)
+ .text.startup  0x0200bf0c       0x1c main.o
+                0x0200bf0c                main
+ .text.startup.stub
+                0x0200bf28       0x78 linker stubs
+ *(.stub)
+ *(.gnu.warning)
+ *(.gnu.linkonce.t*)
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+                0x0200bfa0                . = ALIGN (0x4)
+
+.vfp11_veneer   0x0200bfa8        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x0200bfa8        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x0200bfa8        0x0
+ .iplt          0x00000000        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o
+
+.fini           0x0200bfa8        0xc
+ *(.fini)
+ .fini          0x0200bfa8        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crti.o
+                0x0200bfa8                _fini
+ .fini          0x0200bfac        0x8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtn.o
+                0x0200bfb4                __text_end = .
+
+.rodata         0x0200bfb4     0xcdf4
+ *(.rodata)
+ .rodata        0x0200bfb4       0x40 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+                0x0200bfb4                winfades
+ .rodata        0x0200bff4      0x400 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+                0x0200bff4                PA_SIN
+ .rodata        0x0200c3f4       0x30 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+                0x0200c3f4                PA_obj_sizes
+                0x0200c40c                PA_size
+ .rodata        0x0200c424       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+                0x0200c424                PA_TiledFont
+ .rodata        0x0200c444       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+                0x0200c444                PA_BmpFont0
+ .rodata        0x0200c464       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+                0x0200c464                PA_BmpFont1
+ .rodata        0x0200c484       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+                0x0200c484                PA_BmpFont2
+ .rodata        0x0200c4a4       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+                0x0200c4a4                PA_BmpFont3
+ .rodata        0x0200c4c4       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+                0x0200c4c4                PA_BmpFont4
+ .rodata        0x0200c4e4      0x604 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Map.bin.o)
+                0x0200c4e4                PA_TiledFont_Map
+                0x0200cae4                PA_TiledFont_Map_size
+                0x0200cae4                PA_TiledFont_Map_end
+ .rodata        0x0200cae8      0x204 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Pal.bin.o)
+                0x0200cae8                PA_TiledFont_Pal
+                0x0200cce8                PA_TiledFont_Pal_end
+                0x0200cce8                PA_TiledFont_Pal_size
+ .rodata        0x0200ccec     0x33c4 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Tiles.bin.o)
+                0x0200ccec                PA_TiledFont_Tiles
+                0x020100ac                PA_TiledFont_Tiles_size
+                0x020100ac                PA_TiledFont_Tiles_end
+ .rodata        0x020100b0      0x204 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Map.bin.o)
+                0x020100b0                PA_BmpFont0_Map
+                0x020102b0                PA_BmpFont0_Map_end
+                0x020102b0                PA_BmpFont0_Map_size
+ .rodata        0x020102b4      0x104 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Sizes.bin.o)
+                0x020102b4                PA_BmpFont0_Sizes
+                0x020103b4                PA_BmpFont0_Sizes_size
+                0x020103b4                PA_BmpFont0_Sizes_end
+ .rodata        0x020103b8      0x324 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Tiles.bin.o)
+                0x020103b8                PA_BmpFont0_Tiles
+                0x020106d8                PA_BmpFont0_Tiles_size
+                0x020106d8                PA_BmpFont0_Tiles_end
+ .rodata        0x020106dc      0x204 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Map.bin.o)
+                0x020106dc                PA_BmpFont1_Map
+                0x020108dc                PA_BmpFont1_Map_end
+                0x020108dc                PA_BmpFont1_Map_size
+ .rodata        0x020108e0      0x104 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Sizes.bin.o)
+                0x020108e0                PA_BmpFont1_Sizes
+                0x020109e0                PA_BmpFont1_Sizes_size
+                0x020109e0                PA_BmpFont1_Sizes_end
+ .rodata        0x020109e4      0x34c c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Tiles.bin.o)
+                0x020109e4                PA_BmpFont1_Tiles
+                0x02010d2c                PA_BmpFont1_Tiles_end
+                0x02010d2c                PA_BmpFont1_Tiles_size
+ .rodata        0x02010d30      0x804 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Map.bin.o)
+                0x02010d30                PA_BmpFont2_Map
+                0x02011530                PA_BmpFont2_Map_size
+                0x02011530                PA_BmpFont2_Map_end
+ .rodata        0x02011534      0x104 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Sizes.bin.o)
+                0x02011534                PA_BmpFont2_Sizes
+                0x02011634                PA_BmpFont2_Sizes_end
+                0x02011634                PA_BmpFont2_Sizes_size
+ .rodata        0x02011638      0x39c c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Tiles.bin.o)
+                0x02011638                PA_BmpFont2_Tiles
+                0x020119d0                PA_BmpFont2_Tiles_size
+                0x020119d0                PA_BmpFont2_Tiles_end
+ .rodata        0x020119d4      0x804 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Map.bin.o)
+                0x020119d4                PA_BmpFont3_Map
+                0x020121d4                PA_BmpFont3_Map_end
+                0x020121d4                PA_BmpFont3_Map_size
+ .rodata        0x020121d8      0x104 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Sizes.bin.o)
+                0x020121d8                PA_BmpFont3_Sizes
+                0x020122d8                PA_BmpFont3_Sizes_end
+                0x020122d8                PA_BmpFont3_Sizes_size
+ .rodata        0x020122dc      0x624 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Tiles.bin.o)
+                0x020122dc                PA_BmpFont3_Tiles
+                0x020128fc                PA_BmpFont3_Tiles_end
+                0x020128fc                PA_BmpFont3_Tiles_size
+ .rodata        0x02012900      0x804 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Map.bin.o)
+                0x02012900                PA_BmpFont4_Map
+                0x02013100                PA_BmpFont4_Map_size
+                0x02013100                PA_BmpFont4_Map_end
+ .rodata        0x02013104      0x104 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Sizes.bin.o)
+                0x02013104                PA_BmpFont4_Sizes
+                0x02013204                PA_BmpFont4_Sizes_end
+                0x02013204                PA_BmpFont4_Sizes_size
+ .rodata        0x02013208      0x834 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Tiles.bin.o)
+                0x02013208                PA_BmpFont4_Tiles
+                0x02013a38                PA_BmpFont4_Tiles_size
+                0x02013a38                PA_BmpFont4_Tiles_end
+ .rodata        0x02013a3c       0xf0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+                0x02013a3c                PA_Keyboard
+ .rodata        0x02013b2c     0x2000 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+                0x02013b2c                keyboard_Map
+ .rodata        0x02015b2c       0x20 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+                0x02015b2c                keyboard_Palette
+ .rodata        0x02015b4c     0x28a0 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+                0x02015b4c                keyboard_Tiles
+ .rodata        0x020183ec        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+                0x020183ec                _global_impure_ptr
+ .rodata        0x020183f0       0xf0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o)
+ .rodata        0x020184e0       0xa8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mbtowc_r.o)
+ .rodata        0x02018588       0x68 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mktm_r.o)
+ .rodata        0x020185f0      0x104 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-ctype_.o)
+                0x020185f0                _ctype_
+ .rodata        0x020186f4       0x64 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(iosupport.o)
+                0x020186f4                dotab_stdnull
+ *all.rodata*(*)
+ *(.roda)
+ *(.rodata.*)
+ .rodata.str1.4
+                0x02018758        0x2 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+                                  0x4 (size before relaxing)
+ *fill*         0x0201875a        0x2 ff
+ .rodata.str1.4
+                0x0201875c      0x234 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .rodata.str1.4
+                0x02018990      0x18f c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+                                0x190 (size before relaxing)
+ *fill*         0x02018b1f        0x1 ff
+ .rodata.str1.4
+                0x02018b20       0x26 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+                                 0x28 (size before relaxing)
+ *fill*         0x02018b46        0x2 ff
+ .rodata.str1.4
+                0x02018b48      0x128 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .rodata.str1.4
+                0x02018c70        0xa c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+                                  0xc (size before relaxing)
+ .rodata.str1.4
+                0x00000000        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+ *fill*         0x02018c7a        0x2 ff
+ .rodata.str1.4
+                0x02018c7c      0x120 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o)
+                                0x130 (size before relaxing)
+ .rodata.str1.4
+                0x02018d9c        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzvars.o)
+ .rodata.str1.4
+                0x02018da0        0x8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(iosupport.o)
+ *(.gnu.linkonce.r*)
+                0x02018da8                . = ALIGN (0x4)
+
+.rel.dyn        0x02018da8        0x0
+ .rel.iplt      0x00000000        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x02018da8                __exidx_start = .
+
+ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x02018da8                __exidx_end = .
+                0x02018da8                . = ALIGN (0x4)
+                0x02018da8                PROVIDE (__preinit_array_start, .)
+
+.preinit_array
+ *(.preinit_array)
+                0x02018da8                PROVIDE (__preinit_array_end, .)
+                0x02018da8                PROVIDE (__init_array_start, .)
+
+.init_array     0x02018da8        0x4
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x02018da8        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtbegin.o
+                0x02018dac                PROVIDE (__init_array_end, .)
+                0x02018dac                PROVIDE (__fini_array_start, .)
+
+.fini_array     0x02018dac        0x4
+ *(.fini_array)
+ .fini_array    0x02018dac        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x02018db0                PROVIDE (__fini_array_end, .)
+
+.ctors          0x02018db0        0x0
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x02018db0                . = ALIGN (0x4)
+
+.dtors          0x02018db0        0x0
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x02018db0                . = ALIGN (0x4)
+
+.eh_frame       0x02018db0        0x4
+ *(.eh_frame)
+ .eh_frame      0x02018db0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtbegin.o
+ .eh_frame      0x02018db0        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtend.o
+                0x02018db4                . = ALIGN (0x4)
+
+.gcc_except_table
+                0x02018db4        0x0
+ *(.gcc_except_table)
+                0x02018db4                . = ALIGN (0x4)
+
+.jcr            0x02018db4        0x4
+ *(.jcr)
+ .jcr           0x02018db4        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtbegin.o
+ .jcr           0x02018db4        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtend.o
+
+.got
+ *(.got.plt)
+ *(.got)
+ *(.rel.got)
+
+.ewram          0x02018db8        0x0
+                0x02018db8                __ewram_start = ABSOLUTE (.)
+ *(.ewram)
+ *ewram.*(.text)
+                0x02018db8                . = ALIGN (0x4)
+
+.data           0x02018db8      0xd90
+                0x02018db8                __data_start = ABSOLUTE (.)
+ *(.data)
+ .data          0x02018db8        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o
+ .data          0x02018db8        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crti.o
+ .data          0x02018db8        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtbegin.o
+                0x02018db8                __dso_handle
+ .data          0x02018dbc        0x0 main.o
+ .data          0x02018dbc        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+ .data          0x02018dbc        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .data          0x02018dbc       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+                0x02018dbc                SpriteVBL
+                0x02018dc0                MotionVBL
+                0x02018dc4                GHPadVBL
+                0x02018dc8                PaddleVBL
+                0x02018dcc                CustomVBL
+ .data          0x02018dd0        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .data          0x02018dd0        0x4 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+                0x02018dd0                RandomValue
+ .data          0x02018dd4        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .data          0x02018dd4        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .data          0x02018dd4      0x204 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+                0x02018dd4                PA_UseGraffiti
+                0x02018dd8                PA_Graffiti
+ .data          0x02018fd8        0x4 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+                0x02018fd8                VBLSpriteAnims
+ .data          0x02018fdc        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .data          0x02018fdc       0x7c c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+                0x02018fdc                textinfo
+                0x02018fe0                pa_bittextdefaultsize
+                0x02019008                bittext_maps
+                0x02019030                bittext_tiles_blank
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Map.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Pal.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Tiles.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Map.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Sizes.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Tiles.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Map.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Sizes.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Tiles.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Map.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Sizes.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Tiles.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Map.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Sizes.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Tiles.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Map.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Sizes.bin.o)
+ .data          0x02019058        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Tiles.bin.o)
+ .data          0x02019058       0x10 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+                0x02019058                charsetstart
+                0x0201905c                bg_place
+                0x02019060                bg_sizes
+ .data          0x02019068        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .data          0x02019068        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .data          0x02019068        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .data          0x02019068        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .data          0x02019068        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .data          0x02019068       0x3c c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+                0x02019068                bit8_tiles
+                0x02019090                letters
+ .data          0x020190a4       0x28 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+                0x020190a4                c16_tiles
+ .data          0x020190cc        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .data          0x020190cc        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .data          0x020190cc        0xc c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+                0x020190cc                rotbg_place
+                0x020190d0                rotbg_sizes
+ .data          0x020190d8        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .data          0x020190d8        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+ .data          0x020190d8        0x0 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+ .data          0x020190d8        0x0 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+ .data          0x020190d8        0x0 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+ .data          0x020190d8        0x3 c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .data          0x020190db        0x0 c:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .data          0x020190db        0x0 c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+ .data          0x020190db        0x0 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .data          0x020190db        0x0 c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ *fill*         0x020190db        0x1 ff
+ .data          0x020190dc       0x10 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x020190dc                fifo_buffer_free
+                0x020190e0                fifo_freewords
+                0x020190e4                fifo_send_queue
+                0x020190e8                fifo_receive_queue
+ .data          0x020190ec        0x0 c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .data          0x020190ec        0x0 c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .data          0x020190ec        0x0 c:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+ .data          0x020190ec        0x0 c:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+ .data          0x020190ec        0x0 c:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+ .data          0x020190ec        0x0 c:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .data          0x020190ec        0x0 c:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+ .data          0x020190ec        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_divsi3.o)
+ .data          0x020190ec        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_dvmd_tls.o)
+ .data          0x020190ec        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_addsubdf3.o)
+ .data          0x020190ec        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_muldivdf3.o)
+ .data          0x020190ec        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_cmpdf2.o)
+ .data          0x020190ec        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_fixdfsi.o)
+ .data          0x020190ec        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_muldi3.o)
+ .data          0x020190ec        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime.o)
+ .data          0x020190ec        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime_r.o)
+ *fill*         0x020190ec        0x4 ff
+ .data          0x020190f0      0x430 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+                0x020190f0                _impure_ptr
+ .data          0x02019520        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
+ .data          0x02019520      0x17c c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o)
+                0x02019520                __default_locale
+                0x02019640                __mb_cur_max
+ .data          0x0201969c        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
+ .data          0x0201969c      0x410 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x0201969c                __malloc_av_
+                0x02019aa4                __malloc_sbrk_base
+                0x02019aa8                __malloc_trim_threshold
+ .data          0x02019aac        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mbtowc_r.o)
+                0x02019aac                __mbtowc
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mktm_r.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcasecmp.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcat.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strchr.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcmp.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcpy.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlcpy.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlen.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncasecmp.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncmp.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncpy.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strtol.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-sysstat.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-time.o)
+ .data          0x02019ab0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzlock.o)
+ .data          0x02019ab0        0x8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzvars.o)
+                0x02019ab0                _tzname
+ .data          0x02019ab8        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-wctomb_r.o)
+                0x02019ab8                __wctomb
+ .data          0x02019abc        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-ctype_.o)
+                0x02019abc                __ctype_ptr__
+ .data          0x02019ac0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+ .data          0x02019ac0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-getenv_r.o)
+ .data          0x02019ac0       0x40 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gettzinfo.o)
+ .data          0x02019b00        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-environ.o)
+                0x02019b00                environ
+ .data          0x02019b04        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-envlock.o)
+ .data          0x02019b04        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+ .data          0x02019b04        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(stat.o)
+ .data          0x02019b04        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(times.o)
+ .data          0x02019b04        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+ .data          0x02019b04        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(build_argv.o)
+ .data          0x02019b04        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+ .data          0x02019b04        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(dirent.o)
+ .data          0x02019b04       0x44 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(iosupport.o)
+                0x02019b08                devoptab_list
+ .data          0x02019b48        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_udivsi3.o)
+ .data          0x02019b48        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-errno.o)
+ .data          0x02019b48        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strnlen.o)
+ .data          0x02019b48        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtend.o
+ .data          0x02019b48        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtn.o
+ *(.data.*)
+ *(.gnu.linkonce.d*)
+                0x02019b48                . = ALIGN (0x4)
+                0x02019b48                __data_end = ABSOLUTE (.)
+                0x02019b48                __dtcm_lma = .
+                0x02019b48                __bss_vma = .
+
+.igot.plt       0x02019b48        0x0
+ .igot.plt      0x00000000        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o
+
+.tm_clone_table
+                0x02019b48        0x0
+ .tm_clone_table
+                0x02019b48        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtbegin.o
+ .tm_clone_table
+                0x02019b48        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtend.o
+
+.dtcm           0x0b000000        0x0 load address 0x02019b48
+ *(.dtcm)
+ *(.dtcm.*)
+                0x0b000000                . = ALIGN (0x4)
+                0x0b000000                __dtcm_end = ABSOLUTE (.)
+                0x02019b48                __itcm_lma = (__dtcm_lma + SIZEOF (.dtcm))
+
+.itcm           0x01000100      0x194 load address 0x02019b48
+ *(.itcm)
+ .itcm          0x01000100       0xc8 c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+                0x01000100                irqTable
+ .itcm          0x010001c8       0xcc c:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+                0x010001c8                IntrMain
+ *itcm.*(.text)
+                0x01000294                . = ALIGN (0x4)
+                0x01000294                __itcm_end = ABSOLUTE (.)
+                0x02019cdc                __vectors_lma = (__itcm_lma + SIZEOF (.itcm))
+
+.vectors        0x01000000        0x0 load address 0x02019cdc
+ *(.vectors)
+ *vectors.*(.text)
+                0x01000000                . = ALIGN (0x4)
+                0x01000000                __vectors_end = ABSOLUTE (.)
+
+.sbss           0x0b000000        0x0
+                0x0b000000                __sbss_start = ABSOLUTE (.)
+                0x0b000000                __sbss_start__ = ABSOLUTE (.)
+ *(.sbss)
+                0x0b000000                . = ALIGN (0x4)
+                0x0b000000                __sbss_end = ABSOLUTE (.)
+
+.bss            0x02019b48    0x172b8
+                0x02019b48                __bss_start = ABSOLUTE (.)
+                0x02019b48                __bss_start__ = ABSOLUTE (.)
+ *(.dynbss)
+ *(.gnu.linkonce.b*)
+ *(.bss*)
+ .bss           0x02019b48        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o
+ .bss           0x02019b48        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crti.o
+ .bss           0x02019b48       0x1c c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtbegin.o
+ .bss           0x02019b64        0x0 main.o
+ .bss           0x02019b64        0x4 c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+                0x02019b64                pa_giftotexcolor
+                0x02019b66                PA_Screen
+                0x02019b67                PA_MoveSpriteType
+ .bss           0x02019b68        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .bss           0x02019b68        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+ .bss           0x02019b68        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .bss           0x02019b68        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .bss           0x02019b68        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .bss           0x02019b68        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .bss           0x02019b68        0x1 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+                0x02019b68                PA_CustomReco
+ *fill*         0x02019b69        0x3 00
+ .bss           0x02019b6c        0xc c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+                0x02019b6c                PA_SpriteExtPrio
+                0x02019b70                FirstGfx
+                0x02019b74                nspriteanims
+ .bss           0x02019b78        0x8 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+                0x02019b78                PAtext_pal
+                0x02019b7c                PA_font
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Map.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Pal.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Tiles.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Map.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Sizes.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Tiles.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Map.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Sizes.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Tiles.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Map.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Sizes.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Tiles.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Map.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Sizes.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Tiles.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Map.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Sizes.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Tiles.bin.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .bss           0x02019b80        0x0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .bss           0x02019b80        0x1 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+                0x02019b80                keyb_screen
+ .bss           0x02019b81        0x0 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+ .bss           0x02019b81        0x0 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+ .bss           0x02019b81        0x0 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+ *fill*         0x02019b81        0x1 00
+ .bss           0x02019b82        0x6 c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .bss           0x02019b88        0x4 c:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .bss           0x02019b8c        0x0 c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+ .bss           0x02019b8c        0x0 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .bss           0x02019b8c        0x0 c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .bss           0x02019b8c        0x8 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x02019b90                processing
+ .bss           0x02019b94        0x0 c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .bss           0x02019b94        0x0 c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .bss           0x02019b94        0x0 c:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+ .bss           0x02019b94        0x0 c:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+ .bss           0x02019b94        0x0 c:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+ .bss           0x02019b94        0x0 c:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .bss           0x02019b94        0x0 c:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+ .bss           0x02019b94        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_divsi3.o)
+ .bss           0x02019b94        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_dvmd_tls.o)
+ .bss           0x02019b94        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x02019b94        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_muldivdf3.o)
+ .bss           0x02019b94        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_cmpdf2.o)
+ .bss           0x02019b94        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_fixdfsi.o)
+ .bss           0x02019b94        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_muldi3.o)
+ .bss           0x02019b94        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime.o)
+ .bss           0x02019b94        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime_r.o)
+ .bss           0x02019b94        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+ .bss           0x02019b94        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
+ .bss           0x02019b94      0x2b8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o)
+                0x02019e40                _PathLocale
+                0x02019e44                __mlocale_changed
+                0x02019e48                __nlocale_changed
+ .bss           0x02019e4c        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
+ .bss           0x02019e4c       0x34 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x02019e4c                __malloc_top_pad
+                0x02019e50                __malloc_current_mallinfo
+                0x02019e78                __malloc_max_sbrked_mem
+                0x02019e7c                __malloc_max_total_mem
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mbtowc_r.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mktm_r.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcasecmp.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcat.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strchr.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcmp.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcpy.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlcpy.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlen.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncasecmp.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncmp.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncpy.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strtol.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-sysstat.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-time.o)
+ .bss           0x02019e80        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzlock.o)
+ .bss           0x02019e80        0x8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzvars.o)
+                0x02019e80                _timezone
+                0x02019e84                _daylight
+ .bss           0x02019e88        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-wctomb_r.o)
+ .bss           0x02019e88        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-ctype_.o)
+ .bss           0x02019e88        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+ .bss           0x02019e88        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-getenv_r.o)
+ .bss           0x02019e88        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gettzinfo.o)
+ .bss           0x02019e88        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-environ.o)
+ .bss           0x02019e8c        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-envlock.o)
+ .bss           0x02019e8c        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+ .bss           0x02019e90        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(stat.o)
+ .bss           0x02019e90        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(times.o)
+ .bss           0x02019e90        0x8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+                0x02019e90                fake_heap_start
+                0x02019e94                fake_heap_end
+ .bss           0x02019e98        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(build_argv.o)
+ .bss           0x02019e98        0x8 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+                0x02019e98                __syscalls
+ .bss           0x02019ea0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(dirent.o)
+ .bss           0x02019ea0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(iosupport.o)
+ .bss           0x02019ea0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_udivsi3.o)
+ .bss           0x02019ea0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-errno.o)
+ .bss           0x02019ea0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strnlen.o)
+ .bss           0x02019ea0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtend.o
+ .bss           0x02019ea0        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtn.o
+ *(COMMON)
+ COMMON         0x02019ea0      0x22c c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+                0x02019ea0                PA_ScreenSpace
+                0x02019ea4                PadPointer
+                0x02019ea8                pa_checklid
+                0x02019eac                PA_IPC
+                0x0201a044                Pad
+                0x0201a06c                Stylus
+                0x0201a088                PA_bgmap
+                0x0201a0a8                PA_GifInfo
+                0x0201a0bc                PA_MovedSprite
+ COMMON         0x0201a0cc       0x50 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+                0x0201a0cc                PA_VBLCounter
+                0x0201a10c                PA_VBLCounterOn
+ COMMON         0x0201a11c        0x1 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+                0x0201a11c                _PA_LidDown
+ *fill*         0x0201a11d        0x3 00
+ COMMON         0x0201a120        0x4 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+                0x0201a120                PA_ExtPal
+ COMMON         0x0201a124       0x5a c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+                0x0201a124                PA_RTC
+                0x0201a12c                PA_UserInfo
+ *fill*         0x0201a17e        0x2 00
+ COMMON         0x0201a180     0xa9bc c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+                0x0201a180                PA_Reco
+                0x0201a18c                PA_RecoInfo
+                0x0201a1a4                PA_StylusPos
+                0x02023de4                PA_CustomShape
+                0x02024b2c                PA_RecoShape
+ COMMON         0x02024b3c     0x8204 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+                0x02024b3c                free_mem
+                0x02026b3c                n_free_mem
+                0x02026b40                PA_SpritePrio
+                0x02026c40                used_mem
+                0x02027440                spriteanims
+                0x02029840                PA_SpriteAnimP
+                0x0202b840                PA_first
+                0x0202ba40                PA_next
+                0x0202bb40                obj_per_gfx
+                0x0202c340                PA_obj
+                0x0202cb40                DualSpriteX
+                0x0202cc40                pa_obj_created
+ COMMON         0x0202cd40       0x3c c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+                0x0202cd40                PA_texttiles
+                0x0202cd48                PA_TextBox
+                0x0202cd50                PAbgtext
+                0x0202cd54                pa_printx
+                0x0202cd5c                pa_printy
+                0x0202cd64                textcol
+                0x0202cd68                pa_printscroll
+                0x0202cd6c                PA_textpal
+                0x0202cd74                PA_textmap
+ COMMON         0x0202cd7c     0x301a c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+                0x0202cd7c                PA_LetterPos
+                0x0202fd80                pa_bittextpoliceheight
+                0x0202fd8c                pa_bittextsizes
+ *fill*         0x0202fd96        0x2 00
+ COMMON         0x0202fd98      0x3d0 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+                0x0202fd98                PA_parallaxY
+                0x0202fdb8                PA_parallaxX
+                0x0202fdd8                tempsize
+                0x0202fddc                charblocks
+                0x0202fe68                PA_BgInfo
+                0x02030088                scrollpos
+ COMMON         0x02030168       0x10 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+                0x02030168                PA_Draw16
+                0x02030170                PA_Draw1632
+ COMMON         0x02030178        0x8 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+                0x02030178                rotbg_size
+ COMMON         0x02030180      0x226 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+                0x02030180                PA_olddowntime
+                0x02030184                PA_DrawBg32
+                0x0203018c                PA_DrawBg
+                0x02030194                PA_oldx
+                0x02030198                PA_drawsize
+                0x0203019c                PA_oldy
+                0x020301a0                tempvar
+                0x020301a4                PA_temppal
+                0x020303a4                PA_nBit
+ *fill*         0x020303a6        0x2 00
+ COMMON         0x020303a8       0x12 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+                0x020303a8                PA_Keyboard_Struct
+ COMMON         0x020303ba        0x1 c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+                0x020303ba                __dsimode
+ *fill*         0x020303bb        0x1 00
+ COMMON         0x020303bc      0xa40 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x020303bc                fifo_datamsg_data
+                0x020303fc                fifo_buffer
+                0x02030bfc                fifo_value32_func
+                0x02030c3c                fifo_address_func
+                0x02030c7c                fifo_value32_data
+                0x02030cbc                fifo_value32_queue
+                0x02030cfc                fifo_data_queue
+                0x02030d3c                fifo_address_data
+                0x02030d7c                fifo_datamsg_func
+                0x02030dbc                fifo_address_queue
+ COMMON         0x02030dfc        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(times.o)
+                0x02030dfc                punixTime
+                0x02030e00                . = ALIGN (0x4)
+                0x02030e00                __bss_end__ = ABSOLUTE (.)
+                0x02030e00                __end__ = ABSOLUTE (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x66
+ *(.comment)
+ .comment       0x00000000       0x22 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtbegin.o
+                                 0x23 (size before relaxing)
+ .comment       0x00000000       0x23 main.o
+ .comment       0x00000022       0x22 c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+                                 0x23 (size before relaxing)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+ .comment       0x00000000       0x23 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+ .comment       0x00000044       0x22 c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+                                 0x23 (size before relaxing)
+ .comment       0x00000000       0x23 c:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .comment       0x00000000       0x23 c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+ .comment       0x00000000       0x23 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .comment       0x00000000       0x23 c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .comment       0x00000000       0x23 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .comment       0x00000000       0x23 c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .comment       0x00000000       0x23 c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_muldi3.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime_r.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mbtowc_r.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mktm_r.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcasecmp.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcat.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strchr.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcmp.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcpy.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlcpy.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlen.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncasecmp.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncmp.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncpy.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strtol.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-sysstat.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-time.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzlock.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzvars.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-wctomb_r.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-ctype_.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-getenv_r.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gettzinfo.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-environ.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-envlock.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(stat.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(times.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(build_argv.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(dirent.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(iosupport.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-errno.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strnlen.o)
+ .comment       0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtend.o
+
+.ARM.attributes
+                0x00000000       0x2d
+ .ARM.attributes
+                0x00000000       0x23 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o
+ .ARM.attributes
+                0x00000023       0x18 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crti.o
+ .ARM.attributes
+                0x0000003b       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtbegin.o
+ .ARM.attributes
+                0x0000006d       0x29 main.o
+ .ARM.attributes
+                0x00000096       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+ .ARM.attributes
+                0x000000bd       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .ARM.attributes
+                0x000000e4       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+ .ARM.attributes
+                0x0000010b       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .ARM.attributes
+                0x00000132       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .ARM.attributes
+                0x00000159       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .ARM.attributes
+                0x00000180       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .ARM.attributes
+                0x000001a7       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+ .ARM.attributes
+                0x000001ce       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .ARM.attributes
+                0x000001f5       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .ARM.attributes
+                0x0000021c       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .ARM.attributes
+                0x00000243       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+ .ARM.attributes
+                0x0000026a       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+ .ARM.attributes
+                0x00000291       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+ .ARM.attributes
+                0x000002b8       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+ .ARM.attributes
+                0x000002df       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+ .ARM.attributes
+                0x00000306       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+ .ARM.attributes
+                0x0000032d       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Map.bin.o)
+ .ARM.attributes
+                0x00000341       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Pal.bin.o)
+ .ARM.attributes
+                0x00000355       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont_Tiles.bin.o)
+ .ARM.attributes
+                0x00000369       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Map.bin.o)
+ .ARM.attributes
+                0x0000037d       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Sizes.bin.o)
+ .ARM.attributes
+                0x00000391       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0_Tiles.bin.o)
+ .ARM.attributes
+                0x000003a5       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Map.bin.o)
+ .ARM.attributes
+                0x000003b9       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Sizes.bin.o)
+ .ARM.attributes
+                0x000003cd       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1_Tiles.bin.o)
+ .ARM.attributes
+                0x000003e1       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Map.bin.o)
+ .ARM.attributes
+                0x000003f5       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Sizes.bin.o)
+ .ARM.attributes
+                0x00000409       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2_Tiles.bin.o)
+ .ARM.attributes
+                0x0000041d       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Map.bin.o)
+ .ARM.attributes
+                0x00000431       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Sizes.bin.o)
+ .ARM.attributes
+                0x00000445       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3_Tiles.bin.o)
+ .ARM.attributes
+                0x00000459       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Map.bin.o)
+ .ARM.attributes
+                0x0000046d       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Sizes.bin.o)
+ .ARM.attributes
+                0x00000481       0x14 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4_Tiles.bin.o)
+ .ARM.attributes
+                0x00000495       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .ARM.attributes
+                0x000004bc       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .ARM.attributes
+                0x000004e3       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .ARM.attributes
+                0x0000050a       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .ARM.attributes
+                0x00000531       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .ARM.attributes
+                0x00000558       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .ARM.attributes
+                0x0000057f       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .ARM.attributes
+                0x000005a6       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .ARM.attributes
+                0x000005cd       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .ARM.attributes
+                0x000005f4       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .ARM.attributes
+                0x0000061b       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .ARM.attributes
+                0x00000642       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .ARM.attributes
+                0x00000669       0x27 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+ .ARM.attributes
+                0x00000690       0x27 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+ .ARM.attributes
+                0x000006b7       0x27 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+ .ARM.attributes
+                0x000006de       0x27 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+ .ARM.attributes
+                0x00000705       0x29 c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .ARM.attributes
+                0x0000072e       0x29 c:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .ARM.attributes
+                0x00000757       0x29 c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+ .ARM.attributes
+                0x00000780       0x29 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .ARM.attributes
+                0x000007a9       0x29 c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .ARM.attributes
+                0x000007d2       0x29 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .ARM.attributes
+                0x000007fb       0x29 c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .ARM.attributes
+                0x00000824       0x29 c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .ARM.attributes
+                0x0000084d       0x1d c:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+ .ARM.attributes
+                0x0000086a       0x23 c:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+ .ARM.attributes
+                0x0000088d       0x1d c:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+ .ARM.attributes
+                0x000008aa       0x1d c:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .ARM.attributes
+                0x000008c7       0x23 c:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+ .ARM.attributes
+                0x000008ea       0x1a c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x00000904       0x18 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x0000091c       0x1a c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x00000936       0x1a c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x00000950       0x1a c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x0000096a       0x1a c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x00000984       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_muldi3.o)
+ .ARM.attributes
+                0x000009b6       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime.o)
+ .ARM.attributes
+                0x000009e8       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gmtime_r.o)
+ .ARM.attributes
+                0x00000a1a       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000a4c       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000a7e       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-locale.o)
+ .ARM.attributes
+                0x00000ab0       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-malloc.o)
+ .ARM.attributes
+                0x00000ae2       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+ .ARM.attributes
+                0x00000b14       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mbtowc_r.o)
+ .ARM.attributes
+                0x00000b46       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x00000b78       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mktm_r.o)
+ .ARM.attributes
+                0x00000baa       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x00000bdc       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcasecmp.o)
+ .ARM.attributes
+                0x00000c0e       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcat.o)
+ .ARM.attributes
+                0x00000c40       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strchr.o)
+ .ARM.attributes
+                0x00000c72       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x00000ca4       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strcpy.o)
+ .ARM.attributes
+                0x00000cd6       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlcpy.o)
+ .ARM.attributes
+                0x00000d08       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x00000d3a       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncasecmp.o)
+ .ARM.attributes
+                0x00000d6c       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncmp.o)
+ .ARM.attributes
+                0x00000d9e       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strncpy.o)
+ .ARM.attributes
+                0x00000dd0       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strtol.o)
+ .ARM.attributes
+                0x00000e02       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-sysstat.o)
+ .ARM.attributes
+                0x00000e34       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-time.o)
+ .ARM.attributes
+                0x00000e66       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzlock.o)
+ .ARM.attributes
+                0x00000e98       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzvars.o)
+ .ARM.attributes
+                0x00000eca       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-wctomb_r.o)
+ .ARM.attributes
+                0x00000efc       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-ctype_.o)
+ .ARM.attributes
+                0x00000f2e       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-freer.o)
+ .ARM.attributes
+                0x00000f60       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-getenv_r.o)
+ .ARM.attributes
+                0x00000f92       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-gettzinfo.o)
+ .ARM.attributes
+                0x00000fc4       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-environ.o)
+ .ARM.attributes
+                0x00000ff6       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-envlock.o)
+ .ARM.attributes
+                0x00001028       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+ .ARM.attributes
+                0x0000105a       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(stat.o)
+ .ARM.attributes
+                0x0000108c       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(times.o)
+ .ARM.attributes
+                0x000010be       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+ .ARM.attributes
+                0x000010f0       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(build_argv.o)
+ .ARM.attributes
+                0x00001122       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+ .ARM.attributes
+                0x00001154       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(dirent.o)
+ .ARM.attributes
+                0x00001186       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a(iosupport.o)
+ .ARM.attributes
+                0x000011b8       0x1a c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000011d2       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-errno.o)
+ .ARM.attributes
+                0x00001204       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-strnlen.o)
+ .ARM.attributes
+                0x00001236       0x32 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtend.o
+ .ARM.attributes
+                0x00001268       0x18 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtn.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x4c0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 main.o
+ .debug_aranges
+                0x00000020       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+ .debug_aranges
+                0x00000040       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .debug_aranges
+                0x00000060       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+ .debug_aranges
+                0x00000080       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .debug_aranges
+                0x000000a0       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .debug_aranges
+                0x000000c0       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .debug_aranges
+                0x000000e0       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .debug_aranges
+                0x00000100       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+ .debug_aranges
+                0x00000120       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .debug_aranges
+                0x00000140       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .debug_aranges
+                0x00000160       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .debug_aranges
+                0x00000180       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .debug_aranges
+                0x000001a0       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .debug_aranges
+                0x000001c0       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .debug_aranges
+                0x000001e0       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .debug_aranges
+                0x00000200       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .debug_aranges
+                0x00000220       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .debug_aranges
+                0x00000240       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .debug_aranges
+                0x00000260       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .debug_aranges
+                0x00000280       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .debug_aranges
+                0x000002a0       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .debug_aranges
+                0x000002c0       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .debug_aranges
+                0x000002e0       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .debug_aranges
+                0x00000300       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+ .debug_aranges
+                0x00000320       0x20 c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .debug_aranges
+                0x00000340       0x20 c:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .debug_aranges
+                0x00000360       0x20 c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+ .debug_aranges
+                0x00000380       0x20 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_aranges
+                0x000003a0       0x20 c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .debug_aranges
+                0x000003c0       0x20 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_aranges
+                0x000003e0       0x20 c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .debug_aranges
+                0x00000400       0x20 c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .debug_aranges
+                0x00000420       0x20 c:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+ .debug_aranges
+                0x00000440       0x20 c:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+ .debug_aranges
+                0x00000460       0x20 c:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+ .debug_aranges
+                0x00000480       0x20 c:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .debug_aranges
+                0x000004a0       0x20 c:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+
+.debug_pubnames
+                0x00000000     0x102e
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0xfe c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+ .debug_pubnames
+                0x000000fe       0x39 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .debug_pubnames
+                0x00000137       0xa4 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+ .debug_pubnames
+                0x000001db       0x47 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .debug_pubnames
+                0x00000222       0x40 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .debug_pubnames
+                0x00000262       0x76 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .debug_pubnames
+                0x000002d8       0x54 c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .debug_pubnames
+                0x0000032c       0xd1 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+ .debug_pubnames
+                0x000003fd      0x1e9 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .debug_pubnames
+                0x000005e6      0x11c c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .debug_pubnames
+                0x00000702       0xc4 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .debug_pubnames
+                0x000007c6       0x23 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+ .debug_pubnames
+                0x000007e9       0x22 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+ .debug_pubnames
+                0x0000080b       0x22 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+ .debug_pubnames
+                0x0000082d       0x22 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+ .debug_pubnames
+                0x0000084f       0x22 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+ .debug_pubnames
+                0x00000871       0x22 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+ .debug_pubnames
+                0x00000893      0x12e c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .debug_pubnames
+                0x000009c1       0x2e c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .debug_pubnames
+                0x000009ef       0x38 c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .debug_pubnames
+                0x00000a27       0x73 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .debug_pubnames
+                0x00000a9a       0x88 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .debug_pubnames
+                0x00000b22       0x34 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .debug_pubnames
+                0x00000b56       0xb4 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .debug_pubnames
+                0x00000c0a       0xb0 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .debug_pubnames
+                0x00000cba       0x68 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .debug_pubnames
+                0x00000d22       0xdf c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .debug_pubnames
+                0x00000e01       0x55 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .debug_pubnames
+                0x00000e56       0xa9 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .debug_pubnames
+                0x00000eff       0xc0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+ .debug_pubnames
+                0x00000fbf       0x23 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+ .debug_pubnames
+                0x00000fe2       0x27 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+ .debug_pubnames
+                0x00001009       0x25 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+
+.debug_info     0x00000000    0x3e463
+ *(.debug_info)
+ .debug_info    0x00000000     0x1d13 main.o
+ .debug_info    0x00001d13     0x2481 c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+ .debug_info    0x00004194     0x27ab c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .debug_info    0x0000693f     0x20b0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+ .debug_info    0x000089ef     0x2131 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .debug_info    0x0000ab20     0x20be c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .debug_info    0x0000cbde     0x2476 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .debug_info    0x0000f054     0x22dd c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .debug_info    0x00011331     0x2417 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+ .debug_info    0x00013748     0x275a c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .debug_info    0x00015ea2     0x24a8 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .debug_info    0x0001834a     0x2430 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .debug_info    0x0001a77a      0x1c6 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+ .debug_info    0x0001a940      0x1c6 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+ .debug_info    0x0001ab06      0x1c6 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+ .debug_info    0x0001accc      0x1c6 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+ .debug_info    0x0001ae92      0x1c6 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+ .debug_info    0x0001b058      0x1c6 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+ .debug_info    0x0001b21e     0x25f9 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .debug_info    0x0001d817     0x1ec0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .debug_info    0x0001f6d7     0x20fa c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .debug_info    0x000217d1     0x28a8 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .debug_info    0x00024079     0x2370 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .debug_info    0x000263e9     0x2186 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .debug_info    0x0002856f     0x349e c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .debug_info    0x0002ba0d     0x2770 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .debug_info    0x0002e17d     0x240e c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .debug_info    0x0003058b     0x2d35 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .debug_info    0x000332c0     0x2051 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .debug_info    0x00035311     0x21fe c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .debug_info    0x0003750f     0x24f4 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+ .debug_info    0x00039a03       0x54 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+ .debug_info    0x00039a57       0x53 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+ .debug_info    0x00039aaa       0x54 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+ .debug_info    0x00039afe      0x415 c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .debug_info    0x00039f13      0x91b c:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .debug_info    0x0003a82e      0x302 c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+ .debug_info    0x0003ab30      0x71e c:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_info    0x0003b24e     0x1030 c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .debug_info    0x0003c27e     0x1546 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_info    0x0003d7c4      0x5b4 c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .debug_info    0x0003dd78      0x323 c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .debug_info    0x0003e09b       0xba c:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+ .debug_info    0x0003e155       0xc4 c:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+ .debug_info    0x0003e219       0xbf c:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+ .debug_info    0x0003e2d8       0xc9 c:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .debug_info    0x0003e3a1       0xc2 c:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+
+.debug_abbrev   0x00000000     0x5d1f
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x231 main.o
+ .debug_abbrev  0x00000231      0x27d c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+ .debug_abbrev  0x000004ae      0x316 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .debug_abbrev  0x000007c4      0x23f c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+ .debug_abbrev  0x00000a03      0x224 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .debug_abbrev  0x00000c27      0x292 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .debug_abbrev  0x00000eb9      0x2ba c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .debug_abbrev  0x00001173      0x239 c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .debug_abbrev  0x000013ac      0x30a c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+ .debug_abbrev  0x000016b6      0x3b1 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .debug_abbrev  0x00001a67      0x363 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .debug_abbrev  0x00001dca      0x2b0 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .debug_abbrev  0x0000207a       0xcf c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+ .debug_abbrev  0x00002149       0xcf c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+ .debug_abbrev  0x00002218       0xcf c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+ .debug_abbrev  0x000022e7       0xcf c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+ .debug_abbrev  0x000023b6       0xcf c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+ .debug_abbrev  0x00002485       0xcf c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+ .debug_abbrev  0x00002554      0x314 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .debug_abbrev  0x00002868      0x1e6 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .debug_abbrev  0x00002a4e      0x211 c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .debug_abbrev  0x00002c5f      0x350 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .debug_abbrev  0x00002faf      0x29b c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .debug_abbrev  0x0000324a      0x248 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .debug_abbrev  0x00003492      0x34b c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .debug_abbrev  0x000037dd      0x374 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .debug_abbrev  0x00003b51      0x325 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .debug_abbrev  0x00003e76      0x340 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .debug_abbrev  0x000041b6      0x252 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .debug_abbrev  0x00004408      0x270 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .debug_abbrev  0x00004678      0x33d c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+ .debug_abbrev  0x000049b5       0x50 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+ .debug_abbrev  0x00004a05       0x50 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+ .debug_abbrev  0x00004a55       0x50 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+ .debug_abbrev  0x00004aa5      0x185 c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .debug_abbrev  0x00004c2a      0x26a c:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .debug_abbrev  0x00004e94      0x124 c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+ .debug_abbrev  0x00004fb8      0x209 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_abbrev  0x000051c1      0x2dc c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .debug_abbrev  0x0000549d      0x470 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_abbrev  0x0000590d      0x239 c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .debug_abbrev  0x00005b46      0x175 c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .debug_abbrev  0x00005cbb       0x14 c:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+ .debug_abbrev  0x00005ccf       0x14 c:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+ .debug_abbrev  0x00005ce3       0x14 c:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+ .debug_abbrev  0x00005cf7       0x14 c:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .debug_abbrev  0x00005d0b       0x14 c:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+
+.debug_line     0x00000000     0xad77
+ *(.debug_line)
+ .debug_line    0x00000000      0x3b0 main.o
+ .debug_line    0x000003b0      0x41c c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+ .debug_line    0x000007cc      0x4e5 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .debug_line    0x00000cb1      0x3f2 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+ .debug_line    0x000010a3      0x40f c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .debug_line    0x000014b2      0x45d c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .debug_line    0x0000190f      0x5ca c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .debug_line    0x00001ed9      0x40d c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .debug_line    0x000022e6      0x567 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+ .debug_line    0x0000284d      0x74e c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .debug_line    0x00002f9b      0x73b c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .debug_line    0x000036d6      0x532 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .debug_line    0x00003c08       0xee c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+ .debug_line    0x00003cf6       0xee c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+ .debug_line    0x00003de4       0xee c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+ .debug_line    0x00003ed2       0xee c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+ .debug_line    0x00003fc0       0xee c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+ .debug_line    0x000040ae       0xee c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+ .debug_line    0x0000419c      0x6df c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .debug_line    0x0000487b      0x390 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .debug_line    0x00004c0b      0x42d c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .debug_line    0x00005038      0x6b1 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .debug_line    0x000056e9      0x4b2 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .debug_line    0x00005b9b      0x401 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .debug_line    0x00005f9c      0xa84 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .debug_line    0x00006a20      0x5d8 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .debug_line    0x00006ff8      0x4eb c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .debug_line    0x000074e3      0xcaf c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .debug_line    0x00008192      0x422 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .debug_line    0x000085b4      0x50e c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .debug_line    0x00008ac2      0x64d c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+ .debug_line    0x0000910f       0x55 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+ .debug_line    0x00009164       0x55 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+ .debug_line    0x000091b9       0x55 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+ .debug_line    0x0000920e      0x23f c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .debug_line    0x0000944d      0x286 c:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .debug_line    0x000096d3      0x21e c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+ .debug_line    0x000098f1      0x241 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_line    0x00009b32      0x37e c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .debug_line    0x00009eb0      0x6c9 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_line    0x0000a579      0x26e c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .debug_line    0x0000a7e7      0x1cc c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .debug_line    0x0000a9b3       0xa2 c:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+ .debug_line    0x0000aa55      0x101 c:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+ .debug_line    0x0000ab56       0xc3 c:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+ .debug_line    0x0000ac19       0xc7 c:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .debug_line    0x0000ace0       0x97 c:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+
+.debug_frame    0x00000000     0x14cc
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x28 main.o
+ .debug_frame   0x00000028       0x54 c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+ .debug_frame   0x0000007c       0x54 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .debug_frame   0x000000d0       0x44 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+ .debug_frame   0x00000114       0x5c c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .debug_frame   0x00000170       0x3c c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .debug_frame   0x000001ac       0x70 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .debug_frame   0x0000021c       0x44 c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .debug_frame   0x00000260       0x84 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+ .debug_frame   0x000002e4      0x144 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .debug_frame   0x00000428       0xe0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .debug_frame   0x00000508       0x64 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .debug_frame   0x0000056c      0x124 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .debug_frame   0x00000690       0x48 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .debug_frame   0x000006d8       0x44 c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .debug_frame   0x0000071c       0xc8 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .debug_frame   0x000007e4       0xa8 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .debug_frame   0x0000088c       0x54 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .debug_frame   0x000008e0      0x150 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .debug_frame   0x00000a30       0xe8 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .debug_frame   0x00000b18       0xa4 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .debug_frame   0x00000bbc      0x18c c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .debug_frame   0x00000d48       0x3c c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .debug_frame   0x00000d84       0x3c c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .debug_frame   0x00000dc0       0xe0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+ .debug_frame   0x00000ea0       0x8c c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .debug_frame   0x00000f2c       0xc8 c:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .debug_frame   0x00000ff4       0x44 c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+ .debug_frame   0x00001038       0xc4 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_frame   0x000010fc       0x2c c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .debug_frame   0x00001128      0x2b8 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_frame   0x000013e0       0xb4 c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .debug_frame   0x00001494       0x38 c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+
+.debug_str      0x00000000     0x47f4
+ *(.debug_str)
+ .debug_str     0x00000000      0xd10 main.o
+                                0xe35 (size before relaxing)
+ .debug_str     0x00000d10      0x508 c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+                               0x1156 (size before relaxing)
+ .debug_str     0x00001218      0x89c c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+                               0x1707 (size before relaxing)
+ .debug_str     0x00001ab4       0x63 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+                                0xdf9 (size before relaxing)
+ .debug_str     0x00001b17       0x7f c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+                                0xe45 (size before relaxing)
+ .debug_str     0x00001b96       0x8f c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+                                0xda7 (size before relaxing)
+ .debug_str     0x00001c25      0x3a6 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+                               0x10d0 (size before relaxing)
+ .debug_str     0x00001fcb      0x1cf c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+                                0xf4f (size before relaxing)
+ .debug_str     0x0000219a      0x159 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+                                0xea8 (size before relaxing)
+ .debug_str     0x000022f3      0x235 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+                                0xfdb (size before relaxing)
+ .debug_str     0x00002528      0x165 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+                                0xf3f (size before relaxing)
+ .debug_str     0x0000268d      0x1e6 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+                                0xf39 (size before relaxing)
+ .debug_str     0x00002873       0xa3 c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+                                0x16f (size before relaxing)
+ .debug_str     0x00002916       0x43 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+                                0x16d (size before relaxing)
+ .debug_str     0x00002959       0x43 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+                                0x16d (size before relaxing)
+ .debug_str     0x0000299c       0x43 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+                                0x16d (size before relaxing)
+ .debug_str     0x000029df       0x43 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+                                0x16d (size before relaxing)
+ .debug_str     0x00002a22       0x43 c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+                                0x16d (size before relaxing)
+ .debug_str     0x00002a65      0x13f c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+                                0xfe6 (size before relaxing)
+ .debug_str     0x00002ba4       0x55 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+                                0xcb5 (size before relaxing)
+ .debug_str     0x00002bf9      0x11e c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+                                0xe45 (size before relaxing)
+ .debug_str     0x00002d17      0x12e c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+                                0xeee (size before relaxing)
+ .debug_str     0x00002e45      0x26f c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+                               0x11b1 (size before relaxing)
+ .debug_str     0x000030b4      0x181 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+                                0xe11 (size before relaxing)
+ .debug_str     0x00003235      0x119 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+                                0xf2f (size before relaxing)
+ .debug_str     0x0000334e      0x10d c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+                                0xf67 (size before relaxing)
+ .debug_str     0x0000345b       0x9e c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+                                0xd74 (size before relaxing)
+ .debug_str     0x000034f9      0x155 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+                                0xe09 (size before relaxing)
+ .debug_str     0x0000364e       0x59 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+                                0xdd6 (size before relaxing)
+ .debug_str     0x000036a7      0x15f c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+                                0xe94 (size before relaxing)
+ .debug_str     0x00003806      0x115 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+                                0xeba (size before relaxing)
+ .debug_str     0x0000391b       0x35 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.map.o)
+                                 0x61 (size before relaxing)
+ .debug_str     0x00003950       0x35 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.pal.o)
+                                 0x65 (size before relaxing)
+ .debug_str     0x00003985       0x35 c:/devkitPro/PAlib/lib\libpa9.a(keyboard.raw.o)
+                                 0x5e (size before relaxing)
+ .debug_str     0x000039ba      0x17b c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+                                0x2f5 (size before relaxing)
+ .debug_str     0x00003b35      0x2e8 c:/devkitPro/libnds/lib\libnds9.a(system.o)
+                                0x5dd (size before relaxing)
+ .debug_str     0x00003e1d       0x70 c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+                                0x211 (size before relaxing)
+ .debug_str     0x00003e8d      0x1e4 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+                                0xb3e (size before relaxing)
+ .debug_str     0x00004071      0x134 c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+                                0xa02 (size before relaxing)
+ .debug_str     0x000041a5      0x4b7 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                                0x793 (size before relaxing)
+ .debug_str     0x0000465c      0x10e c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+                                0x382 (size before relaxing)
+ .debug_str     0x0000476a       0x8a c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+                                0x2c6 (size before relaxing)
+
+.debug_loc      0x00000000     0xaf25
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x20 main.o
+ .debug_loc     0x00000020       0xa0 c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+ .debug_loc     0x000000c0      0x17d c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .debug_loc     0x0000023d       0x68 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+ .debug_loc     0x000002a5       0xb3 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .debug_loc     0x00000358      0x2f0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .debug_loc     0x00000648      0x3cd c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .debug_loc     0x00000a15       0xa1 c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .debug_loc     0x00000ab6      0x896 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+ .debug_loc     0x0000134c      0x87a c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .debug_loc     0x00001bc6      0xaea c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .debug_loc     0x000026b0      0x739 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .debug_loc     0x00002de9      0x88e c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .debug_loc     0x00003677       0xe2 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .debug_loc     0x00003759       0x7d c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .debug_loc     0x000037d6      0x922 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .debug_loc     0x000040f8      0x2fe c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .debug_loc     0x000043f6      0x150 c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .debug_loc     0x00004546     0x1c67 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .debug_loc     0x000061ad      0x7c6 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .debug_loc     0x00006973      0x57d c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .debug_loc     0x00006ef0     0x1617 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .debug_loc     0x00008507      0x223 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .debug_loc     0x0000872a      0x3e6 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .debug_loc     0x00008b10      0x5f3 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+ .debug_loc     0x00009103       0x20 c:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .debug_loc     0x00009123      0x2cf c:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .debug_loc     0x000093f2      0x115 c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+ .debug_loc     0x00009507      0x2a1 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_loc     0x000097a8       0x3f c:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .debug_loc     0x000097e7     0x149c c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_loc     0x0000ac83      0x22a c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .debug_loc     0x0000aead       0x78 c:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.stack          0x00080000        0x0
+                0x00080000                _stack = .
+ *(.stack)
+LOAD c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o
+LOAD c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crti.o
+LOAD c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtbegin.o
+LOAD main.o
+LOAD c:/devkitPro/PAlib/lib\libpa9.a
+LOAD c:/devkitPro/libnds/lib\libfilesystem.a
+LOAD c:/devkitPro/libnds/lib\libfat.a
+LOAD c:/devkitPro/libnds/lib\libnds9.a
+START GROUP
+LOAD c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb\libgcc.a
+LOAD c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libg.a
+LOAD c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libc.a
+LOAD c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb\libsysbase.a
+END GROUP
+LOAD c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtend.o
+LOAD c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/4.7.1/thumb/crtn.o
+OUTPUT(build.elf elf32-littlearm)
+
+.debug_ranges   0x00000000     0x2698
+ .debug_ranges  0x00000000       0x10 main.o
+ .debug_ranges  0x00000010       0xd8 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .debug_ranges  0x000000e8      0x120 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .debug_ranges  0x00000208       0xd0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .debug_ranges  0x000002d8       0xc0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+ .debug_ranges  0x00000398      0x148 c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .debug_ranges  0x000004e0       0x48 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .debug_ranges  0x00000528       0x28 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .debug_ranges  0x00000550      0x100 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .debug_ranges  0x00000650      0x250 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .debug_ranges  0x000008a0       0x78 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .debug_ranges  0x00000918      0xce0 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .debug_ranges  0x000015f8       0x58 c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .debug_ranges  0x00001650      0x108 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .debug_ranges  0x00001758      0x750 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .debug_ranges  0x00001ea8       0x20 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .debug_ranges  0x00001ec8       0x28 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .debug_ranges  0x00001ef0      0x168 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
+ .debug_ranges  0x00002058       0x18 c:/devkitPro/libnds/lib\libnds9.a(touch.o)
+ .debug_ranges  0x00002070       0x78 c:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_ranges  0x000020e8      0x490 c:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_ranges  0x00002578      0x120 c:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+
+.debug_pubtypes
+                0x00000000     0x4eb0
+ .debug_pubtypes
+                0x00000000      0x382 c:/devkitPro/PAlib/lib\libpa9.a(PA.o)
+ .debug_pubtypes
+                0x00000382      0x343 c:/devkitPro/PAlib/lib\libpa9.a(PA_Inits.o)
+ .debug_pubtypes
+                0x000006c5      0x327 c:/devkitPro/PAlib/lib\libpa9.a(PA_Interrupt.o)
+ .debug_pubtypes
+                0x000009ec      0x350 c:/devkitPro/PAlib/lib\libpa9.a(PA_Keys.o)
+ .debug_pubtypes
+                0x00000d3c      0x331 c:/devkitPro/PAlib/lib\libpa9.a(PA_Math.o)
+ .debug_pubtypes
+                0x0000106d      0x365 c:/devkitPro/PAlib/lib\libpa9.a(PA_Palette.o)
+ .debug_pubtypes
+                0x000013d2      0x349 c:/devkitPro/PAlib/lib\libpa9.a(PA_RTC.o)
+ .debug_pubtypes
+                0x0000171b      0x341 c:/devkitPro/PAlib/lib\libpa9.a(PA_Reco.o)
+ .debug_pubtypes
+                0x00001a5c      0x33d c:/devkitPro/PAlib/lib\libpa9.a(PA_Sprite.o)
+ .debug_pubtypes
+                0x00001d99      0x359 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text.o)
+ .debug_pubtypes
+                0x000020f2      0x316 c:/devkitPro/PAlib/lib\libpa9.a(PA_TextBits.o)
+ .debug_pubtypes
+                0x00002408       0x2d c:/devkitPro/PAlib/lib\libpa9.a(PA_TiledFont.o)
+ .debug_pubtypes
+                0x00002435       0x2d c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont0.o)
+ .debug_pubtypes
+                0x00002462       0x2d c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont1.o)
+ .debug_pubtypes
+                0x0000248f       0x2d c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont2.o)
+ .debug_pubtypes
+                0x000024bc       0x2d c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont3.o)
+ .debug_pubtypes
+                0x000024e9       0x2d c:/devkitPro/PAlib/lib\libpa9.a(PA_BmpFont4.o)
+ .debug_pubtypes
+                0x00002516      0x33f c:/devkitPro/PAlib/lib\libpa9.a(PA_BgTiles.o)
+ .debug_pubtypes
+                0x00002855      0x308 c:/devkitPro/PAlib/lib\libpa9.a(PA_Error.o)
+ .debug_pubtypes
+                0x00002b5d      0x32d c:/devkitPro/PAlib/lib\libpa9.a(PA_Fifo.o)
+ .debug_pubtypes
+                0x00002e8a      0x341 c:/devkitPro/PAlib/lib\libpa9.a(PA_NewBg.o)
+ .debug_pubtypes
+                0x000031cb      0x360 c:/devkitPro/PAlib/lib\libpa9.a(PA_PaletteEx.o)
+ .debug_pubtypes
+                0x0000352b      0x3bd c:/devkitPro/PAlib/lib\libpa9.a(PA_Stuff.o)
+ .debug_pubtypes
+                0x000038e8      0x323 c:/devkitPro/PAlib/lib\libpa9.a(PA_Text8bit.o)
+ .debug_pubtypes
+                0x00003c0b      0x32b c:/devkitPro/PAlib/lib\libpa9.a(PA_16c.o)
+ .debug_pubtypes
+                0x00003f36      0x311 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgEasy.o)
+ .debug_pubtypes
+                0x00004247      0x311 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgLargeMap.o)
+ .debug_pubtypes
+                0x00004558      0x314 c:/devkitPro/PAlib/lib\libpa9.a(PA_BgRot.o)
+ .debug_pubtypes
+                0x0000486c      0x327 c:/devkitPro/PAlib/lib\libpa9.a(PA_Draw.o)
+ .debug_pubtypes
+                0x00004b93      0x31d c:/devkitPro/PAlib/lib\libpa9.a(PA_Keyboard.o)
