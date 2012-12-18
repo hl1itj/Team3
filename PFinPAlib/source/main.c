@@ -28,7 +28,6 @@
 #define SP			   2
 #define N_PUZZLE       6
 #define N_BLOCK        5
-#define N_BLOCK_SPRITE	10
 
 #define PUZZLE_X(x)    ((x) % N_PUZZLE)
 #define PUZZLE_Y(x)    ((x) / N_PUZZLE)
@@ -38,12 +37,11 @@
 #define BOMB		1
 #define BOMB_PAL	1
 
-
-#define UP_SCREEN 1
 #define DOWN_SCREEN 0
+#define UP_SCREEN 1
 
-#define BACKGROUND_UP		1
 #define BACKGROUND_DOWN		0
+#define BACKGROUND_UP		1
 
 #define MAX_LEVEL			10
 
@@ -97,9 +95,20 @@ u8 read_puzzle(void)
 	return (0x20 >> touch.px);
 }
 
-void draw_block(u8 id, u8 sprite_num)
+void draw_block(u8 id, u8 color)
 {
-	PA_SetSpriteAnim(DOWN_SCREEN, id, sprite_num);
+	PA_SetSpriteAnim(DOWN_SCREEN, id, color + 4);
+}
+
+void draw_bomb(u8 id)
+{
+	int i, j;
+
+	//PA_LoadSpritePal(DOWN_SCREEN, BOMB, (void*) bomb_Pal);
+	for (i = 0; i < 7; i++) {
+		PA_SetSpriteAnim(DOWN_SCREEN, id, i);
+		for (j = 0; j < 1000000000; j++);
+	}
 }
 
 // 지금 선택한 block이 바로 전에 선택한 block의 상하좌우에 위치해 있는지 검사
@@ -284,10 +293,12 @@ void check_puzzle(void)
 			changed = FALSE;
 
 			// 폭발 이미지
-
-
-			// 일정 시간 delay
-			for (i = 0; i < 1000000; i++);
+			/*
+			for (i = 0; i < N_PUZZLE; i++)
+				for (j = 0; j < N_PUZZLE; j++)
+					if (puzzle[i][j].bomb)
+						PA_StartSpriteAnimEx(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 2, ANIM_LOOP, 2);
+			*/
 
 			// block 상쇄에 따른 행동
 			for (i = 0; i < N_BLOCK; i++)
@@ -366,6 +377,7 @@ void initialize_puzzle(void)
 	u8 old_color = -1;
 
 	PA_LoadSpritePal(DOWN_SCREEN, PUZZLE, (void*) puzzle_Pal);
+
 	for (i = 0; i < N_PUZZLE; i++)
 		for (j = 0; j < N_PUZZLE; j++) {
 			do {
@@ -398,7 +410,7 @@ void initialize_puzzle(void)
 
 void game(void)
 {
-	u8 old_key = -1;
+	u8 old_key = 0;
 	u8 key;
 	u8 selected = FALSE;
 
@@ -416,8 +428,7 @@ void game(void)
 
 			if (!selected) {
 				selected = TRUE;
-				if (old_key != -1)
-					draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
+				draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
 				draw_block(key, puzzle[PUZZLE_X(key)][PUZZLE_Y(key)].color + N_BLOCK);
 				old_key = key;
 			}
@@ -471,7 +482,6 @@ portTASK_FUNCTION(Puzzle_Key_Task, pvParameters)
 	u8 pre_line;
 
 	while (1) {
-
 		if (!key_pressed) {
 
 			write_puzzle(0x20 >> scan);
@@ -498,12 +508,24 @@ portTASK_FUNCTION(Puzzle_Key_Task, pvParameters)
 			}
 		}
 
-		if (key_pressed
-				&& ((read_puzzle() == 0)
-						|| (read_puzzle() != pre_line)))
+		if (key_pressed && (read_puzzle() == 0))
 			key_pressed = FALSE;
 
 		vTaskDelay(MSEC2TICK(25));
+	}
+}
+
+static
+portTASK_FUNCTION(Up_Screen_Task, pvParameters)
+{
+	PA_InitText(UP_SCREEN, 0);
+
+	while (1) {
+		PA_SetTextTileCol(UP_SCREEN, TEXT_RED);
+		PA_OutputText(UP_SCREEN, 10, 13, "monster hp: %d", monster[g_info.level].hp);
+		PA_OutputText(UP_SCREEN, 2, 17, "hp: %d", u_info.hp);
+		PA_SetTextTileCol(UP_SCREEN, TEXT_BLUE);
+		PA_OutputText(UP_SCREEN, 2, 20, "mp: %d", u_info.mp);
 	}
 }
 
@@ -523,6 +545,13 @@ void create_tasks(void)
 			(void *)NULL,
 			tskIDLE_PRIORITY + 10,
 			NULL);
+
+	xTaskCreate(Up_Screen_Task,
+				(const signed char * const)"Up_Screen_Task",
+				2048,
+				(void *)NULL,
+				tskIDLE_PRIORITY + 1,
+				NULL);
 
 	xTaskCreate(Game_Task,
 			(const signed char * const)"Game_Task",
