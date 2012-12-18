@@ -11,306 +11,541 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define COLOR_RED       RGB(31,  0,  0) /* Bright Red  	*/
-#define COLOR_WHITE     RGB(31, 31, 31) /* Bright White */
-#define COLOR_YELLOW     RGB(31, 31, 0) /* Bright White */
-#define COLOR_BLACK     RGB( 0,  0,  0)	/* Black : Zero	*/
-#define COLOR_GRAY     RGB(16, 16, 16)
-#define COLOR_GREEN     RGB( 0, 31,  0) /* Bright Green */
-#define COLOR_BLUE      RGB( 0,  0, 31) /* Bright White */
-#define COLOR_PURPLE     RGB(16, 0, 16) /* Bright White */
-#define COLOR_SELECT     RGB(31, 0, 31) /* Bright White */
+#define COLOR_RED            RGB(31,  0,  0)    /* Bright Red      */
+#define COLOR_WHITE        RGB(31, 31, 31)    /* Bright White */
+#define COLOR_YELLOW        RGB(31, 31, 0)    /* Bright Yellow */
+#define COLOR_BLACK        RGB( 0,  0,  0)    /* Black : Zero    */
+#define COLOR_GRAY        RGB(16, 16, 16)    /* Bright Gray */
+#define COLOR_GREEN        RGB( 0, 31,  0)    /* Bright Green */
+#define COLOR_BLUE        RGB( 0,  0, 31)    /* Bright Blue */
+#define COLOR_PURPLE        RGB(16, 0, 16)    /* Bright Purple */
+#define COLOR_SELECT        RGB(31, 0, 31)    /* Bright Magenta */
 
-#define BLOCK_WIDTH		32
-#define BLOCK_HEIGHT		32
+#define BLOCK_WIDTH        32
+#define BLOCK_HEIGHT        32
 
-#define SP				2
-#define N_PUZZLE		6
-#define N_BLOCK		5
-#define PUZZLE_X(x)	((x) % N_PUZZLE)
-#define PUZZLE_Y(x)	((x) / N_PUZZLE)
-#define SCREEN_X(x)	(((x) % N_PUZZLE) + SP)
-#define SCREEN_Y(x)	((x) / N_PUZZLE)
+#define SP                2
+#define N_PUZZLE        6
+#define N_BLOCK        5
+#define PUZZLE_X(x)    ((x) % N_PUZZLE)
+#define PUZZLE_Y(x)    ((x) / N_PUZZLE)
+#define SCREEN_X(x)    (((x) % N_PUZZLE) + SP)
+#define SCREEN_Y(x)    ((x) / N_PUZZLE)
+
+#define MAX_LEVEL        10
 
 // global variable
-//xSemaphoreHandle xSemaphore[BLOCK_X_MAX - 1];
+typedef struct game_info {
+    u8 block_count[N_BLOCK];
+    u8 turn;
+    u8 level;
+} game_info;
+
+typedef struct user_info {
+    int hp;
+    int mp;
+    int atk;
+    int def;
+    void (*action) (int);
+} user_info;
+
+typedef struct block {
+    u8 color;
+    u8 flag;
+} block;
+
 volatile u8 virtual_puzzle;
-u8 puzzle[N_PUZZLE][N_PUZZLE];
+game_info g_info;
+user_info u_info;
+user_info monster[MAX_LEVEL];
+block puzzle[N_PUZZLE][N_PUZZLE];
+enum {RED = 0, BLUE, GREEN, YELLOW, PURPLE};
+enum {HP = 0, MP, DEF, ATK, SPC};
 
-void
-draw_block(int pos_x, int pos_y, u16 color)
+void draw_block(int pos_x, int pos_y, u16 color)
 {
-	// draw big white box
-	int i, j;
-	u32 *basePoint, pixel, blank_pixel;
+    // draw big white box
+    int i, j;
+    u32 *basePoint, pixel, blank_pixel;
 
-	pixel = (color << 16) + color;
-	blank_pixel = (COLOR_GRAY << 16) + COLOR_GRAY;
-	for (i = 0; i < BLOCK_HEIGHT; i++) {
+    pixel = (color << 16) + color;
+    blank_pixel = (COLOR_GRAY << 16) + COLOR_GRAY;
+    for (i = 0; i < BLOCK_HEIGHT; i++) {
 
-		basePoint = (u32 *) BG_GFX_SUB+
-				((((pos_y * BLOCK_HEIGHT) + i) * SCREEN_WIDTH) +
-						pos_x * BLOCK_WIDTH) / 2;
+        basePoint = (u32 *) BG_GFX_SUB+
+                ((((pos_y * BLOCK_HEIGHT) + i) * SCREEN_WIDTH) +
+                        pos_x * BLOCK_WIDTH) / 2;
 
-		for (j = 0; j < (BLOCK_WIDTH / 2); j++) {
-			if ((i < 2) || (i > (BLOCK_HEIGHT-3))
-					|| (j == 0) || (j == (BLOCK_HEIGHT/2-1))) {
-				*basePoint++ = blank_pixel;
-				continue;
-			}
-			*basePoint++ = pixel;
-		}
-	}
+        for (j = 0; j < (BLOCK_WIDTH / 2); j++) {
+            if ((i < 2) || (i > (BLOCK_HEIGHT-3))
+                    || (j == 0) || (j == (BLOCK_HEIGHT/2-1))) {
+                *basePoint++ = blank_pixel;
+                continue;
+            }
+            *basePoint++ = pixel;
+        }
+    }
 }
 
-void
-select_block(int pos_x, int pos_y, u16 color)
+void select_block(int pos_x, int pos_y, u16 color)
 {
-	// draw big white box
-	int i, j;
-	u32 *basePoint, pixel;
+    // draw big white box
+    int i, j;
+    u32 *basePoint, pixel;
 
-	pixel = (color << 16) + color;
+    pixel = (color << 16) + color;
 
-	for (i = 0; i < BLOCK_HEIGHT; i++) {
+    for (i = 0; i < BLOCK_HEIGHT; i++) {
 
-		basePoint = (u32 *) BG_GFX_SUB+
-				((((pos_y * BLOCK_HEIGHT) + i) * SCREEN_WIDTH) +
-						pos_x * BLOCK_WIDTH) / 2;
+        basePoint = (u32 *) BG_GFX_SUB+
+                ((((pos_y * BLOCK_HEIGHT) + i) * SCREEN_WIDTH) +
+                        pos_x * BLOCK_WIDTH) / 2;
 
-		for (j = 0; j < (BLOCK_WIDTH / 2); j++) {
-			if ((i < 2) || (i > (BLOCK_HEIGHT-3))
-					|| (j == 0) || (j == (BLOCK_HEIGHT/2-1))) {
-				*basePoint++ = pixel;
-				continue;
-			}
-			*basePoint++;
-		}
-	}
+        for (j = 0; j < (BLOCK_WIDTH / 2); j++) {
+            if ((i < 2) || (i > (BLOCK_HEIGHT-3))
+                    || (j == 0) || (j == (BLOCK_HEIGHT/2-1))) {
+                *basePoint++ = pixel;
+                continue;
+            }
+            *basePoint++;
+        }
+    }
 }
 
-u16
-set_color(u8 n) {
-	switch (n) {
-	case 0:
-		return COLOR_YELLOW;
-	case 1:
-		return COLOR_RED;
-	case 2:
-		return COLOR_GREEN;
-	case 3:
-		return COLOR_BLUE;
-	case 4:
-		return COLOR_PURPLE;
-	}
+u16 set_color(u8 n) {
+    switch (n) {
+    case RED:
+        return COLOR_RED;
+    case BLUE:
+        return COLOR_BLUE;
+    case GREEN:
+        return COLOR_GREEN;
+    case YELLOW:
+        return COLOR_YELLOW;
+    case PURPLE:
+        return COLOR_PURPLE;
+    }
 }
 
-void
-write_puzzle(u8 value)
+void write_puzzle(u8 value)
 {
-	virtual_puzzle = value & 0x3F;
+    virtual_puzzle = value & 0x3F;
 }
 
-u8
-read_puzzle(void)
+u8 read_puzzle(void)
 {
-	touchPosition touch;
+    touchPosition touch;
 
-	if (!(virtual_puzzle & 0x3F))
-		return 0;
-	touchRead(&touch);
-	touch.py = (touch.py / BLOCK_HEIGHT);
-	touch.px = (touch.px / BLOCK_WIDTH) - SP;
-	if ((touch.py < 0) || (touch.py > 5) || (touch.px < 0) || (touch.px > 5))
-		return 0;
-	if (!(virtual_puzzle & (0x20 >> touch.py))) return 0;
-	return (0x20 >> touch.px);
+    if (!(virtual_puzzle & 0x3F))
+        return 0;
+    touchRead(&touch);
+    touch.py = (touch.py / BLOCK_HEIGHT);
+    touch.px = (touch.px / BLOCK_WIDTH) - SP;
+    if ((touch.py < 0) || (touch.py > 5) || (touch.px < 0) || (touch.px > 5))
+        return 0;
+    if (!(virtual_puzzle & (0x20 >> touch.py))) return 0;
+    return (0x20 >> touch.px);
 }
 
-u8
-is_switching_position(u8 old_key, u8 key)
+// ¡ˆ±› º±≈√«— block¿Ã πŸ∑Œ ¿¸ø° º±≈√«— block¿« ªÛ«œ¡¬øÏø° ¿ßƒ°«ÿ ¿÷¥¬¡ˆ ∞ÀªÁ
+u8 is_switching_position(u8 old_key, u8 key)
 {
-	u8 old_x, old_y;
-	u8 x, y;
-	old_x = PUZZLE_X(old_key); old_y = PUZZLE_Y(old_key);
-	x = PUZZLE_X(key); y = PUZZLE_Y(key);
+    u8 old_x, old_y;
+    u8 x, y;
+    old_x = PUZZLE_X(old_key); old_y = PUZZLE_Y(old_key);
+    x = PUZZLE_X(key); y = PUZZLE_Y(key);
 
-	if (old_x > 0) {
-		if (((old_x-1) == x) && (old_y == y))
-			return TRUE;
-	}
+    if (old_x > 0) {
+        if (((old_x-1) == x) && (old_y == y))
+            return TRUE;
+    }
 
-	if (old_x < 5) {
-		if (((old_x+1) == x) && (old_y == y))
-			return TRUE;
-	}
+    if (old_x < 5) {
+        if (((old_x+1) == x) && (old_y == y))
+            return TRUE;
+    }
 
-	if (old_y > 0) {
-		if (((old_y-1) == y) && (old_x == x))
-			return TRUE;
-	}
+    if (old_y > 0) {
+        if (((old_y-1) == y) && (old_x == x))
+            return TRUE;
+    }
 
-	if (old_y < 5) {
-		if (((old_y+1) == y) && (old_x == x))
-			return TRUE;
-	}
+    if (old_y < 5) {
+        if (((old_y+1) == y) && (old_x == x))
+            return TRUE;
+    }
 
-	return FALSE;
+    return FALSE;
 }
 
-void
-switching_color(u8 old_key, u8 key)
+// πŸ∑Œ ¿¸ø° º±≈√«— block∞˙ ¡ˆ±› º±≈√«— block¿« ªˆ¿ª πŸ≤€¥Ÿ
+void switching_color(u8 old_key, u8 key)
 {
-	u8 old_x, old_y;
-	u8 x, y;
-	u8 temp;
+    u8 old_x, old_y;
+    u8 x, y;
+    u8 temp;
 
-	old_x = PUZZLE_X(old_key); old_y = PUZZLE_Y(old_key);
-	x = PUZZLE_X(key); y = PUZZLE_Y(key);
+    old_x = PUZZLE_X(old_key); old_y = PUZZLE_Y(old_key);
+    x = PUZZLE_X(key); y = PUZZLE_Y(key);
 
-	temp = puzzle[old_x][old_y];
-	puzzle[old_x][old_y] = puzzle[x][y];
-	puzzle[x][y] = temp;
+    temp = puzzle[old_x][old_y].color;
+    puzzle[old_x][old_y].color = puzzle[x][y].color;
+    puzzle[x][y].color = temp;
 
-	draw_block(SCREEN_X(old_key), SCREEN_Y(old_key), set_color(puzzle[old_x][old_y]));
-	draw_block(SCREEN_X(key), SCREEN_Y(key), set_color(puzzle[x][y]));
+    draw_block(SCREEN_X(old_key), SCREEN_Y(old_key), set_color(puzzle[old_x][old_y].color));
+    draw_block(SCREEN_X(key), SCREEN_Y(key), set_color(puzzle[x][y].color));
 }
 
-void
-cancel_out_block()
+// «ÿ¥Á «‡ø° ø¨º”µ» ªˆ¿Ã ¿÷¥¬¡ˆ ∞ÀªÁ
+u8 check_row(int row)
 {
+    u8 changed = FALSE;
+    u8 color;
+    int i, match;
 
+    match = 0;
+    color = puzzle[row][0].color;
+
+    for(i = 1; i < N_PUZZLE; i++) {
+        if (color == puzzle[row][i].color) {
+            match++;
+
+            if (match == 2) {
+                changed = TRUE;
+                puzzle[row][i-2].flag = TRUE;
+                puzzle[row][i-1].flag = TRUE;
+                puzzle[row][i].flag = TRUE;
+                g_info.block_count[color] += 3;
+            }
+            else if (match >= 3) {
+                puzzle[row][i].flag = TRUE;
+                g_info.block_count[color]++;
+            }
+        }
+        else {
+            // match «“ ºˆ ¿÷¥¬ block¿Ã 2∞≥¿ÃªÛ ¿Ã∂Û∏È
+            if (i < (N_PUZZLE-2)) {
+                match = 0;
+                color = puzzle[row][i].color;
+            }
+            else
+                break;
+        }
+    }
+    return changed;
 }
 
-void
-Game(void)
+// «ÿ¥Á ø≠ø° ø¨º”µ» ªˆ¿Ã ¿÷¥¬¡ˆ ∞ÀªÁ
+u8 check_col(int col)
 {
-	int i, j;
-	u8 old_key = -1;
-	u8 key;
-	u8 selected = FALSE;
-	u8 color;
+    u8 changed = FALSE;
+    u8 color;
+    int i, match;
 
-	// randomÏúºÎ°ú puzzle Ï¥àÍ∏∞Ìôî
-	srand((int)time(NULL));
-	for (i = 0; i < N_PUZZLE; i++)
-		for (j = 0; j < N_PUZZLE; j++) {
-			color = rand() % N_BLOCK;
-			draw_block(i + SP, j, set_color(color));
-			puzzle[i][j] = color;
-		}
-	// BLOCK ÏÉÅÏáÑ ÎêòÎäîÏßÄ ÌôïÏù∏
+    match = 0;
+    color = puzzle[0][col].color;
 
+    for(i = 1; i < N_PUZZLE; i++) {
+        if (color == puzzle[i][col].color) {
+            match++;
 
-	/* keyÏûÖÎ†•Ïóê Îî∞Î•∏ Ï≤òÎ¶¨ pusedo code */
-	///////////////////////////////////////////////
-	// getkey
-	// selected == falseÏù∏ Í≤ΩÏö∞
-	// 		key Í∞íÏóê Îî∞Îùº puzzle ÏÑ†ÌÉù
-	// selected == trueÏù∏ Í≤ΩÏö∞
-	// 		key == old_keyÎùºÎ©¥, ÏÑ†ÌÉù Ìï¥Ï†ú
-	//		ÏÑ†ÌÉùÌïú puzzleÏùò ÏÉÅÌïòÏ¢åÏö∞ ÎùºÎ©¥, ÏúÑÏπò Î∞îÍøà
-	//		Í∞ÄÎä•ÌïòÎã§Î©¥ puzzle ÏÉÅÏáÑ
-	///////////////////////////////////////////////
-	while (1) {
-		key = getkey();
-
-		if (key <= 36) {
-			printf("%d ", key);
-			key--;
-
-			if (!selected) {
-				selected = TRUE;
-				if (old_key != -1)
-					select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
-				select_block(SCREEN_X(key), SCREEN_Y(key), COLOR_SELECT);
-				old_key = key;
-			}
-			else {
-				if (key == old_key) {
-					selected = FALSE;
-					select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
-				}
-				else if (is_switching_position(old_key, key)) {
-					selected = FALSE;
-					select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
-					switching_color(old_key, key);
-					// BLOCK ÏÉÅÏáÑ ÎêòÎäîÏßÄ ÌôïÏù∏
-					cancel_out_block();
-					// Ï†ÅÏö©Í∞ÄÎä•Ìïú ÌñâÎèôÏù¥ ÏûàÎã§Î©¥ ÌñâÎèôÌï®
-				}
-			}
-		}
-	}
+            if (match == 2) {
+                changed = TRUE;
+                puzzle[i-2][col].flag = TRUE;
+                puzzle[i-1][col].flag = TRUE;
+                puzzle[i][col].flag = TRUE;
+                g_info.block_count[color] += 3;
+            }
+            else if (match >= 3) {
+                puzzle[i][col].flag = TRUE;
+                g_info.block_count[color]++;
+            }
+        }
+        else {
+            // match «“ ºˆ ¿÷¥¬ block¿Ã 2∞≥¿ÃªÛ ¿Ã∂Û∏È
+            if (i < (N_PUZZLE-2)) {
+                match = 0;
+                color = puzzle[i][col].color;
+            }
+            else
+                break;
+        }
+    }
+    return changed;
 }
 
-void
-key_init(void)
+// action∞™ø° µ˚∂Û ¿Ø¿˙∞° «‡µø«‘
+void user_action(int action)
 {
-	int i;
-	u8 key;
+    int damage;
 
-	for (i = 0; i < MAX_KEY_LOG; i++)
-		xQueueReceive(KeyQueue, &key, 0);
+    switch (action) {
+    case HP:
+        u_info.hp += (g_info.block_count[action] * 10);
+        break;
+
+    case MP:
+        u_info.mp += (g_info.block_count[action] * 5);
+        break;
+
+    case DEF:
+        u_info.def += (g_info.block_count[action] * 5);
+        break;
+
+    case ATK:
+        u_info.atk += (g_info.block_count[action] * 10);
+        damage = u_info.atk - monster[g_info.level].def;
+        if (damage > 0)
+            monster[g_info.level].hp -= (damage);
+        break;
+
+    case SPC:
+        damage = g_info.block_count[action] * 10;
+        damage *= (g_info.block_count[action] - 1);
+        damage -= monster[g_info.level].def;
+        if (damage > 0)
+            monster[g_info.level].hp -= (damage);
+        break;
+    }
 }
 
-int
-kbhit(void)
+void next_level(void)
 {
-	u8 key;
-	int ret = xQueuePeek(KeyQueue, &key, 0);
-	return (ret == pdPASS);
-}
-u8
-getkey(void)
-{
-	u8 key;
-	xQueueReceive(KeyQueue, &key, portMAX_DELAY);
-	return key;
+    if (g_info.level < MAX_LEVEL)
+        g_info.level++;
+    else
+        ;// game clear
 }
 
-// 4*4 key matrix ÏûÖÎ†•ÏùÑ 6*6 ÏûÖÎ†•ÏúºÎ°ú Î∞îÍøà
-// Í∏∞Ï°¥Ïùò key scanÌïòÎäî Î∞©ÏãùÍ≥º ÎèôÏùº
+// puzzleø° ªÛº‚ ∞°¥…«— ∫Ì∑∞¿Ã ¿÷¥¬¡ˆ ∞ÀªÁ«œø©
+// ªÛº‚µ» block ¥ÎΩ≈ø° ªı∑ŒøÓ block¿ª ª˝º∫
+// block ªÛº‚ø° µ˚∏• «‡µø(∞¯∞›, πÊæÓ µÓµÓ)
+void check_puzzle(void)
+{
+    int i, j;
+    u8 color;
+    u8 old_color = -1;
+    u8 changed = FALSE;
+
+    do {
+        if (changed) {
+            changed = FALSE;
+
+            // ªÛº‚µ» block¿ª ∞À¿∫ªˆ¿∏∑Œ «•Ω√
+            for (i = 0; i < N_PUZZLE; i++)
+                for (j = 0; j < N_PUZZLE; j++)
+                    if (puzzle[i][j].flag)
+                        draw_block(i + SP, j, COLOR_BLACK);
+
+            // ¿œ¡§ Ω√∞£ delay
+            for (i = 0; i < 1000000; i++);
+
+            // block ªÛº‚ø° µ˚∏• «‡µø
+            for (i = 0; i < N_BLOCK; i++)
+                if (g_info.block_count[i] > 0) {
+                    u_info.action(i);
+                    if (monster[g_info.level].hp <= 0)
+                        next_level();
+                }
+
+            // block count √ ±‚»≠
+            for (i = 0; i < N_BLOCK; i++)
+                g_info.block_count[i] = 0;
+
+            // ªı∑ŒøÓ block ª˝º∫
+            srand((int)time(NULL));
+            for (i = 0; i < N_PUZZLE; i++)
+                for (j = 0; j < N_PUZZLE; j++)
+                    if (puzzle[i][j].flag) {
+                        do {
+                            color = rand() % N_BLOCK;
+                        }while(color == old_color);
+
+                        draw_block(i + SP, j, set_color(color));
+                        puzzle[i][j].color = color;
+                        puzzle[i][j].flag = FALSE;
+                        old_color = color;
+                    }
+        }
+
+        for(i = 0; i < N_PUZZLE; i++) {
+            changed = changed | check_row(i);
+            changed = changed | check_col(i);
+        }
+    } while (changed);
+}
+
+// ¿Ø¿˙ ¡§∫∏∏¶ √ ±‚»≠
+void initialize_user_info(void)
+{
+    u_info.atk = 0;
+    u_info.def = 0;
+    u_info.hp = 1000;
+    u_info.mp = 500;
+    u_info.action = user_action;
+}
+
+// ∏ÛΩ∫≈Õ ¡§∫∏∏¶ √ ±‚»≠
+void initialize_monster_info(void)
+{
+    int i;
+    for (i = 0; i < MAX_LEVEL; i++) {
+        monster[i].atk = i * 10;
+        monster[i].def = i;
+        monster[i].hp = (i + 1) * 200;
+        monster[i].mp = 0;
+    }
+}
+
+// ∞‘¿” ¡§∫∏∏¶ √ ±‚»≠
+void initialize_game_info(void)
+{
+    int i;
+    for (i = 0; i < N_BLOCK; i++)
+        g_info.block_count[i] = 0;
+
+    g_info.level = 1;
+}
+
+// random¿∏∑Œ puzzle ªˆ¿ª √ ±‚»≠
+void initialize_puzzle(void)
+{
+    int i, j;
+    u8 color;
+    u8 old_color = -1;
+
+    srand((int)time(NULL));
+    for (i = 0; i < N_PUZZLE; i++)
+        for (j = 0; j < N_PUZZLE; j++) {
+            do {
+                color = rand() % N_BLOCK;
+            }while(color == old_color);
+
+            draw_block(i + SP, j, set_color(color));
+            puzzle[i][j].color = color;
+            puzzle[i][j].flag = FALSE;
+            old_color = color;
+        }
+}
+
+/* key¿‘∑¬ø° µ˚∏• √≥∏Æ pusedo code */
+///////////////////////////////////////////////
+// getkey
+// selected == false¿Œ ∞ÊøÏ
+//         key ∞™ø° µ˚∂Û puzzle º±≈√
+// selected == true¿Œ ∞ÊøÏ
+//         key == old_key∂Û∏È, º±≈√ «ÿ¡¶
+//        º±≈√«— puzzle¿« ªÛ«œ¡¬øÏ ∂Û∏È, ¿ßƒ° πŸ≤ﬁ
+//        ∞°¥…«œ¥Ÿ∏È puzzle ªÛº‚
+///////////////////////////////////////////////
+
+void Game(void)
+{
+    u8 old_key = -1;
+    u8 key;
+    u8 selected = FALSE;
+
+    initialize_user_info();
+    initialize_monster_info();
+    initialize_game_info();
+    initialize_puzzle();
+    check_puzzle();
+
+    while (1) {
+        key = getkey();
+
+        if (key <= 36) {
+            printf("%d ", key);
+            key--;
+
+            if (!selected) {
+                selected = TRUE;
+                if (old_key != -1)
+                    select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
+                select_block(SCREEN_X(key), SCREEN_Y(key), COLOR_SELECT);
+                old_key = key;
+            }
+            else {
+                if (key == old_key) {
+                    selected = FALSE;
+                    select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
+                }
+                else if (is_switching_position(old_key, key)) {
+                    selected = FALSE;
+                    select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
+                    switching_color(old_key, key);
+                    check_puzzle();
+                }
+            }
+        }
+    }
+}
+
+void key_init(void)
+{
+    int i;
+    u8 key;
+
+    for (i = 0; i < MAX_KEY_LOG; i++)
+        xQueueReceive(KeyQueue, &key, 0);
+}
+
+int kbhit(void)
+{
+    u8 key;
+    int ret = xQueuePeek(KeyQueue, &key, 0);
+    return (ret == pdPASS);
+}
+
+u8 getkey(void)
+{
+    u8 key;
+    xQueueReceive(KeyQueue, &key, portMAX_DELAY);
+    return key;
+}
+
+// 4*4 key matrix ¿‘∑¬¿ª 6*6 ¿‘∑¬¿∏∑Œ πŸ≤ﬁ
+// ±‚¡∏¿« key scan«œ¥¬ πÊΩƒ∞˙ µø¿œ
 portTASK_FUNCTION(Key_Task, pvParameters)
 {
-	// Variables
-	u8 key, scan = 0;
-	u8 key_pressed = FALSE;
-	u8 pre_line;
+    // Variables
+    u8 key, scan = 0;
+    u8 key_pressed = FALSE;
+    u8 pre_line;
 
-	while (1) {
+    while (1) {
 
-		if (!key_pressed) {
+        if (!key_pressed) {
 
-			write_puzzle(0x20 >> scan);
-			key = scan * 6;
+            write_puzzle(0x20 >> scan);
+            key = scan * 6;
 
-			pre_line = read_puzzle();
-			switch (read_puzzle()) {
-			case 32 : key += 1; break;
-			case 16 : key += 2; break;
-			case 8 : key += 3; break;
-			case 4 : key += 4; break;
-			case 2 : key += 5; break;
-			case 1 : key += 6; break;
-			default : key = 255; break;
-			}
+            pre_line = read_puzzle();
+            switch (read_puzzle()) {
+            case 32 : key += 1; break;
+            case 16 : key += 2; break;
+            case 8 : key += 3; break;
+            case 4 : key += 4; break;
+            case 2 : key += 5; break;
+            case 1 : key += 6; break;
+            default : key = 255; break;
+            }
 
-			scan++;
-			if (scan == 6)
-				scan = 0;
+            scan++;
+            if (scan == 6)
+                scan = 0;
 
-			if (key <= 36) {
-				key_pressed = TRUE;
-				xQueueSend(KeyQueue, &key, 0);
-			}
-		}
+            if (key <= 36) {
+                key_pressed = TRUE;
+                xQueueSend(KeyQueue, &key, 0);
+            }
+        }
 
-		if (key_pressed
-				&& ((read_puzzle() == 0)
-						|| (read_puzzle() != pre_line)))
-			key_pressed = FALSE;
+        if (key_pressed
+                && ((read_puzzle() == 0)
+                        || (read_puzzle() != pre_line)))
+            key_pressed = FALSE;
 
-		vTaskDelay(MSEC2TICK(25));
-	}
+        vTaskDelay(MSEC2TICK(25));
+    }
 }

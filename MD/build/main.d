@@ -1,4 +1,4 @@
-main.o: d:/!ing/NDS/_project/Eclipse/MD_4/MD/source/main.c \
+main.o: C:\Users\ksi\Documents\GitHub\Team3\MD\source/main.c \
  c:/devkitPro/PAlib/include/nds/PA9.h c:/devkitPro/libnds/include/nds.h \
  c:/devkitPro/libnds/include/nds/libversion.h \
  c:/devkitPro/libnds/include/nds/ndstypes.h \
@@ -116,29 +116,29 @@ main.o: d:/!ing/NDS/_project/Eclipse/MD_4/MD/source/main.c \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Fake16bit.h \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h \
  c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/all_gfx.h \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/all_gfx.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/all_gfx.h \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/number.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/item.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Gameover.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Pause_Down.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Play_Down.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Season.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Shop.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Title.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Title_Down.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/number.pal.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/item.pal.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Gameover.pal.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Pause_Down.pal.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Play_Down.pal.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Season.pal.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Shop.pal.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Title.pal.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Title_Down.pal.c \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/build/Startup.h \
- d:/!ing/NDS/_project/Eclipse/MD_4/MD/build/trapcard.h
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/all_gfx.h \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/all_gfx.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/all_gfx.h \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/number.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/item.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Gameover.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Pause_Down.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Play_Down.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Season.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Shop.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Title.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Title_Down.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/number.pal.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/item.pal.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Gameover.pal.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Pause_Down.pal.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Play_Down.pal.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Season.pal.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Shop.pal.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Title.pal.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Title_Down.pal.c \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/build/Startup.h \
+ C:/Users/ksi/Documents/GitHub/Team3/MD/build/trapcard.h
 
 c:/devkitPro/PAlib/include/nds/PA9.h:
 
@@ -376,48 +376,48 @@ c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h:
 
 c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/all_gfx.h:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/all_gfx.h:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/all_gfx.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/all_gfx.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/all_gfx.h:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/all_gfx.h:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/number.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/number.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/item.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/item.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Gameover.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Gameover.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Pause_Down.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Pause_Down.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Play_Down.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Play_Down.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Season.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Season.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Shop.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Shop.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Title.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Title.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Title_Down.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Title_Down.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/number.pal.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/number.pal.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/item.pal.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/item.pal.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Gameover.pal.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Gameover.pal.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Pause_Down.pal.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Pause_Down.pal.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Play_Down.pal.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Play_Down.pal.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Season.pal.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Season.pal.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Shop.pal.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Shop.pal.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Title.pal.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Title.pal.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/gfx/Title_Down.pal.c:
+C:/Users/ksi/Documents/GitHub/Team3/MD/gfx/Title_Down.pal.c:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/build/Startup.h:
+C:/Users/ksi/Documents/GitHub/Team3/MD/build/Startup.h:
 
-d:/!ing/NDS/_project/Eclipse/MD_4/MD/build/trapcard.h:
+C:/Users/ksi/Documents/GitHub/Team3/MD/build/trapcard.h:

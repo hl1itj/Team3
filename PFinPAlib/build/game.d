@@ -1,4 +1,4 @@
-main.o: c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/main.c \
+game.o: c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/game.c \
  c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/header.h \
  c:/devkitPro/PAlib/include/nds/PA9.h c:/devkitPro/libnds/include/nds.h \
  c:/devkitPro/libnds/include/nds/libversion.h \
