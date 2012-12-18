@@ -66,6 +66,7 @@ typedef struct block {
 	u8 bomb;
 } block;
 
+xTaskHandle UpScreenTask;
 xQueueHandle KeyQueue;
 volatile u8 virtual_puzzle;
 game_info g_info;
@@ -414,6 +415,7 @@ void game(void)
 	u8 key;
 	u8 selected = FALSE;
 
+	vTaskResume(UpScreenTask);
 	initialize_user_info();
 	initialize_monster_info();
 	initialize_game_info();
@@ -446,6 +448,21 @@ void game(void)
 				}
 			}
 		}
+	}
+}
+
+void main_screen() {
+
+	while (1) {
+		if (Stylus.Newpress || Pad.Newpress.Start) {
+				PA_DeleteBg(UP_SCREEN, BACKGROUND_UP);
+				PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
+				PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &bground_up);
+				PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &down);
+				break;
+		}
+
+		PA_WaitForVBL();
 	}
 }
 
@@ -533,6 +550,7 @@ static
 portTASK_FUNCTION(Game_Task, pvParameters)
 {
 	while (1) {
+		main_screen();
 		game();
 	}
 }
@@ -551,7 +569,9 @@ void create_tasks(void)
 				2048,
 				(void *)NULL,
 				tskIDLE_PRIORITY + 1,
-				NULL);
+				&UpScreenTask);
+
+	vTaskSuspend(UpScreenTask);
 
 	xTaskCreate(Game_Task,
 			(const signed char * const)"Game_Task",
@@ -565,13 +585,12 @@ void create_tasks(void)
 
 int main(){
 	PA_Init();    // Initializes PA_Lib
-	//	PA_InitVBL(); // Initializes a standard VBL
 
 	AS_Init(AS_MODE_SURROUND | AS_MODE_16CH);
 	AS_SetDefaultSettings(AS_PCM_8BIT, 11025, AS_SURROUND);
 
-	PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &bground_up);
-	PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &down);
+	PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &main_up);
+	PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &main_down);
 
 	create_tasks();
 
