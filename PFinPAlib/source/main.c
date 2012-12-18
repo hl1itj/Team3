@@ -25,17 +25,13 @@
 #define BLOCK_WIDTH			32
 #define BLOCK_HEIGHT		32
 
-#define SP             2
+#define SP			   2
 #define N_PUZZLE       6
 #define N_BLOCK        5
 #define N_BLOCK_SPRITE	10
 
 #define PUZZLE_X(x)    ((x) % N_PUZZLE)
 #define PUZZLE_Y(x)    ((x) / N_PUZZLE)
-#define SCREEN_X(x)    (((x) % N_PUZZLE) + SP)
-#define SCREEN_Y(x)    ((x) / N_PUZZLE)
-
-#define SELECT_BLOCK(x)	((x) * 2)
 
 #define PUZZLE		0
 #define PUZZLE_PAL	0
@@ -67,8 +63,9 @@ typedef struct user_info {
 } user_info;
 
 typedef struct block {
+	u8 id;
 	u8 color;
-	u8 flag;
+	u8 bomb;
 } block;
 
 xQueueHandle KeyQueue;
@@ -79,56 +76,6 @@ user_info monster[MAX_LEVEL];
 block puzzle[N_PUZZLE][N_PUZZLE];
 enum {RED = 0, BLUE, GREEN, YELLOW, PURPLE};
 enum {HP = 0, MP, DEF, ATK, SPC};
-
-void draw_block(int pos_x, int pos_y, u16 color)
-{
-	// draw big white box
-	int i, j;
-	u32 *basePoint, pixel, blank_pixel;
-
-	pixel = (color << 16) + color;
-	//blank_pixel = (COLOR_GRAY << 16) + COLOR_GRAY;
-	for (i = 0; i < BLOCK_HEIGHT; i++) {
-
-		basePoint = (u32 *) BG_GFX_SUB+
-				((((pos_y * BLOCK_HEIGHT) + i) * SCREEN_WIDTH) +
-						pos_x * BLOCK_WIDTH) / 2;
-
-		for (j = 0; j < (BLOCK_WIDTH / 2); j++) {
-			if ((i < 2) || (i > (BLOCK_HEIGHT-3))
-					|| (j == 0) || (j == (BLOCK_HEIGHT/2-1))) {
-				*basePoint++ = blank_pixel;
-				continue;
-			}
-			*basePoint++ = pixel;
-		}
-	}
-}
-
-void select_block(int pos_x, int pos_y, u16 color)
-{
-	// draw big white box
-	int i, j;
-	u32 *basePoint, pixel;
-
-	pixel = (color << 16) + color;
-
-	for (i = 0; i < BLOCK_HEIGHT; i++) {
-
-		basePoint = (u32 *) BG_GFX_SUB+
-				((((pos_y * BLOCK_HEIGHT) + i) * SCREEN_WIDTH) +
-						pos_x * BLOCK_WIDTH) / 2;
-
-		for (j = 0; j < (BLOCK_WIDTH / 2); j++) {
-			if ((i < 2) || (i > (BLOCK_HEIGHT-3))
-					|| (j == 0) || (j == (BLOCK_HEIGHT/2-1))) {
-				*basePoint++ = pixel;
-				continue;
-			}
-			*basePoint++;
-		}
-	}
-}
 
 void write_puzzle(u8 value)
 {
@@ -142,12 +89,17 @@ u8 read_puzzle(void)
 	if (!(virtual_puzzle & 0x3F))
 		return 0;
 	touchRead(&touch);
-	touch.py = (touch.py / BLOCK_HEIGHT);
+	touch.py = touch.py / BLOCK_HEIGHT;
 	touch.px = (touch.px / BLOCK_WIDTH) - SP;
 	if ((touch.py < 0) || (touch.py > 5) || (touch.px < 0) || (touch.px > 5))
 		return 0;
 	if (!(virtual_puzzle & (0x20 >> touch.py))) return 0;
 	return (0x20 >> touch.px);
+}
+
+void draw_block(u8 id, u8 sprite_num)
+{
+	PA_SetSpriteAnim(DOWN_SCREEN, id, sprite_num);
 }
 
 // 지금 선택한 block이 바로 전에 선택한 block의 상하좌우에 위치해 있는지 검사
@@ -212,13 +164,13 @@ u8 check_row(int row)
 
 			if (match == 2) {
 				changed = TRUE;
-				puzzle[row][i-2].flag = TRUE;
-				puzzle[row][i-1].flag = TRUE;
-				puzzle[row][i].flag = TRUE;
+				puzzle[row][i-2].bomb = TRUE;
+				puzzle[row][i-1].bomb = TRUE;
+				puzzle[row][i].bomb = TRUE;
 				g_info.block_count[color] += 3;
 			}
 			else if (match >= 3) {
-				puzzle[row][i].flag = TRUE;
+				puzzle[row][i].bomb = TRUE;
 				g_info.block_count[color]++;
 			}
 		}
@@ -251,13 +203,13 @@ u8 check_col(int col)
 
 			if (match == 2) {
 				changed = TRUE;
-				puzzle[i-2][col].flag = TRUE;
-				puzzle[i-1][col].flag = TRUE;
-				puzzle[i][col].flag = TRUE;
+				puzzle[i-2][col].bomb = TRUE;
+				puzzle[i-1][col].bomb = TRUE;
+				puzzle[i][col].bomb = TRUE;
 				g_info.block_count[color] += 3;
 			}
 			else if (match >= 3) {
-				puzzle[i][col].flag = TRUE;
+				puzzle[i][col].bomb = TRUE;
 				g_info.block_count[color]++;
 			}
 		}
@@ -331,6 +283,8 @@ void check_puzzle(void)
 		if (changed) {
 			changed = FALSE;
 
+			// 폭발 이미지
+
 			// 일정 시간 delay
 			for (i = 0; i < 1000000; i++);
 
@@ -347,17 +301,18 @@ void check_puzzle(void)
 				g_info.block_count[i] = 0;
 
 			// 새로운 block 생성
-			srand((int)time(NULL));
 			for (i = 0; i < N_PUZZLE; i++)
 				for (j = 0; j < N_PUZZLE; j++)
-					if (puzzle[i][j].flag) {
+					if (puzzle[i][j].bomb) {
+						old_color = color;
 						do {
-							color = rand() % N_BLOCK;
+							color = PA_RandMax(N_BLOCK - 1);
 						}while(color == old_color);
 
-						//draw_block(i + SP, j, set_color(color));
 						puzzle[i][j].color = color;
-						puzzle[i][j].flag = FALSE;
+						puzzle[i][j].bomb = FALSE;
+
+						draw_block(puzzle[i][j].id, puzzle[i][j].color);
 						old_color = color;
 					}
 		}
@@ -415,11 +370,16 @@ void initialize_puzzle(void)
 			do {
 				color = PA_RandMax(N_BLOCK - 1);
 			}while(color == old_color);
+
+			// key값과 id값을 맞추기 위해 (j, i)로 사용
+			puzzle[j][i].id = id;
+			puzzle[j][i].color = color;
+			puzzle[j][i].bomb = FALSE;
+
+			PA_CreateSprite(DOWN_SCREEN, id, (void*)puzzle_Sprite,
+					OBJ_SIZE_32X32, TRUE, PUZZLE, j*32 + SP*32, i*32);
+			draw_block(id, puzzle[j][i].color);
 			id++;
-			puzzle[i][j].color = color;
-			puzzle[i][j].flag = FALSE;
-			PA_CreateSprite(DOWN_SCREEN, id,(void*)puzzle_Sprite, OBJ_SIZE_32X32, TRUE, PUZZLE, i*32, j*32);
-			PA_SetSpriteAnim(DOWN_SCREEN, id, puzzle[i][j].color);
 			old_color = color;
 		}
 }
@@ -451,25 +411,25 @@ void game(void)
 		key = getkey();
 
 		if (key <= 36) {
-			printf("%d ", key);
 			key--;
 
 			if (!selected) {
 				selected = TRUE;
 				if (old_key != -1)
-					//select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
-				//select_block(SCREEN_X(key), SCREEN_Y(key), COLOR_SELECT);
+					draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
+				draw_block(key, puzzle[PUZZLE_X(key)][PUZZLE_Y(key)].color + N_BLOCK);
 				old_key = key;
 			}
 			else {
 				if (key == old_key) {
 					selected = FALSE;
-					//select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
+					draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
 				}
 				else if (is_switching_position(old_key, key)) {
 					selected = FALSE;
-					//select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
-					//switching_color(old_key, key);
+					switching_color(old_key, key);
+					draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
+					draw_block(key, puzzle[PUZZLE_X(key)][PUZZLE_Y(key)].color);
 					check_puzzle();
 				}
 			}
