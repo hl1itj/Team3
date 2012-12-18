@@ -57,6 +57,8 @@ typedef struct user_info {
 	int mp;
 	int atk;
 	int def;
+	int max_hp;
+	int max_mp;
 	void (*action) (int);
 } user_info;
 
@@ -240,41 +242,68 @@ u8 check_col(int col)
 void user_action(int action)
 {
 	int damage;
+	u8 count = g_info.block_count[action];
 
 	switch (action) {
 	case HP:
-		u_info.hp += (g_info.block_count[action] * 10);
+		u_info.hp += (count * 10);
+		if (u_info.hp > u_info.max_hp)
+			u_info.hp = u_info.max_hp;
 		break;
 
 	case MP:
-		u_info.mp += (g_info.block_count[action] * 5);
+		u_info.mp += (count * 5);
+		if (u_info.mp > u_info.max_mp)
+			u_info.hp = u_info.max_mp;
 		break;
 
 	case DEF:
-		u_info.def += (g_info.block_count[action] * 5);
+		u_info.def += (count * 5);
 		break;
 
 	case ATK:
-		u_info.atk += (g_info.block_count[action] * 10);
+		u_info.atk += (count * 10);
 		damage = u_info.atk - monster[g_info.level].def;
 		if (damage > 0)
 			monster[g_info.level].hp -= (damage);
 		break;
 
 	case SPC:
-		damage = g_info.block_count[action] * 10;
-		damage *= (g_info.block_count[action] - 1);
 		damage -= monster[g_info.level].def;
-		if (damage > 0)
-			monster[g_info.level].hp -= (damage);
+		if (u_info.mp >= 300) {
+			damage = g_info.block_count[action] * 10;
+
+			/*************************************************/
+			//block_count \ mp 에 따른 damage 증가 표
+			//block_count \ mp	300		400		500		600
+			//		3			x2		x2		x2		x2
+			//		4			x2		x3		x3		x3
+			//		5			x2		x3		x4		x4
+			//		6			x2		x3		x4		x5
+			/*************************************************/
+			if (count >= (u_info.mp / 100)) {
+				damage *= ((count - (u_info.mp / 100)) + 2);
+				u_info.mp -= (((count - (u_info.mp / 100)) + 3) * 100);
+			}
+			else {
+				damage *= ((u_info.mp / 100) - count - 1);
+				u_info.mp -= ((count - 1) * 100);
+			}
+
+			damage -= monster[g_info.level].def;
+			if (damage > 0)
+				monster[g_info.level].hp -= (damage);
+		}
 		break;
 	}
 }
 
 void next_level(void)
 {
-	if (g_info.level < MAX_LEVEL)
+	if (g_info.level < MAX_LEVEL) {
 		g_info.level++;
+		initialize_user_info();
+	}
 	else
 		;// game clear
 }
@@ -299,7 +328,7 @@ void check_puzzle(void)
 				for (j = 0; j < N_PUZZLE; j++)
 					if (puzzle[i][j].bomb)
 						PA_StartSpriteAnimEx(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 2, ANIM_LOOP, 2);
-			*/
+			 */
 
 			// block 상쇄에 따른 행동
 			for (i = 0; i < N_BLOCK; i++)
@@ -342,8 +371,9 @@ void initialize_user_info(void)
 {
 	u_info.atk = 0;
 	u_info.def = 0;
-	u_info.hp = 1000;
-	u_info.mp = 500;
+	u_info.max_hp = u_info.hp = 1000 + 500 * (g_info.level - 1);
+	if (g_info.level == 1) u_info.mp = 500;
+	u_info.max_mp = 500 + 100 * (g_info.level - 1);
 	u_info.action = user_action;
 }
 
@@ -351,10 +381,10 @@ void initialize_user_info(void)
 void initialize_monster_info(void)
 {
 	int i;
-	for (i = 0; i < MAX_LEVEL; i++) {
-		monster[i].atk = i * 10;
-		monster[i].def = i;
-		monster[i].hp = (i + 1) * 200;
+	for (i = 1; i <= MAX_LEVEL; i++) {
+		monster[i].atk = i * 50;
+		monster[i].def = 0;
+		monster[i].hp = i * 200;
 		monster[i].mp = 0;
 	}
 }
@@ -455,11 +485,11 @@ void main_screen() {
 
 	while (1) {
 		if (Stylus.Newpress || Pad.Newpress.Start) {
-				PA_DeleteBg(UP_SCREEN, BACKGROUND_UP);
-				PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
-				PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &bground_up);
-				PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &down);
-				break;
+			PA_DeleteBg(UP_SCREEN, BACKGROUND_UP);
+			PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
+			PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &bground_up);
+			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &down);
+			break;
 		}
 
 		PA_WaitForVBL();
@@ -565,11 +595,11 @@ void create_tasks(void)
 			NULL);
 
 	xTaskCreate(Up_Screen_Task,
-				(const signed char * const)"Up_Screen_Task",
-				2048,
-				(void *)NULL,
-				tskIDLE_PRIORITY + 1,
-				&UpScreenTask);
+			(const signed char * const)"Up_Screen_Task",
+			2048,
+			(void *)NULL,
+			tskIDLE_PRIORITY + 1,
+			&UpScreenTask);
 
 	vTaskSuspend(UpScreenTask);
 
