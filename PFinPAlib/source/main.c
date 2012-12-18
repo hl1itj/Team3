@@ -22,16 +22,6 @@
 #include <stdlib.h>
 #include <sevencore_io.h>
 
-#define COLOR_RED          RGB(31,  0,  0)    /* Bright Red      */
-#define COLOR_WHITE        RGB(31, 31, 31)    /* Bright White */
-#define COLOR_YELLOW       RGB(31, 31,  0)    /* Bright Yellow */
-#define COLOR_BLACK        RGB( 0,  0,  0)    /* Black : Zero    */
-#define COLOR_GRAY         RGB(16, 16, 16)    /* Bright Gray */
-#define COLOR_GREEN        RGB( 0, 31,  0)    /* Bright Green */
-#define COLOR_BLUE         RGB( 0,  0, 31)    /* Bright Blue */
-#define COLOR_PURPLE       RGB(16,  0, 16)    /* Bright Purple */
-#define COLOR_SELECT       RGB(31,  0, 31)    /* Bright Magenta */
-
 #define BLOCK_WIDTH			32
 #define BLOCK_HEIGHT		32
 
@@ -39,10 +29,19 @@
 #define N_PUZZLE       6
 #define N_BLOCK        5
 #define N_BLOCK_SPRITE	10
+
 #define PUZZLE_X(x)    ((x) % N_PUZZLE)
 #define PUZZLE_Y(x)    ((x) / N_PUZZLE)
 #define SCREEN_X(x)    (((x) % N_PUZZLE) + SP)
 #define SCREEN_Y(x)    ((x) / N_PUZZLE)
+
+#define SELECT_BLOCK(x)	((x) * 2)
+
+#define PUZZLE		0
+#define PUZZLE_PAL	0
+#define BOMB		1
+#define BOMB_PAL	1
+
 
 #define UP_SCREEN 1
 #define DOWN_SCREEN 0
@@ -88,7 +87,7 @@ void draw_block(int pos_x, int pos_y, u16 color)
 	u32 *basePoint, pixel, blank_pixel;
 
 	pixel = (color << 16) + color;
-	blank_pixel = (COLOR_GRAY << 16) + COLOR_GRAY;
+	//blank_pixel = (COLOR_GRAY << 16) + COLOR_GRAY;
 	for (i = 0; i < BLOCK_HEIGHT; i++) {
 
 		basePoint = (u32 *) BG_GFX_SUB+
@@ -128,21 +127,6 @@ void select_block(int pos_x, int pos_y, u16 color)
 			}
 			*basePoint++;
 		}
-	}
-}
-
-u16 set_color(u8 n) {
-	switch (n) {
-	case RED:
-		return COLOR_RED;
-	case BLUE:
-		return COLOR_BLUE;
-	case GREEN:
-		return COLOR_GREEN;
-	case YELLOW:
-		return COLOR_YELLOW;
-	case PURPLE:
-		return COLOR_PURPLE;
 	}
 }
 
@@ -210,9 +194,6 @@ void switching_color(u8 old_key, u8 key)
 	temp = puzzle[old_x][old_y].color;
 	puzzle[old_x][old_y].color = puzzle[x][y].color;
 	puzzle[x][y].color = temp;
-
-	draw_block(SCREEN_X(old_key), SCREEN_Y(old_key), set_color(puzzle[old_x][old_y].color));
-	draw_block(SCREEN_X(key), SCREEN_Y(key), set_color(puzzle[x][y].color));
 }
 
 // 해당 행에 연속된 색이 있는지 검사
@@ -350,12 +331,6 @@ void check_puzzle(void)
 		if (changed) {
 			changed = FALSE;
 
-			// 상쇄된 block을 검은색으로 표시
-			for (i = 0; i < N_PUZZLE; i++)
-				for (j = 0; j < N_PUZZLE; j++)
-					if (puzzle[i][j].flag)
-						draw_block(i + SP, j, COLOR_BLACK);
-
 			// 일정 시간 delay
 			for (i = 0; i < 1000000; i++);
 
@@ -380,7 +355,7 @@ void check_puzzle(void)
 							color = rand() % N_BLOCK;
 						}while(color == old_color);
 
-						draw_block(i + SP, j, set_color(color));
+						//draw_block(i + SP, j, set_color(color));
 						puzzle[i][j].color = color;
 						puzzle[i][j].flag = FALSE;
 						old_color = color;
@@ -430,47 +405,23 @@ void initialize_game_info(void)
 void initialize_puzzle(void)
 {
 	int i, j;
+	u8 id = 0;
 	u8 color;
 	u8 old_color = -1;
 
-	/*
-	srand((int)time(NULL));
+	PA_LoadSpritePal(DOWN_SCREEN, PUZZLE, (void*) puzzle_Pal);
 	for (i = 0; i < N_PUZZLE; i++)
 		for (j = 0; j < N_PUZZLE; j++) {
 			do {
-				color = rand() % N_BLOCK;
+				color = PA_RandMax(N_BLOCK - 1);
 			}while(color == old_color);
-
-			draw_block(i + SP, j, set_color(color));
+			id++;
 			puzzle[i][j].color = color;
 			puzzle[i][j].flag = FALSE;
+			PA_CreateSprite(DOWN_SCREEN, id,(void*)puzzle_Sprite, OBJ_SIZE_32X32, TRUE, PUZZLE, i*32, j*32);
+			PA_SetSpriteAnim(DOWN_SCREEN, id, puzzle[i][j].color);
 			old_color = color;
 		}
-	 */
-
-	for (i = 0; i < N_PUZZLE; i++)
-		for (j = 0; j < N_PUZZLE; j++) {
-			do {
-				color = PA_RandMax(N_BLOCK);
-			}while(color == old_color);
-
-			puzzle[i][j].color = color;
-			puzzle[i][j].flag = FALSE;
-			PA_CreateSprite(DOWN_SCREEN, color,(void*)puzzle_Sprite, OBJ_SIZE_32X32, 1, N_BLOCK_SPRITE, i*32, j*32);
-			PA_SetSpriteAnim(DOWN_SCREEN, color, puzzle[i][j].color);
-			old_color = color;
-		}
-
-	/*
-	for ( i=0;i<SIZE;i++ ) {
-		for ( j=0;j<SIZE;j++ ){
-			PA_CreateSprite(DOWN_SCREEN, k,(void*)number_Sprite, OBJ_SIZE_32X32,1,NPAL, i*32, j*32);
-			Blksprite[j][i] = k; // 해당 블락스프라이트정보배열 값  초기화
-			PA_SetSpriteAnim(DOWN_SCREEN, k, blocks[j][i]); // 블록배열의 값을 스프라이트에 반영.
-			k++;
-		}
-	}
-	*/
 }
 
 /* key입력에 따른 처리 pusedo code */
@@ -506,19 +457,19 @@ void game(void)
 			if (!selected) {
 				selected = TRUE;
 				if (old_key != -1)
-					select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
-				select_block(SCREEN_X(key), SCREEN_Y(key), COLOR_SELECT);
+					//select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
+				//select_block(SCREEN_X(key), SCREEN_Y(key), COLOR_SELECT);
 				old_key = key;
 			}
 			else {
 				if (key == old_key) {
 					selected = FALSE;
-					select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
+					//select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
 				}
 				else if (is_switching_position(old_key, key)) {
 					selected = FALSE;
-					select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
-					switching_color(old_key, key);
+					//select_block(SCREEN_X(old_key), SCREEN_Y(old_key), COLOR_GRAY);
+					//switching_color(old_key, key);
 					check_puzzle();
 				}
 			}
