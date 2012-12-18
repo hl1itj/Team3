@@ -1,0 +1,23 @@
+PAGfx Converter v0.10 -- by Mollusk -- resurrected by fincs -- forum.palib.info
+If you have suggestions, problems or anything please come to the PAlib forums
+
+Converting PAGfx.ini
+Transparent Color: Green
+
+2 sprites:
+  puzzle: 256colors, 32x320, Pal: puzzle_Pal, -> puzzle_Sprite
+  bomb: 256colors, 32x224, Pal: bomb_Pal, -> bomb_Sprite
+
+2 backgrounds:
+  down : EasyBg, 256x192, Pal: down_Pal, 1 tiles -> down_Tiles and down_Map
+  bground_up : EasyBg, 256x192, Pal: bground_up_Pal, 725 tiles -> bground_up_Tiles and bground_up_Map
+
+4 palettes:
+  puzzle_Pal, 162 colors
+  bomb_Pal, 37 colors
+  down_Pal, 2 colors
+  bground_up_Pal, 21 colors
+
+Converted in 0 minutes and 0 seconds
+
+Finished!

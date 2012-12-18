@@ -119,7 +119,20 @@ main.o: c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/main.c \
  c:/devkitPro/PAlib/include/nds/arm9/PA_KeysSpecial.h \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Fake16bit.h \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h \
- c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h
+ c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/gfx/all_gfx.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/FreeRTOS.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/projdefs.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/FreeRTOSConfig.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/portable.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/portmacro.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/mpu_wrappers.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/task.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/list.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/queue.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/semphr.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/queue.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/sevencore_io.h
 
 c:/devkitPro/PAlib/include/nds/PA9.h:
 
@@ -364,3 +377,29 @@ c:/devkitPro/PAlib/include/nds/arm9/PA_Fake16bit.h:
 c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h:
 
 c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/gfx/all_gfx.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/FreeRTOS.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/projdefs.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/FreeRTOSConfig.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/portable.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/portmacro.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/mpu_wrappers.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/task.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/list.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/queue.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/semphr.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/queue.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/sevencore_io.h:

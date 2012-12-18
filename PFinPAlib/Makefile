@@ -32,8 +32,8 @@ TEXT3 := for your project!
 
 TARGET      := $(shell basename $(CURDIR))
 BUILD       := build
-SOURCES     := source data gfx/bin
-INCLUDES    := include build data gfx
+SOURCES     := source data gfx/bin FreeRTOS FreeRTOS/NDS
+INCLUDES    := include build data gfx FreeRTOS/include FreeRTOS/NDS
 AUDIO       := audio
 RELEASEPATH := 
 
