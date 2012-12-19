@@ -7,6 +7,7 @@
 #include "header.h"
 #include "game.h"
 #include "bomb_sound.h"
+#include "hit_sound.h"
 
 void write_puzzle(u8 value)
 {
@@ -303,6 +304,7 @@ void check_puzzle(void)
 
 			// 폭발 이미지
 			AS_SoundDefaultPlay((u8*)bomb_sound, (u32)bomb_sound_size, 127, 64, FALSE, 0);
+			AS_SoundDefaultPlay((u8*)hit_sound, (u32)hit_sound_size, 127, 64, FALSE, 0);
 			for (i = 0; i < N_PUZZLE; i++)
 				for (j = 0; j < N_PUZZLE; j++)
 					if (puzzle[i][j].bomb)

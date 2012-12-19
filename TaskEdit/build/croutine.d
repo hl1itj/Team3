@@ -1,29 +1,29 @@
 croutine.o: \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/croutine.c \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/FreeRTOS.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/projdefs.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/FreeRTOSConfig.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/portable.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/portmacro.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/mpu_wrappers.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/task.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/list.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/croutine.h
+ c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/croutine.c \
+ c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/FreeRTOS.h \
+ c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/projdefs.h \
+ c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/NDS/FreeRTOSConfig.h \
+ c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/portable.h \
+ c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/NDS/portmacro.h \
+ c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/mpu_wrappers.h \
+ c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/task.h \
+ c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/list.h \
+ c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/croutine.h
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/FreeRTOS.h:
+c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/FreeRTOS.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/projdefs.h:
+c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/projdefs.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/FreeRTOSConfig.h:
+c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/NDS/FreeRTOSConfig.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/portable.h:
+c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/portable.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/portmacro.h:
+c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/NDS/portmacro.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/mpu_wrappers.h:
+c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/mpu_wrappers.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/task.h:
+c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/task.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/list.h:
+c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/list.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/croutine.h:
+c:/Users/mingi/Documents/GitHub/Team3/TaskEdit/FreeRTOS/include/croutine.h:
