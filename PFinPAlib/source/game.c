@@ -37,6 +37,11 @@ void draw_monster(u8 level)
 	PA_SetSpriteAnim(UP_SCREEN, 0, 0);
 }
 
+void draw_damaged_monster(void)
+{
+	PA_StartSpriteAnimEx(UP_SCREEN, 0, 0, 1, 10, ANIM_LOOP, 3);
+}
+
 void draw_text(void)
 {
 	PA_InitText(UP_SCREEN, 0);
@@ -59,6 +64,17 @@ void draw_text(void)
 
 	PA_SetTextTileCol(UP_SCREEN, TEXT_GREEN);
 	PA_OutputText(UP_SCREEN, 23, 22, "DEF %d", u_info.def);
+}
+
+void delay(int time)
+{
+	int delay;
+	portTickType xLastWakeTime;
+	xLastWakeTime = xTaskGetTickCount();
+
+	do {
+		delay = xTaskGetTickCount() - xLastWakeTime;
+	} while (delay < ((int)(time / portTICK_RATE_MS)));
 }
 
 void set_monster_sprite(u8 level)
@@ -220,8 +236,10 @@ void user_action(int action)
 	case ATK:
 		u_info.atk += (count * 10);
 		damage = u_info.atk - monster[g_info.level].def;
-		if (damage > 0)
+		if (damage > 0) {
 			monster[g_info.level].hp -= (damage);
+			draw_damaged_monster();
+		}
 		u_info.atk = 0;
 		break;
 
@@ -231,8 +249,10 @@ void user_action(int action)
 			damage = g_info.block_count[action] * 100;
 			u_info.spc += damage;
 			damage -= monster[g_info.level].def;
-			if (damage > 0)
+			if (damage > 0) {
 				monster[g_info.level].hp -= (damage);
+				draw_damaged_monster();
+			}
 			u_info.spc = 0;
 		}
 		break;
@@ -273,14 +293,13 @@ void check_puzzle(void)
 	u8 color;
 	u8 old_color = -1;
 	u8 changed = FALSE;
-	portTickType xLastWakeTime;
-	int delay;
+
 
 	do {
 		if (changed) {
 			changed = FALSE;
 
-			xLastWakeTime = xTaskGetTickCount();
+
 			// 气惯 捞固瘤
 			for (i = 0; i < N_PUZZLE; i++)
 				for (j = 0; j < N_PUZZLE; j++)
@@ -288,9 +307,7 @@ void check_puzzle(void)
 						PA_StartSpriteAnimEx(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 10, ANIM_LOOP, 1);
 
 			// delay 0.5 sec
-			do {
-				delay = xTaskGetTickCount() - xLastWakeTime;
-			} while (delay < ((int)(500 / portTICK_RATE_MS)));
+			delay(500);
 
 			// 货肺款 block 积己
 			for (i = 0; i < N_PUZZLE; i++)

@@ -75,7 +75,10 @@ enum {HP = 0, MP, DEF, ATK, SPC};
 void write_puzzle(u8 value);
 u8 read_puzzle(void);
 void draw_block(u8 id, u8 color);
-void draw_bomb(u8 id);
+void draw_monster(u8 level);
+void draw_text(void);
+void delay(int time);
+void set_monster_sprite(u8 level);
 u8 is_switching_position(u8 old_key, u8 key);
 void switching_color(u8 old_key, u8 key);
 u8 check_row(int row);
@@ -89,7 +92,5 @@ void initialize_game_info(void);
 void initialize_puzzle(void);
 void game(void);
 void main_screen();
-void set_monster_sprite(u8 level);
-void draw_monster(u8 level);
 
 #endif
