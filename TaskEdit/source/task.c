@@ -77,18 +77,31 @@ portTASK_FUNCTION(Puzzle_Key_Task, pvParameters)
 portTASK_FUNCTION(Up_Screen_Task, pvParameters)
 {
 	PA_InitText(UP_SCREEN, 0);
+	PA_InitText(DOWN_SCREEN, 0);
 
 	while (1) {
+		//위 화면
 		PA_SetTextTileCol(UP_SCREEN, TEXT_RED);
-		//PA_OutputTextSpecial0(UP_SCREEN, 0, 0, "Level");
-		PA_OutputSimpleText(UP_SCREEN, 1, 1, "LEVEL");
-		PA_OutputSimpleText(UP_SCREEN, 11, 1, "TURN NUM");
-		PA_OutputSimpleText(UP_SCREEN, 23, 1, "TURN WHO");
-		PA_OutputSimpleText(UP_SCREEN, 1, 22, "HP");
-		//PA_OutputText(UP_SCREEN, 5, 13, "monster hp: %d", monster[g_info.level].hp);
-		//PA_OutputText(UP_SCREEN, 2, 17, "hp: %d", u_info.hp);
-		//PA_SetTextTileCol(UP_SCREEN, TEXT_BLUE);
-		//PA_OutputText(UP_SCREEN, 2, 20, "mp: %d", u_info.mp);
+		PA_OutputText(UP_SCREEN, 1, 1, "LEVEL ");
+		PA_OutputText(UP_SCREEN, 11, 1, "TURN ");
+		PA_OutputText(UP_SCREEN, 23, 1, "TURN ");
+		PA_OutputText(UP_SCREEN, 1, 22, "HP");
+
+		//아래화면
+		PA_SetTextTileCol(DOWN_SCREEN, TEXT_RED);
+		PA_OutputText(DOWN_SCREEN, 1, 1, "HP %d", u_info.hp);
+
+		PA_SetTextTileCol(DOWN_SCREEN, TEXT_BLUE);
+		PA_OutputText(DOWN_SCREEN, 1, 5, "MP %d", u_info.mp);
+
+		PA_SetTextTileCol(DOWN_SCREEN, TEXT_GREEN);
+		PA_OutputText(DOWN_SCREEN, 1, 10, "DEF %d", u_info.def);
+
+		PA_SetTextTileCol(DOWN_SCREEN, TEXT_YELLOW);
+		PA_OutputText(DOWN_SCREEN, 1, 15, "ATK %d", u_info.atk);
+
+		PA_SetTextTileCol(DOWN_SCREEN, TEXT_MAGENTA);
+		//PA_OutputText(DOWN_SCREEN, 2, 20, "SCP %d", u_info);
 	}
 }
 

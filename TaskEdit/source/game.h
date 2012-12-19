@@ -33,6 +33,16 @@
 
 #define MAX_LEVEL			10
 
+#define COLOR_RED		RGB(31,  0,  0)    /* Bright Red      */
+#define COLOR_WHITE		RGB(31, 31, 31)    /* Bright White */
+#define COLOR_YELLOW	RGB(31, 31, 0)    /* Bright Yellow */
+#define COLOR_BLACK		RGB( 0,  0,  0)    /* Black : Zero    */
+#define COLOR_GRAY		RGB(16, 16, 16)    /* Bright Gray */
+#define COLOR_GREEN		RGB( 0, 31,  0)    /* Bright Green */
+#define COLOR_BLUE		RGB( 0,  0, 31)    /* Bright Blue */
+#define COLOR_PURPLE	RGB(16, 0, 16)    /* Bright Purple */
+#define COLOR_SELECT	RGB(31, 0, 31)    /* Bright Magenta */
+
 // global variable
 typedef struct game_info {
 	u8 block_count[N_BLOCK];
