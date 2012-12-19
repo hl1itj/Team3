@@ -7,6 +7,7 @@
 #include "header.h"
 #include "game.h"
 
+
 void write_puzzle(u8 value)
 {
 	virtual_puzzle = value & 0x3F;
@@ -30,17 +31,6 @@ u8 read_puzzle(void)
 void draw_block(u8 id, u8 color)
 {
 	PA_SetSpriteAnim(DOWN_SCREEN, id, color + 4);
-}
-
-void draw_bomb(u8 id)
-{
-	int i, j;
-
-	//PA_LoadSpritePal(DOWN_SCREEN, BOMB, (void*) bomb_Pal);
-	for (i = 0; i < 7; i++) {
-		PA_SetSpriteAnim(DOWN_SCREEN, id, i);
-		for (j = 0; j < 1000000000; j++);
-	}
 }
 
 // 지금 선택한 block이 바로 전에 선택한 block의 상하좌우에 위치해 있는지 검사
@@ -245,18 +235,25 @@ void check_puzzle(void)
 	u8 color;
 	u8 old_color = -1;
 	u8 changed = FALSE;
+	portTickType xLastWakeTime;
+	int delay;
 
 	do {
 		if (changed) {
 			changed = FALSE;
 
+			xLastWakeTime = xTaskGetTickCount();
 			// 폭발 이미지
-			/*
 			for (i = 0; i < N_PUZZLE; i++)
 				for (j = 0; j < N_PUZZLE; j++)
 					if (puzzle[i][j].bomb)
-						PA_StartSpriteAnimEx(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 2, ANIM_LOOP, 2);
-			 */
+						//PA_StartSpriteAnim(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 1);
+						PA_StartSpriteAnimEx(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 10, ANIM_LOOP, 1);
+
+			// delay 0.5 sec
+			do {
+				delay = xTaskGetTickCount() - xLastWakeTime;
+			} while (delay < ((int)(500 / portTICK_RATE_MS)));
 
 			// block 상쇄에 따른 행동
 			for (i = 0; i < N_BLOCK; i++)
@@ -273,16 +270,17 @@ void check_puzzle(void)
 			// 새로운 block 생성
 			for (i = 0; i < N_PUZZLE; i++)
 				for (j = 0; j < N_PUZZLE; j++)
-					if (puzzle[i][j].bomb) {
+					// key값과 id값을 맞추기 위해 (j, i)로 사용
+					if (puzzle[j][i].bomb) {
 						old_color = color;
 						do {
 							color = PA_RandMax(N_BLOCK - 1);
 						}while(color == old_color);
 
-						puzzle[i][j].color = color;
-						puzzle[i][j].bomb = FALSE;
+						puzzle[j][i].color = color;
+						puzzle[j][i].bomb = FALSE;
 
-						draw_block(puzzle[i][j].id, puzzle[i][j].color);
+						draw_block(puzzle[j][i].id, puzzle[j][i].color);
 						old_color = color;
 					}
 		}

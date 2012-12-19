@@ -1,16 +1,16 @@
 gdbStub.o: \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStub.c \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStub.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/FreeRTOS.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/projdefs.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/FreeRTOSConfig.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/portable.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/portmacro.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/mpu_wrappers.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/task.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/list.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStubAsm.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/card_spi.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStub.c \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStub.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/FreeRTOS.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/projdefs.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/FreeRTOSConfig.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/portable.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/portmacro.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/mpu_wrappers.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/task.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/list.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStubAsm.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/card_spi.h \
  c:/devkitPro/libnds/include/nds.h \
  c:/devkitPro/libnds/include/nds/libversion.h \
  c:/devkitPro/libnds/include/nds/ndstypes.h \
@@ -66,29 +66,29 @@ gdbStub.o: \
  c:/devkitPro/libnds/include/nds/arm9/trig_lut.h \
  c:/devkitPro/libnds/include/nds/arm9/video.h \
  c:/devkitPro/libnds/include/nds/arm9/videoGL.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/define.h
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/define.h
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStub.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStub.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/FreeRTOS.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/FreeRTOS.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/projdefs.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/projdefs.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/FreeRTOSConfig.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/FreeRTOSConfig.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/portable.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/portable.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/portmacro.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/portmacro.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/mpu_wrappers.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/mpu_wrappers.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/task.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/task.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/list.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/list.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStubAsm.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStubAsm.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/card_spi.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/card_spi.h:
 
 c:/devkitPro/libnds/include/nds.h:
 
@@ -200,4 +200,4 @@ c:/devkitPro/libnds/include/nds/arm9/video.h:
 
 c:/devkitPro/libnds/include/nds/arm9/videoGL.h:
 
-c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/define.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/define.h:

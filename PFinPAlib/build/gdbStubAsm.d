@@ -1,2 +1,2 @@
 gdbStubAsm.o: \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStubAsm.s
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/gdbStubAsm.s
