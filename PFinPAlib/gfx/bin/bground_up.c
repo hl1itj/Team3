@@ -12,6 +12,6 @@ const PA_BgStruct bground_up = {
 	bground_up_Map,
 	{bground_up_Pal},
 
-	46400,
+	320,
 	{1536}
 };

@@ -48,6 +48,9 @@ typedef struct user_info {
 	int max_hp;
 	int max_mp;
 	void (*action) (int);
+
+	void *img_pal;
+	void *img_sprite;
 } user_info;
 
 typedef struct block {

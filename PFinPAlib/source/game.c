@@ -7,7 +7,6 @@
 #include "header.h"
 #include "game.h"
 
-
 void write_puzzle(u8 value)
 {
 	virtual_puzzle = value & 0x3F;
@@ -314,6 +313,10 @@ void initialize_monster_info(void)
 		monster[i].hp = i * 200;
 		monster[i].mp = 0;
 	}
+	/*
+	monster[0].img_pal = ;
+	monster[0].img_sprite =
+	*/
 }
 
 // 게임 정보를 초기화
