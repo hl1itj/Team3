@@ -207,6 +207,7 @@ void user_action(int action)
 				u_info.mp -= (count * 100);
 			}
 
+			u_info.spc += damage;
 			damage -= monster[g_info.level].def;
 			if (damage > 0)
 				monster[g_info.level].hp -= (damage);
@@ -301,6 +302,7 @@ void initialize_user_info(void)
 		u_info.mp = 500;
 	u_info.max_mp = 500 + 100 * (g_info.level - 1);
 	u_info.action = user_action;
+	u_info.spc = 0;
 }
 
 // 몬스터 정보를 초기화
@@ -414,13 +416,12 @@ void game(void)
 
 void main_screen()
 {
-
 	while (1) {
 		if (Stylus.Newpress || Pad.Newpress.Start) {
 			PA_DeleteBg(UP_SCREEN, BACKGROUND_UP);
 			PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
 			PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &bground_up);
-			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &down);
+			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &bground_down);
 			break;
 		}
 

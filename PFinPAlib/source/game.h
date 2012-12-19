@@ -45,6 +45,7 @@ typedef struct user_info {
 	int mp;
 	int atk;
 	int def;
+	int spc;
 	int max_hp;
 	int max_mp;
 	void (*action) (int);
