@@ -32,6 +32,17 @@ void draw_block(u8 id, u8 color)
 	PA_SetSpriteAnim(DOWN_SCREEN, id, color + 4);
 }
 
+void draw_bomb(u8 id)
+{
+	int i, j;
+
+	//PA_LoadSpritePal(DOWN_SCREEN, BOMB, (void*) bomb_Pal);
+	for (i = 0; i < 7; i++) {
+		PA_SetSpriteAnim(DOWN_SCREEN, id, i);
+		for (j = 0; j < 1000000000; j++);
+	}
+}
+
 // 지금 선택한 block이 바로 전에 선택한 block의 상하좌우에 위치해 있는지 검사
 u8 is_switching_position(u8 old_key, u8 key)
 {
@@ -244,22 +255,8 @@ void check_puzzle(void)
 			for (i = 0; i < N_PUZZLE; i++)
 				for (j = 0; j < N_PUZZLE; j++)
 					if (puzzle[i][j].bomb)
-						//PA_StartSpriteAnim(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 1);
-						PA_StartSpriteAnimEx(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 60, ANIM_LOOP, 1);
-
-			portTickType xLastWakeTime = xTaskGetTickCount();
-			while(1) {
-			if xLastWakeTime, MSEC2TIC(현재) > 몇초
-			}
-			일정 시간 이상 이면 while을 빠져나오게 해서 delay
-			*/
-
-			//for (i = 0; i < 4294967295; i++);
-
-			for (i = 0; i < N_PUZZLE; i++)
-				for (j = 0; j < N_PUZZLE; j++)
-					if (puzzle[i][j].bomb)
-						PA_StopSpriteAnim(DOWN_SCREEN, puzzle[i][j].id);
+						PA_StartSpriteAnimEx(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 2, ANIM_LOOP, 2);
+			 */
 
 			// block 상쇄에 따른 행동
 			for (i = 0; i < N_BLOCK; i++)
