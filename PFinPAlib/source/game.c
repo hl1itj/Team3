@@ -404,7 +404,8 @@ void initialize_monster_info(void)
 {
 	int i;
 	for (i = 1; i <= MAX_LEVEL; i++) {
-		monster[i].atk = i * 50;
+		monster[i].atk = i * 20;
+		//monster[i].hp = i;
 		monster[i].def = 0;
 		monster[i].hp = i * 200;
 		//monster[i].hp = i;
