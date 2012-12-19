@@ -134,7 +134,8 @@ game.o: c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/source/game.c \
  c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/semphr.h \
  c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/queue.h \
  c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/sevencore_io.h \
- c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/source/game.h
+ c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/source/game.h \
+ c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/build/bomb_sound.h
 
 c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/source/header.h:
 
@@ -409,3 +410,5 @@ c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/queue.h:
 c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/sevencore_io.h:
 
 c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/source/game.h:
+
+c:/Users/mingi/Documents/GitHub/Team3/PFinPAlib/build/bomb_sound.h:

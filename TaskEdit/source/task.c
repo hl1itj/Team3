@@ -38,7 +38,6 @@ portTASK_FUNCTION(Puzzle_Key_Task, pvParameters)
 	// Variables
 	u8 key, scan = 0;
 	u8 key_pressed = FALSE;
-	u8 pre_line;
 
 	while (1) {
 		if (!key_pressed) {
@@ -46,7 +45,6 @@ portTASK_FUNCTION(Puzzle_Key_Task, pvParameters)
 			write_puzzle(0x20 >> scan);
 			key = scan * 6;
 
-			pre_line = read_puzzle();
 			switch (read_puzzle()) {
 			case 32 : key += 1; break;
 			case 16 : key += 2; break;
@@ -74,37 +72,6 @@ portTASK_FUNCTION(Puzzle_Key_Task, pvParameters)
 	}
 }
 
-portTASK_FUNCTION(Up_Screen_Task, pvParameters)
-{
-	PA_InitText(UP_SCREEN, 0);
-	PA_InitText(DOWN_SCREEN, 0);
-
-	while (1) {
-		//위 화면
-		PA_SetTextTileCol(UP_SCREEN, TEXT_RED);
-		PA_OutputText(UP_SCREEN, 1, 1, "LEVEL ");
-		PA_OutputText(UP_SCREEN, 11, 1, "TURN ");
-		PA_OutputText(UP_SCREEN, 23, 1, "TURN ");
-		PA_OutputText(UP_SCREEN, 1, 22, "HP");
-
-		//아래화면
-		PA_SetTextTileCol(DOWN_SCREEN, TEXT_RED);
-		PA_OutputText(DOWN_SCREEN, 1, 1, "HP %d", u_info.hp);
-
-		PA_SetTextTileCol(DOWN_SCREEN, TEXT_BLUE);
-		PA_OutputText(DOWN_SCREEN, 1, 5, "MP %d", u_info.mp);
-
-		PA_SetTextTileCol(DOWN_SCREEN, TEXT_GREEN);
-		PA_OutputText(DOWN_SCREEN, 1, 10, "DEF %d", u_info.def);
-
-		PA_SetTextTileCol(DOWN_SCREEN, TEXT_YELLOW);
-		PA_OutputText(DOWN_SCREEN, 1, 15, "ATK %d", u_info.atk);
-
-		PA_SetTextTileCol(DOWN_SCREEN, TEXT_MAGENTA);
-		//PA_OutputText(DOWN_SCREEN, 2, 20, "SCP %d", u_info);
-	}
-}
-
 portTASK_FUNCTION(Game_Task, pvParameters)
 {
 	while (1) {
@@ -121,15 +88,6 @@ void create_tasks(void)
 			(void *)NULL,
 			tskIDLE_PRIORITY + 10,
 			NULL);
-
-	xTaskCreate(Up_Screen_Task,
-			(const signed char * const)"Up_Screen_Task",
-			2048,
-			(void *)NULL,
-			tskIDLE_PRIORITY + 1,
-			&UpScreenTask);
-
-	vTaskSuspend(UpScreenTask);
 
 	xTaskCreate(Game_Task,
 			(const signed char * const)"Game_Task",

@@ -9,48 +9,48 @@ extern "C"{
 #endif
 
 // Sprites:
-extern const unsigned char goblin_Sprite[4096] _GFX_ALIGN; // Palette: goblin_Pal
-extern const unsigned char harpy_Sprite[4096] _GFX_ALIGN; // Palette: harpy_Pal
-extern const unsigned char incubus_Sprite[4096] _GFX_ALIGN; // Palette: incubus_Pal
-extern const unsigned char kerberos_Sprite[4096] _GFX_ALIGN; // Palette: kerberos_Pal
-extern const unsigned char kraken_Sprite[4096] _GFX_ALIGN; // Palette: kraken_Pal
-extern const unsigned char cyclops_Sprite[4096] _GFX_ALIGN; // Palette: cyclops_Pal
-extern const unsigned char ghost_Sprite[4096] _GFX_ALIGN; // Palette: ghost_Pal
-extern const unsigned char scorpion_Sprite[4096] _GFX_ALIGN; // Palette: scorpion_Pal
-extern const unsigned char troll_Sprite[4096] _GFX_ALIGN; // Palette: troll_Pal
-extern const unsigned char warewolf_Sprite[4096] _GFX_ALIGN; // Palette: warewolf_Pal
-extern const unsigned char zombie_Sprite[4096] _GFX_ALIGN; // Palette: zombie_Pal
-extern const unsigned char medusa_Sprite[4096] _GFX_ALIGN; // Palette: medusa_Pal
-extern const unsigned char mummy_Sprite[4096] _GFX_ALIGN; // Palette: mummy_Pal
-extern const unsigned char ninetail_Sprite[4096] _GFX_ALIGN; // Palette: ninetail_Pal
-extern const unsigned char oak_Sprite[4096] _GFX_ALIGN; // Palette: oak_Pal
 extern const unsigned char puzzle_Sprite[14336] _GFX_ALIGN; // Palette: puzzle_Pal
-extern const unsigned char salamander_Sprite[4096] _GFX_ALIGN; // Palette: salamander_Pal
+extern const unsigned char _5_Sprite[8192] _GFX_ALIGN; // Palette: _5_Pal
+extern const unsigned char _6_Sprite[8192] _GFX_ALIGN; // Palette: _6_Pal
+extern const unsigned char _7_Sprite[8192] _GFX_ALIGN; // Palette: _7_Pal
+extern const unsigned char _8_Sprite[8192] _GFX_ALIGN; // Palette: _8_Pal
+extern const unsigned char _9_Sprite[8192] _GFX_ALIGN; // Palette: _9_Pal
+extern const unsigned char _10_Sprite[8192] _GFX_ALIGN; // Palette: _10_Pal
+extern const unsigned char _11_Sprite[8192] _GFX_ALIGN; // Palette: _11_Pal
+extern const unsigned char _12_Sprite[8192] _GFX_ALIGN; // Palette: _12_Pal
+extern const unsigned char _13_Sprite[8192] _GFX_ALIGN; // Palette: _13_Pal
+extern const unsigned char _14_Sprite[8192] _GFX_ALIGN; // Palette: _14_Pal
+extern const unsigned char _15_Sprite[8192] _GFX_ALIGN; // Palette: _15_Pal
+extern const unsigned char _16_Sprite[8192] _GFX_ALIGN; // Palette: _16_Pal
+extern const unsigned char _1_Sprite[8192] _GFX_ALIGN; // Palette: _1_Pal
+extern const unsigned char _2_Sprite[8192] _GFX_ALIGN; // Palette: _2_Pal
+extern const unsigned char _3_Sprite[8192] _GFX_ALIGN; // Palette: _3_Pal
+extern const unsigned char _4_Sprite[8192] _GFX_ALIGN; // Palette: _4_Pal
 
 // Backgrounds:
+extern const PA_BgStruct bground_up;
 extern const PA_BgStruct main_down;
 extern const PA_BgStruct main_up;
-extern const PA_BgStruct bground_up;
-extern const PA_BgStruct down;
+extern const PA_BgStruct bground_down;
 
 // Palettes:
-extern const unsigned short goblin_Pal[256] _GFX_ALIGN;
-extern const unsigned short harpy_Pal[256] _GFX_ALIGN;
-extern const unsigned short incubus_Pal[256] _GFX_ALIGN;
-extern const unsigned short kerberos_Pal[256] _GFX_ALIGN;
-extern const unsigned short kraken_Pal[256] _GFX_ALIGN;
-extern const unsigned short cyclops_Pal[256] _GFX_ALIGN;
-extern const unsigned short ghost_Pal[256] _GFX_ALIGN;
-extern const unsigned short scorpion_Pal[256] _GFX_ALIGN;
-extern const unsigned short troll_Pal[256] _GFX_ALIGN;
-extern const unsigned short warewolf_Pal[256] _GFX_ALIGN;
-extern const unsigned short zombie_Pal[256] _GFX_ALIGN;
-extern const unsigned short medusa_Pal[256] _GFX_ALIGN;
-extern const unsigned short mummy_Pal[256] _GFX_ALIGN;
-extern const unsigned short ninetail_Pal[256] _GFX_ALIGN;
-extern const unsigned short oak_Pal[256] _GFX_ALIGN;
 extern const unsigned short puzzle_Pal[256] _GFX_ALIGN;
-extern const unsigned short salamander_Pal[256] _GFX_ALIGN;
+extern const unsigned short _5_Pal[256] _GFX_ALIGN;
+extern const unsigned short _6_Pal[256] _GFX_ALIGN;
+extern const unsigned short _7_Pal[256] _GFX_ALIGN;
+extern const unsigned short _8_Pal[256] _GFX_ALIGN;
+extern const unsigned short _9_Pal[256] _GFX_ALIGN;
+extern const unsigned short _10_Pal[256] _GFX_ALIGN;
+extern const unsigned short _11_Pal[256] _GFX_ALIGN;
+extern const unsigned short _12_Pal[256] _GFX_ALIGN;
+extern const unsigned short _13_Pal[256] _GFX_ALIGN;
+extern const unsigned short _14_Pal[256] _GFX_ALIGN;
+extern const unsigned short _15_Pal[256] _GFX_ALIGN;
+extern const unsigned short _16_Pal[256] _GFX_ALIGN;
+extern const unsigned short _1_Pal[256] _GFX_ALIGN;
+extern const unsigned short _2_Pal[256] _GFX_ALIGN;
+extern const unsigned short _3_Pal[256] _GFX_ALIGN;
+extern const unsigned short _4_Pal[256] _GFX_ALIGN;
 
 #ifdef __cplusplus
 }

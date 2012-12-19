@@ -12,6 +12,6 @@ const PA_BgStruct down = {
 	down_Map,
 	{down_Pal},
 
-	64,
+	128,
 	{1536}
 };

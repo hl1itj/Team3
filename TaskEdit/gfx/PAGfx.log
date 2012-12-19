@@ -5,52 +5,52 @@ Converting PAGfx.ini
 Transparent Color: Magenta
 
 17 sprites:
-  goblin: 256colors, 64x64, Pal: goblin_Pal, -> goblin_Sprite
-  harpy: 256colors, 64x64, Pal: harpy_Pal, -> harpy_Sprite
-  incubus: 256colors, 64x64, Pal: incubus_Pal, -> incubus_Sprite
-  kerberos: 256colors, 64x64, Pal: kerberos_Pal, -> kerberos_Sprite
-  kraken: 256colors, 64x64, Pal: kraken_Pal, -> kraken_Sprite
-  cyclops: 256colors, 64x64, Pal: cyclops_Pal, -> cyclops_Sprite
-  ghost: 256colors, 64x64, Pal: ghost_Pal, -> ghost_Sprite
-  scorpion: 256colors, 64x64, Pal: scorpion_Pal, -> scorpion_Sprite
-  troll: 256colors, 64x64, Pal: troll_Pal, -> troll_Sprite
-  warewolf: 256colors, 64x64, Pal: warewolf_Pal, -> warewolf_Sprite
-  zombie: 256colors, 64x64, Pal: zombie_Pal, -> zombie_Sprite
-  medusa: 256colors, 64x64, Pal: medusa_Pal, -> medusa_Sprite
-  mummy: 256colors, 64x64, Pal: mummy_Pal, -> mummy_Sprite
-  ninetail: 256colors, 64x64, Pal: ninetail_Pal, -> ninetail_Sprite
-  oak: 256colors, 64x64, Pal: oak_Pal, -> oak_Sprite
   puzzle: 256colors, 32x448, Pal: puzzle_Pal, -> puzzle_Sprite
-  salamander: 256colors, 64x64, Pal: salamander_Pal, -> salamander_Sprite
+  _5: 256colors, 64x128, Pal: _5_Pal, -> _5_Sprite
+  _6: 256colors, 64x128, Pal: _6_Pal, -> _6_Sprite
+  _7: 256colors, 64x128, Pal: _7_Pal, -> _7_Sprite
+  _8: 256colors, 64x128, Pal: _8_Pal, -> _8_Sprite
+  _9: 256colors, 64x128, Pal: _9_Pal, -> _9_Sprite
+  _10: 256colors, 64x128, Pal: _10_Pal, -> _10_Sprite
+  _11: 256colors, 64x128, Pal: _11_Pal, -> _11_Sprite
+  _12: 256colors, 64x128, Pal: _12_Pal, -> _12_Sprite
+  _13: 256colors, 64x128, Pal: _13_Pal, -> _13_Sprite
+  _14: 256colors, 64x128, Pal: _14_Pal, -> _14_Sprite
+  _15: 256colors, 64x128, Pal: _15_Pal, -> _15_Sprite
+  _16: 256colors, 64x128, Pal: _16_Pal, -> _16_Sprite
+  _1: 256colors, 64x128, Pal: _1_Pal, -> _1_Sprite
+  _2: 256colors, 64x128, Pal: _2_Pal, -> _2_Sprite
+  _3: 256colors, 64x128, Pal: _3_Pal, -> _3_Sprite
+  _4: 256colors, 64x128, Pal: _4_Pal, -> _4_Sprite
 
 4 backgrounds:
+  bground_up : EasyBg, 256x192, Pal: bground_up_Pal, 5 tiles -> bground_up_Tiles and bground_up_Map
   main_down : EasyBg, 256x192, Pal: main_down_Pal, 38 tiles -> main_down_Tiles and main_down_Map
   main_up : EasyBg, 256x192, Pal: main_up_Pal, 243 tiles -> main_up_Tiles and main_up_Map
-  bground_up : EasyBg, 256x192, Pal: bground_up_Pal, 725 tiles -> bground_up_Tiles and bground_up_Map
-  down : EasyBg, 256x192, Pal: down_Pal, 1 tiles -> down_Tiles and down_Map
+  bground_down : EasyBg, 256x192, Pal: bground_down_Pal, 2 tiles -> bground_down_Tiles and bground_down_Map
 
 21 palettes:
-  goblin_Pal, 22 colors
-  harpy_Pal, 22 colors
-  incubus_Pal, 26 colors
-  kerberos_Pal, 22 colors
-  kraken_Pal, 18 colors
-  cyclops_Pal, 28 colors
-  ghost_Pal, 18 colors
-  scorpion_Pal, 14 colors
-  troll_Pal, 20 colors
-  warewolf_Pal, 22 colors
-  zombie_Pal, 19 colors
-  medusa_Pal, 29 colors
-  mummy_Pal, 9 colors
-  ninetail_Pal, 34 colors
-  oak_Pal, 28 colors
-  puzzle_Pal, 171 colors
-  salamander_Pal, 22 colors
+  puzzle_Pal, 169 colors
+  _5_Pal, 16 colors
+  _6_Pal, 24 colors
+  _7_Pal, 38 colors
+  _8_Pal, 40 colors
+  _9_Pal, 33 colors
+  _10_Pal, 43 colors
+  _11_Pal, 26 colors
+  _12_Pal, 42 colors
+  _13_Pal, 36 colors
+  _14_Pal, 38 colors
+  _15_Pal, 49 colors
+  _16_Pal, 57 colors
+  _1_Pal, 34 colors
+  _2_Pal, 33 colors
+  _3_Pal, 31 colors
+  _4_Pal, 42 colors
+  bground_up_Pal, 4 colors
   main_down_Pal, 18 colors
   main_up_Pal, 58 colors
-  bground_up_Pal, 21 colors
-  down_Pal, 2 colors
+  bground_down_Pal, 3 colors
 
 Converted in 0 minutes and 0 seconds
 

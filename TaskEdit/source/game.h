@@ -24,6 +24,8 @@
 #define PUZZLE_PAL	0
 #define BOMB		1
 #define BOMB_PAL	1
+#define MONSTER		2
+#define MONSTER_PA	2
 
 #define DOWN_SCREEN 0
 #define UP_SCREEN 1
@@ -31,17 +33,7 @@
 #define BACKGROUND_DOWN		0
 #define BACKGROUND_UP		1
 
-#define MAX_LEVEL			10
-
-#define COLOR_RED		RGB(31,  0,  0)    /* Bright Red      */
-#define COLOR_WHITE		RGB(31, 31, 31)    /* Bright White */
-#define COLOR_YELLOW	RGB(31, 31, 0)    /* Bright Yellow */
-#define COLOR_BLACK		RGB( 0,  0,  0)    /* Black : Zero    */
-#define COLOR_GRAY		RGB(16, 16, 16)    /* Bright Gray */
-#define COLOR_GREEN		RGB( 0, 31,  0)    /* Bright Green */
-#define COLOR_BLUE		RGB( 0,  0, 31)    /* Bright Blue */
-#define COLOR_PURPLE	RGB(16, 0, 16)    /* Bright Purple */
-#define COLOR_SELECT	RGB(31, 0, 31)    /* Bright Magenta */
+#define MAX_LEVEL			16
 
 // global variable
 typedef struct game_info {
@@ -55,9 +47,13 @@ typedef struct user_info {
 	int mp;
 	int atk;
 	int def;
+	int spc;
 	int max_hp;
 	int max_mp;
 	void (*action) (int);
+
+	void *img_pal;
+	void *img_sprite;
 } user_info;
 
 typedef struct block {
@@ -66,13 +62,12 @@ typedef struct block {
 	u8 bomb;
 } block;
 
-xTaskHandle UpScreenTask;
 xQueueHandle KeyQueue;
 volatile u8 virtual_puzzle;
 
 game_info g_info;
 user_info u_info;
-user_info monster[MAX_LEVEL];
+user_info monster[MAX_LEVEL + 1];
 block puzzle[N_PUZZLE][N_PUZZLE];
 enum {HP = 0, MP, DEF, ATK, SPC};
 
@@ -80,7 +75,10 @@ enum {HP = 0, MP, DEF, ATK, SPC};
 void write_puzzle(u8 value);
 u8 read_puzzle(void);
 void draw_block(u8 id, u8 color);
-void draw_bomb(u8 id);
+void draw_monster(u8 level);
+void draw_text(void);
+void delay(int time);
+void set_monster_sprite(u8 level);
 u8 is_switching_position(u8 old_key, u8 key);
 void switching_color(u8 old_key, u8 key);
 u8 check_row(int row);
