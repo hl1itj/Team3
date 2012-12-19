@@ -80,10 +80,15 @@ portTASK_FUNCTION(Up_Screen_Task, pvParameters)
 
 	while (1) {
 		PA_SetTextTileCol(UP_SCREEN, TEXT_RED);
-		PA_OutputText(UP_SCREEN, 10, 13, "monster hp: %d", monster[g_info.level].hp);
-		PA_OutputText(UP_SCREEN, 2, 17, "hp: %d", u_info.hp);
-		PA_SetTextTileCol(UP_SCREEN, TEXT_BLUE);
-		PA_OutputText(UP_SCREEN, 2, 20, "mp: %d", u_info.mp);
+		//PA_OutputTextSpecial0(UP_SCREEN, 0, 0, "Level");
+		PA_OutputSimpleText(UP_SCREEN, 1, 1, "LEVEL");
+		PA_OutputSimpleText(UP_SCREEN, 11, 1, "TURN NUM");
+		PA_OutputSimpleText(UP_SCREEN, 23, 1, "TURN WHO");
+		PA_OutputSimpleText(UP_SCREEN, 1, 22, "HP");
+		//PA_OutputText(UP_SCREEN, 5, 13, "monster hp: %d", monster[g_info.level].hp);
+		//PA_OutputText(UP_SCREEN, 2, 17, "hp: %d", u_info.hp);
+		//PA_SetTextTileCol(UP_SCREEN, TEXT_BLUE);
+		//PA_OutputText(UP_SCREEN, 2, 20, "mp: %d", u_info.mp);
 	}
 }
 
