@@ -24,6 +24,8 @@
 #define PUZZLE_PAL	0
 #define BOMB		1
 #define BOMB_PAL	1
+#define MONSTER		2
+#define MONSTER_PA	2
 
 #define DOWN_SCREEN 0
 #define UP_SCREEN 1
@@ -31,7 +33,7 @@
 #define BACKGROUND_DOWN		0
 #define BACKGROUND_UP		1
 
-#define MAX_LEVEL			10
+#define MAX_LEVEL			16
 
 // global variable
 typedef struct game_info {
@@ -60,13 +62,12 @@ typedef struct block {
 	u8 bomb;
 } block;
 
-xTaskHandle UpScreenTask;
 xQueueHandle KeyQueue;
 volatile u8 virtual_puzzle;
 
 game_info g_info;
 user_info u_info;
-user_info monster[MAX_LEVEL];
+user_info monster[MAX_LEVEL + 1];
 block puzzle[N_PUZZLE][N_PUZZLE];
 enum {HP = 0, MP, DEF, ATK, SPC};
 
@@ -88,5 +89,7 @@ void initialize_game_info(void);
 void initialize_puzzle(void);
 void game(void);
 void main_screen();
+void set_monster_sprite(u8 level);
+void draw_monster(u8 level);
 
 #endif

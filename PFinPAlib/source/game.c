@@ -32,6 +32,44 @@ void draw_block(u8 id, u8 color)
 	PA_SetSpriteAnim(DOWN_SCREEN, id, color + 4);
 }
 
+void draw_monster(u8 level)
+{
+	PA_SetSpriteAnim(UP_SCREEN, 0, 0);
+}
+
+void draw_text(void)
+{
+	PA_InitText(UP_SCREEN, 0);
+
+	// 게임 정보
+	PA_SetTextTileCol(UP_SCREEN, TEXT_RED);
+	PA_OutputText(UP_SCREEN, 1, 1, "LEVEL %d", g_info.level);
+	PA_OutputText(UP_SCREEN, 11, 1, "TURN ");
+	PA_OutputText(UP_SCREEN, 23, 1, "TURN ");
+
+	// 몬스터 정보
+	PA_OutputText(UP_SCREEN, 13, 5, "HP %d", monster[g_info.level].hp);
+
+	// 유저 정보
+	PA_SetTextTileCol(UP_SCREEN, TEXT_RED);
+	PA_OutputText(UP_SCREEN, 1, 22, "HP %d", u_info.hp);
+
+	PA_SetTextTileCol(UP_SCREEN, TEXT_BLUE);
+	PA_OutputText(UP_SCREEN, 13, 22, "MP %d", u_info.mp);
+
+	PA_SetTextTileCol(UP_SCREEN, TEXT_GREEN);
+	PA_OutputText(UP_SCREEN, 23, 22, "DEF %d", u_info.def);
+}
+
+void set_monster_sprite(u8 level)
+{
+	if (level > 1)
+		PA_DeleteSprite(UP_SCREEN, 0);
+	PA_LoadSpritePal(UP_SCREEN, MONSTER, monster[level].img_pal);
+	PA_CreateSprite(UP_SCREEN, 0, monster[level].img_sprite,
+			OBJ_SIZE_64X64, TRUE, MONSTER, 3*32, 2*32);
+}
+
 // 지금 선택한 block이 바로 전에 선택한 block의 상하좌우에 위치해 있는지 검사
 u8 is_switching_position(u8 old_key, u8 key)
 {
@@ -159,7 +197,7 @@ u8 check_col(int col)
 // action값에 따라 유저가 행동함
 void user_action(int action)
 {
-	int damage;
+	int damage = 0;
 	u8 count = g_info.block_count[action];
 
 	switch (action) {
@@ -184,33 +222,18 @@ void user_action(int action)
 		damage = u_info.atk - monster[g_info.level].def;
 		if (damage > 0)
 			monster[g_info.level].hp -= (damage);
+		u_info.atk = 0;
 		break;
 
 	case SPC:
-		if (u_info.mp >= 300) {
-			damage = g_info.block_count[action] * 10;
-
-			/*************************************************/
-			//block_count \ mp 에 따른 damage 증가 표
-			//block_count \ mp	300		400		500		600
-			//		3			x2		x2		x2		x2
-			//		4			x2		x3		x3		x3
-			//		5			x2		x3		x4		x4
-			//		6			x2		x3		x4		x5
-			/*************************************************/
-			if (count >= (u_info.mp / 100)) {
-				damage *= ((count - (u_info.mp / 100)) + 2);
-				u_info.mp -= (((count - (u_info.mp / 100)) + 3) * 100);
-			}
-			else {
-				damage *= (count - 1);
-				u_info.mp -= (count * 100);
-			}
-
+		if (u_info.mp >= 100) {
+			u_info.mp -= 100;
+			damage = g_info.block_count[action] * 100;
 			u_info.spc += damage;
 			damage -= monster[g_info.level].def;
 			if (damage > 0)
 				monster[g_info.level].hp -= (damage);
+			u_info.spc = 0;
 		}
 		break;
 	}
@@ -218,9 +241,24 @@ void user_action(int action)
 
 void next_level(void)
 {
+	int i;
+
 	if (g_info.level < MAX_LEVEL) {
 		g_info.level++;
+
+		// block count 초기화
+		for (i = 0; i < N_BLOCK; i++)
+			g_info.block_count[i] = 0;
+
+		// user 정보 초기화
 		initialize_user_info();
+
+		// 해당 level 몬스터 이미지 표시
+		set_monster_sprite(g_info.level);
+		draw_monster(g_info.level);
+
+		// text 표시
+		draw_text();
 	}
 	else
 		;// game clear
@@ -247,25 +285,12 @@ void check_puzzle(void)
 			for (i = 0; i < N_PUZZLE; i++)
 				for (j = 0; j < N_PUZZLE; j++)
 					if (puzzle[i][j].bomb)
-						//PA_StartSpriteAnim(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 1);
 						PA_StartSpriteAnimEx(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 10, ANIM_LOOP, 1);
 
 			// delay 0.5 sec
 			do {
 				delay = xTaskGetTickCount() - xLastWakeTime;
 			} while (delay < ((int)(500 / portTICK_RATE_MS)));
-
-			// block 상쇄에 따른 행동
-			for (i = 0; i < N_BLOCK; i++)
-				if (g_info.block_count[i] > 0) {
-					u_info.action(i);
-					if (monster[g_info.level].hp <= 0)
-						next_level();
-				}
-
-			// block count 초기화
-			for (i = 0; i < N_BLOCK; i++)
-				g_info.block_count[i] = 0;
 
 			// 새로운 block 생성
 			for (i = 0; i < N_PUZZLE; i++)
@@ -283,6 +308,21 @@ void check_puzzle(void)
 						draw_block(puzzle[j][i].id, puzzle[j][i].color);
 						old_color = color;
 					}
+
+			// block 상쇄에 따른 행동
+			for (i = 0; i < N_BLOCK; i++)
+				if (g_info.block_count[i] > 0) {
+					u_info.action(i);
+					draw_text();
+					if (monster[g_info.level].hp <= 0) {
+						next_level();
+						//return;
+					}
+				}
+
+			// block count 초기화
+			for (i = 0; i < N_BLOCK; i++)
+				g_info.block_count[i] = 0;
 		}
 
 		for(i = 0; i < N_PUZZLE; i++) {
@@ -315,10 +355,57 @@ void initialize_monster_info(void)
 		monster[i].hp = i * 200;
 		monster[i].mp = 0;
 	}
-	/*
-	monster[0].img_pal = ;
-	monster[0].img_sprite =
-	*/
+
+	monster[1].img_pal = _1_Pal;
+	monster[1].img_sprite = _1_Sprite;
+
+	monster[2].img_pal = _2_Pal;
+	monster[2].img_sprite = _2_Sprite;
+
+	monster[3].img_pal = _3_Pal;
+	monster[3].img_sprite = _3_Sprite;
+
+	monster[4].img_pal = _4_Pal;
+	monster[4].img_sprite = _4_Sprite;
+
+	monster[5].img_pal = _5_Pal;
+	monster[5].img_sprite = _5_Sprite;
+
+	monster[6].img_pal = _6_Pal;
+	monster[6].img_sprite = _6_Sprite;
+
+	monster[7].img_pal = _7_Pal;
+	monster[7].img_sprite = _7_Sprite;
+
+	monster[8].img_pal = _8_Pal;
+	monster[8].img_sprite = _8_Sprite;
+
+	monster[9].img_pal = _9_Pal;
+	monster[9].img_sprite = _9_Sprite;
+
+	monster[10].img_pal = _10_Pal;
+	monster[10].img_sprite = _10_Sprite;
+
+	monster[11].img_pal = _11_Pal;
+	monster[11].img_sprite = _11_Sprite;
+
+	monster[12].img_pal = _12_Pal;
+	monster[12].img_sprite = _12_Sprite;
+
+	monster[13].img_pal = _13_Pal;
+	monster[13].img_sprite = _13_Sprite;
+
+	monster[14].img_pal = _14_Pal;
+	monster[14].img_sprite = _14_Sprite;
+
+	monster[15].img_pal = _15_Pal;
+	monster[15].img_sprite = _15_Sprite;
+
+	monster[16].img_pal = _16_Pal;
+	monster[16].img_sprite = _16_Sprite;
+
+	set_monster_sprite(g_info.level);
+	draw_monster(g_info.level);
 }
 
 // 게임 정보를 초기화
@@ -377,12 +464,13 @@ void game(void)
 	u8 key;
 	u8 selected = FALSE;
 
-	vTaskResume(UpScreenTask);
+	//vTaskResume(UpScreenTask);
 	// initialize 순서를 바꾸면 제대로된 게임 실행이 안될 수 있음!
 	initialize_game_info();
 	initialize_user_info();
 	initialize_monster_info();
 	initialize_puzzle();
+	draw_text();
 	check_puzzle();
 
 	while (1) {
