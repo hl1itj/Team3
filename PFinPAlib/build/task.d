@@ -123,6 +123,11 @@ task.o: c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/task.c \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h \
  c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h \
  c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/gfx/all_gfx.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/build/main_sound.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/build/bomb_sound.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/build/hit_sound.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/build/lose_sound.h \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/build/win_sound.h \
  c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/FreeRTOS.h \
  c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/projdefs.h \
  c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/FreeRTOSConfig.h \
@@ -386,6 +391,16 @@ c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h:
 c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h:
 
 c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/gfx/all_gfx.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/build/main_sound.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/build/bomb_sound.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/build/hit_sound.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/build/lose_sound.h:
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/build/win_sound.h:
 
 c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/FreeRTOS.h:
 

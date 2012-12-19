@@ -4,7 +4,7 @@
  *  Created on: 2012. 12. 19.
  *      Author: ksi
  */
-
+#include "header.h"
 #include "game.h"
 #include "task.h"
 
@@ -48,9 +48,10 @@ void draw_monster_attack(void)
 {
 	PA_LoadSpritePal(UP_SCREEN, HIT, (void *) hit_Pal);
 	PA_CreateSprite(UP_SCREEN, 1, (void *) hit_Sprite,
-				OBJ_SIZE_32X32, TRUE, HIT, 118, 130);
+			OBJ_SIZE_32X32, TRUE, HIT, 118, 130);
 
 	PA_StartSpriteAnimEx(UP_SCREEN, 1, 0, 3, 10, ANIM_LOOP, 1);
+	AS_SoundDefaultPlay((u8*)hit_sound, (u32)hit_sound_size, 127, 64, FALSE, 0);
 	delay(500);
 	PA_DeleteSprite(UP_SCREEN, 1);
 }
@@ -282,12 +283,13 @@ void monster_action(void)
 	damage = monster[g_info.level].atk - u_info.def;
 
 	if (damage > 0) {
-	u_info.hp -= damage;
-	draw_text();
-	draw_monster_attack();
+		u_info.hp -= damage;
+		if (u_info.hp <= 0) u_info.hp = 0;
+		draw_text();
+		draw_monster_attack();
 
-	if (u_info.hp <= 0)
-		game_over(); // game over
+		if (u_info.hp <= 0)
+			game_over(); // game over
 	}
 }
 
@@ -336,6 +338,7 @@ void check_puzzle(void)
 				for (j = 0; j < N_PUZZLE; j++)
 					if (puzzle[i][j].bomb)
 						PA_StartSpriteAnimEx(DOWN_SCREEN, puzzle[i][j].id, 0, 3, 10, ANIM_LOOP, 1);
+			AS_SoundDefaultPlay((u8*)bomb_sound, (u32)bomb_sound_size, 127, 64, FALSE, 0);
 
 			// delay 0.5 sec
 			delay(500);
@@ -385,7 +388,9 @@ void initialize_user_info(void)
 {
 	u_info.atk = 0;
 	u_info.def = 0;
-	u_info.max_hp = u_info.hp = 1000 + 500 * (g_info.level - 1);
+	if (g_info.level == 1)
+		u_info.hp = 1000;
+	u_info.max_hp = 1000 + 500 * (g_info.level - 1);
 	//u_info.max_hp = u_info.hp = 10;
 	if (g_info.level == 1)
 		u_info.mp = 500;
@@ -401,8 +406,8 @@ void initialize_monster_info(void)
 	for (i = 1; i <= MAX_LEVEL; i++) {
 		monster[i].atk = i * 50;
 		monster[i].def = 0;
-		//monster[i].hp = i * 200;
-		monster[i].hp = i;
+		monster[i].hp = i * 200;
+		//monster[i].hp = i;
 		monster[i].mp = 0;
 		monster[i].hit = monster_action;
 	}
@@ -553,7 +558,12 @@ void user_turn(void)
 		}
 
 		delay = xTaskGetTickCount() - xLastWakeTime;
-		if (delay > 10000) break;
+
+		if (delay > 10000) {
+			if (selected)
+				draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
+			break;
+		}
 	}
 }
 
@@ -565,6 +575,8 @@ void monster_turn(void)
 
 void game(void)
 {
+	AS_SoundDefaultPlay((u8*)main_sound, (u32)main_sound_size, 127, 64, TRUE, 10);
+
 	// initialize 순서를 바꾸면 제대로된 게임 실행이 안될 수 있음!
 	initialize_game_info();
 	initialize_user_info();
@@ -596,16 +608,27 @@ void main_screen(void)
 
 void game_over(void)
 {
+	int i;
 	PA_Init();
+	for (i = 0; i < 16; i++)
+		PA_StopSound(i);
+
 	PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &gameover);
 	PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &gameover);
+	AS_SoundDefaultPlay((u8*)lose_sound, (u32)lose_sound_size, 127, 64, TRUE, 1);
 	vTaskSuspend(gameTask);
 }
 
 void game_clear(void)
 {
+	int i;
+
 	PA_Init();
+	for (i = 0; i < 16; i++)
+			PA_StopSound(i);
+
 	PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &gameclear);
 	PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &gameclear);
+	AS_SoundDefaultPlay((u8*)win_sound, (u32)win_sound_size, 127, 64, TRUE, 1);
 	vTaskSuspend(gameTask);
 }

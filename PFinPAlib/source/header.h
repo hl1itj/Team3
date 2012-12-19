@@ -11,6 +11,11 @@
 // PAlib Header
 #include <PA9.h>
 #include "all_gfx.h"
+#include "main_sound.h"
+#include "bomb_sound.h"
+#include "hit_sound.h"
+#include "lose_sound.h"
+#include "win_sound.h"
 
 // Free RTOS Headers
 // See API reference Document in http://www.freertos.org/
