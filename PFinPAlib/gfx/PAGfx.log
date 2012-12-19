@@ -4,7 +4,7 @@ If you have suggestions, problems or anything please come to the PAlib forums
 Converting PAGfx.ini
 Transparent Color: Magenta
 
-17 sprites:
+18 sprites:
   puzzle: 256colors, 32x448, Pal: puzzle_Pal, -> puzzle_Sprite
   _5: 256colors, 64x128, Pal: _5_Pal, -> _5_Sprite
   _6: 256colors, 64x128, Pal: _6_Pal, -> _6_Sprite
@@ -22,14 +22,17 @@ Transparent Color: Magenta
   _2: 256colors, 64x128, Pal: _2_Pal, -> _2_Sprite
   _3: 256colors, 64x128, Pal: _3_Pal, -> _3_Sprite
   _4: 256colors, 64x128, Pal: _4_Pal, -> _4_Sprite
+  hit: 256colors, 32x128, Pal: hit_Pal, -> hit_Sprite
 
-4 backgrounds:
+6 backgrounds:
   bground_up : EasyBg, 256x192, Pal: bground_up_Pal, 5 tiles -> bground_up_Tiles and bground_up_Map
   main_down : EasyBg, 256x192, Pal: main_down_Pal, 38 tiles -> main_down_Tiles and main_down_Map
   main_up : EasyBg, 256x192, Pal: main_up_Pal, 243 tiles -> main_up_Tiles and main_up_Map
-  bground_down : EasyBg, 256x192, Pal: bground_down_Pal, 2 tiles -> bground_down_Tiles and bground_down_Map
+  bground_down : EasyBg, 256x192, Pal: bground_down_Pal, 165 tiles -> bground_down_Tiles and bground_down_Map
+  gameover : EasyBg, 256x192, Pal: gameover_Pal, 68 tiles -> gameover_Tiles and gameover_Map
+  gameclear : EasyBg, 256x192, Pal: gameclear_Pal, 78 tiles -> gameclear_Tiles and gameclear_Map
 
-21 palettes:
+24 palettes:
   puzzle_Pal, 169 colors
   _5_Pal, 16 colors
   _6_Pal, 24 colors
@@ -47,10 +50,13 @@ Transparent Color: Magenta
   _2_Pal, 33 colors
   _3_Pal, 31 colors
   _4_Pal, 42 colors
+  hit_Pal, 6 colors
   bground_up_Pal, 4 colors
   main_down_Pal, 18 colors
   main_up_Pal, 58 colors
-  bground_down_Pal, 3 colors
+  bground_down_Pal, 176 colors
+  gameover_Pal, 24 colors
+  gameclear_Pal, 18 colors
 
 Converted in 0 minutes and 0 seconds
 

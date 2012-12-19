@@ -4,8 +4,9 @@
  *  Created on: 2012. 12. 19.
  *      Author: ksi
  */
-#include "header.h"
+
 #include "game.h"
+#include "task.h"
 
 void write_puzzle(u8 value)
 {
@@ -40,6 +41,18 @@ void draw_monster(u8 level)
 void draw_damaged_monster(void)
 {
 	PA_StartSpriteAnimEx(UP_SCREEN, 0, 0, 1, 10, ANIM_LOOP, 3);
+	delay(500);
+}
+
+void draw_monster_attack(void)
+{
+	PA_LoadSpritePal(UP_SCREEN, HIT, (void *) hit_Pal);
+	PA_CreateSprite(UP_SCREEN, 1, (void *) hit_Sprite,
+				OBJ_SIZE_32X32, TRUE, HIT, 118, 130);
+
+	PA_StartSpriteAnimEx(UP_SCREEN, 1, 0, 3, 10, ANIM_LOOP, 1);
+	delay(500);
+	PA_DeleteSprite(UP_SCREEN, 1);
 }
 
 void draw_text(void)
@@ -49,8 +62,12 @@ void draw_text(void)
 	// 게임 정보
 	PA_SetTextTileCol(UP_SCREEN, TEXT_RED);
 	PA_OutputText(UP_SCREEN, 1, 1, "LEVEL %d", g_info.level);
-	PA_OutputText(UP_SCREEN, 11, 1, "TURN ");
-	PA_OutputText(UP_SCREEN, 23, 1, "TURN ");
+	PA_OutputText(UP_SCREEN, 11, 1, "TURN %d", g_info.turn_count);
+
+	if (g_info.turn == USER_TURN)
+		PA_OutputText(UP_SCREEN, 23, 1, "USR TURN");
+	else
+		PA_OutputText(UP_SCREEN, 23, 1, "MON TURN");
 
 	// 몬스터 정보
 	PA_OutputText(UP_SCREEN, 13, 5, "HP %d", monster[g_info.level].hp);
@@ -83,7 +100,7 @@ void set_monster_sprite(u8 level)
 		PA_DeleteSprite(UP_SCREEN, 0);
 	PA_LoadSpritePal(UP_SCREEN, MONSTER, monster[level].img_pal);
 	PA_CreateSprite(UP_SCREEN, 0, monster[level].img_sprite,
-			OBJ_SIZE_64X64, TRUE, MONSTER, 3*32, 2*32);
+			OBJ_SIZE_64X64, TRUE, MONSTER, 96, 64);
 }
 
 // 지금 선택한 block이 바로 전에 선택한 block의 상하좌우에 위치해 있는지 검사
@@ -259,12 +276,28 @@ void user_action(int action)
 	}
 }
 
+void monster_action(void)
+{
+	int damage;
+	damage = monster[g_info.level].atk - u_info.def;
+
+	if (damage > 0) {
+	u_info.hp -= damage;
+	draw_text();
+	draw_monster_attack();
+
+	if (u_info.hp <= 0)
+		game_over(); // game over
+	}
+}
+
 void next_level(void)
 {
 	int i;
 
 	if (g_info.level < MAX_LEVEL) {
 		g_info.level++;
+		g_info.turn_count = 0;
 
 		// block count 초기화
 		for (i = 0; i < N_BLOCK; i++)
@@ -281,7 +314,7 @@ void next_level(void)
 		draw_text();
 	}
 	else
-		;// game clear
+		game_clear();// game clear
 }
 
 // puzzle에 상쇄 가능한 블럭이 있는지 검사하여
@@ -294,11 +327,9 @@ void check_puzzle(void)
 	u8 old_color = -1;
 	u8 changed = FALSE;
 
-
 	do {
 		if (changed) {
 			changed = FALSE;
-
 
 			// 폭발 이미지
 			for (i = 0; i < N_PUZZLE; i++)
@@ -349,12 +380,13 @@ void check_puzzle(void)
 	} while (changed);
 }
 
-// 유저 정보를 초기화
+// 유저 정보 초기화
 void initialize_user_info(void)
 {
 	u_info.atk = 0;
 	u_info.def = 0;
 	u_info.max_hp = u_info.hp = 1000 + 500 * (g_info.level - 1);
+	//u_info.max_hp = u_info.hp = 10;
 	if (g_info.level == 1)
 		u_info.mp = 500;
 	u_info.max_mp = 500 + 100 * (g_info.level - 1);
@@ -369,8 +401,10 @@ void initialize_monster_info(void)
 	for (i = 1; i <= MAX_LEVEL; i++) {
 		monster[i].atk = i * 50;
 		monster[i].def = 0;
-		monster[i].hp = i * 200;
+		//monster[i].hp = i * 200;
+		monster[i].hp = i;
 		monster[i].mp = 0;
+		monster[i].hit = monster_action;
 	}
 
 	monster[1].img_pal = _1_Pal;
@@ -433,6 +467,8 @@ void initialize_game_info(void)
 		g_info.block_count[i] = 0;
 
 	g_info.level = 1;
+	g_info.turn = USER_TURN;
+	g_info.turn_count = 0;
 }
 
 // random으로 puzzle 색을 초기화
@@ -475,13 +511,60 @@ void initialize_puzzle(void)
 //        가능하다면 puzzle 상쇄
 ///////////////////////////////////////////////
 
-void game(void)
+void user_turn(void)
 {
 	u8 old_key = 0;
 	u8 key;
 	u8 selected = FALSE;
+	int delay;
+	portTickType xLastWakeTime;
+	xLastWakeTime = xTaskGetTickCount();
+	g_info.turn = USER_TURN;
+	g_info.turn_count++;
+	draw_text();
 
-	//vTaskResume(UpScreenTask);
+	while(1) {
+		if (kbhit()) {
+			key = getkey();
+
+			if (key <= 36) {
+				key--;
+
+				if (!selected) {
+					selected = TRUE;
+					draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
+					draw_block(key, puzzle[PUZZLE_X(key)][PUZZLE_Y(key)].color + N_BLOCK);
+					old_key = key;
+				}
+				else {
+					if (key == old_key) {
+						selected = FALSE;
+						draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
+					}
+					else if (is_switching_position(old_key, key)) {
+						selected = FALSE;
+						switching_color(old_key, key);
+						draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
+						draw_block(key, puzzle[PUZZLE_X(key)][PUZZLE_Y(key)].color);
+						check_puzzle();
+					}
+				}
+			}
+		}
+
+		delay = xTaskGetTickCount() - xLastWakeTime;
+		if (delay > 10000) break;
+	}
+}
+
+void monster_turn(void)
+{
+	g_info.turn = MONSTER_TURN;
+	monster[g_info.level].hit();
+}
+
+void game(void)
+{
 	// initialize 순서를 바꾸면 제대로된 게임 실행이 안될 수 있음!
 	initialize_game_info();
 	initialize_user_info();
@@ -491,35 +574,12 @@ void game(void)
 	check_puzzle();
 
 	while (1) {
-		key = getkey();
-
-		if (key <= 36) {
-			key--;
-
-			if (!selected) {
-				selected = TRUE;
-				draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
-				draw_block(key, puzzle[PUZZLE_X(key)][PUZZLE_Y(key)].color + N_BLOCK);
-				old_key = key;
-			}
-			else {
-				if (key == old_key) {
-					selected = FALSE;
-					draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
-				}
-				else if (is_switching_position(old_key, key)) {
-					selected = FALSE;
-					switching_color(old_key, key);
-					draw_block(old_key, puzzle[PUZZLE_X(old_key)][PUZZLE_Y(old_key)].color);
-					draw_block(key, puzzle[PUZZLE_X(key)][PUZZLE_Y(key)].color);
-					check_puzzle();
-				}
-			}
-		}
+		user_turn();
+		monster_turn();
 	}
 }
 
-void main_screen()
+void main_screen(void)
 {
 	while (1) {
 		if (Stylus.Newpress || Pad.Newpress.Start) {
@@ -532,4 +592,20 @@ void main_screen()
 
 		PA_WaitForVBL();
 	}
+}
+
+void game_over(void)
+{
+	PA_Init();
+	PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &gameover);
+	PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &gameover);
+	vTaskSuspend(gameTask);
+}
+
+void game_clear(void)
+{
+	PA_Init();
+	PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &gameclear);
+	PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &gameclear);
+	vTaskSuspend(gameTask);
 }

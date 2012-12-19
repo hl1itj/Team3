@@ -12,6 +12,6 @@ const PA_BgStruct bground_down = {
 	bground_down_Map,
 	{bground_down_Pal},
 
-	128,
+	10560,
 	{1536}
 };

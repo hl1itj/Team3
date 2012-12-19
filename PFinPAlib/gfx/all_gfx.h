@@ -26,12 +26,15 @@ extern const unsigned char _1_Sprite[8192] _GFX_ALIGN; // Palette: _1_Pal
 extern const unsigned char _2_Sprite[8192] _GFX_ALIGN; // Palette: _2_Pal
 extern const unsigned char _3_Sprite[8192] _GFX_ALIGN; // Palette: _3_Pal
 extern const unsigned char _4_Sprite[8192] _GFX_ALIGN; // Palette: _4_Pal
+extern const unsigned char hit_Sprite[4096] _GFX_ALIGN; // Palette: hit_Pal
 
 // Backgrounds:
 extern const PA_BgStruct bground_up;
 extern const PA_BgStruct main_down;
 extern const PA_BgStruct main_up;
 extern const PA_BgStruct bground_down;
+extern const PA_BgStruct gameover;
+extern const PA_BgStruct gameclear;
 
 // Palettes:
 extern const unsigned short puzzle_Pal[256] _GFX_ALIGN;
@@ -51,6 +54,7 @@ extern const unsigned short _1_Pal[256] _GFX_ALIGN;
 extern const unsigned short _2_Pal[256] _GFX_ALIGN;
 extern const unsigned short _3_Pal[256] _GFX_ALIGN;
 extern const unsigned short _4_Pal[256] _GFX_ALIGN;
+extern const unsigned short hit_Pal[256] _GFX_ALIGN;
 
 #ifdef __cplusplus
 }

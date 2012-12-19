@@ -10,11 +10,13 @@
 
 #include "header.h"
 
+xQueueHandle KeyQueue;
+xTaskHandle gameTask;
+
 void key_init(void);
 int kbhit(void);
 u8 getkey(void);
 portTASK_FUNCTION(Puzzle_Key_Task, pvParameters);
-portTASK_FUNCTION(Up_Screen_Task, pvParameters);
 portTASK_FUNCTION(Game_Task, pvParameters);
 void create_tasks(void);
 

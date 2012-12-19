@@ -94,7 +94,7 @@ void create_tasks(void)
 			2048,
 			(void *)NULL,
 			tskIDLE_PRIORITY + 1,
-			NULL);
+			&gameTask);
 
 	KeyQueue = xQueueCreate(MAX_KEY_LOG, sizeof(u8));
 }

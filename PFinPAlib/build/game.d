@@ -1,4 +1,5 @@
 game.o: c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/game.c \
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/game.h \
  c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/header.h \
  c:/devkitPro/PAlib/include/nds/PA9.h c:/devkitPro/libnds/include/nds.h \
  c:/devkitPro/libnds/include/nds/libversion.h \
@@ -134,7 +135,9 @@ game.o: c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/game.c \
  c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/semphr.h \
  c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/queue.h \
  c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/sevencore_io.h \
- c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/game.h
+ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/task.h
+
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/game.h:
 
 c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/header.h:
 
@@ -408,4 +411,4 @@ c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/include/queue.h:
 
 c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/FreeRTOS/NDS/sevencore_io.h:
 
-c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/game.h:
+c:/Users/ksi/Documents/GitHub/Team3/PFinPAlib/source/task.h:
