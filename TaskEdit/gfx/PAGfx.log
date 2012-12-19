@@ -1,0 +1,57 @@
+PAGfx Converter v0.10 -- by Mollusk -- resurrected by fincs -- forum.palib.info
+If you have suggestions, problems or anything please come to the PAlib forums
+
+Converting PAGfx.ini
+Transparent Color: Magenta
+
+17 sprites:
+  goblin: 256colors, 64x64, Pal: goblin_Pal, -> goblin_Sprite
+  harpy: 256colors, 64x64, Pal: harpy_Pal, -> harpy_Sprite
+  incubus: 256colors, 64x64, Pal: incubus_Pal, -> incubus_Sprite
+  kerberos: 256colors, 64x64, Pal: kerberos_Pal, -> kerberos_Sprite
+  kraken: 256colors, 64x64, Pal: kraken_Pal, -> kraken_Sprite
+  cyclops: 256colors, 64x64, Pal: cyclops_Pal, -> cyclops_Sprite
+  ghost: 256colors, 64x64, Pal: ghost_Pal, -> ghost_Sprite
+  scorpion: 256colors, 64x64, Pal: scorpion_Pal, -> scorpion_Sprite
+  troll: 256colors, 64x64, Pal: troll_Pal, -> troll_Sprite
+  warewolf: 256colors, 64x64, Pal: warewolf_Pal, -> warewolf_Sprite
+  zombie: 256colors, 64x64, Pal: zombie_Pal, -> zombie_Sprite
+  medusa: 256colors, 64x64, Pal: medusa_Pal, -> medusa_Sprite
+  mummy: 256colors, 64x64, Pal: mummy_Pal, -> mummy_Sprite
+  ninetail: 256colors, 64x64, Pal: ninetail_Pal, -> ninetail_Sprite
+  oak: 256colors, 64x64, Pal: oak_Pal, -> oak_Sprite
+  puzzle: 256colors, 32x448, Pal: puzzle_Pal, -> puzzle_Sprite
+  salamander: 256colors, 64x64, Pal: salamander_Pal, -> salamander_Sprite
+
+4 backgrounds:
+  main_down : EasyBg, 256x192, Pal: main_down_Pal, 38 tiles -> main_down_Tiles and main_down_Map
+  main_up : EasyBg, 256x192, Pal: main_up_Pal, 243 tiles -> main_up_Tiles and main_up_Map
+  bground_up : EasyBg, 256x192, Pal: bground_up_Pal, 725 tiles -> bground_up_Tiles and bground_up_Map
+  down : EasyBg, 256x192, Pal: down_Pal, 1 tiles -> down_Tiles and down_Map
+
+21 palettes:
+  goblin_Pal, 22 colors
+  harpy_Pal, 22 colors
+  incubus_Pal, 26 colors
+  kerberos_Pal, 22 colors
+  kraken_Pal, 18 colors
+  cyclops_Pal, 28 colors
+  ghost_Pal, 18 colors
+  scorpion_Pal, 14 colors
+  troll_Pal, 20 colors
+  warewolf_Pal, 22 colors
+  zombie_Pal, 19 colors
+  medusa_Pal, 29 colors
+  mummy_Pal, 9 colors
+  ninetail_Pal, 34 colors
+  oak_Pal, 28 colors
+  puzzle_Pal, 171 colors
+  salamander_Pal, 22 colors
+  main_down_Pal, 18 colors
+  main_up_Pal, 58 colors
+  bground_up_Pal, 21 colors
+  down_Pal, 2 colors
+
+Converted in 0 minutes and 0 seconds
+
+Finished!
